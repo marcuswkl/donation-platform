@@ -6,7 +6,7 @@
 <title>Donor Homepage</title>
 <link rel="icon" href="favicon.png" type="image/png">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="donation-home.css" rel="stylesheet" type="text/css"> 
+<link href="css/donation-home.css" rel="stylesheet" type="text/css"> 
 
 </head>
 <body style="background-color:#00ffaa;"">
@@ -281,7 +281,7 @@
   </div>
 </section>
 
-<script type="text/javascript" src="donor-home.js"></script>
+<script type="text/javascript" src="js/donor-home.js"></script>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
