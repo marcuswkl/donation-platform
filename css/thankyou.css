@@ -2,3 +2,8 @@ body{
     background-color: #ECFDEF;
 }
 
+.btn-lg{
+    background-color:#52B788 !important;
+    color: #000;
+    align-content: right;
+}
