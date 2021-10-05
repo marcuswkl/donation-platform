@@ -10,10 +10,21 @@
     <link rel="stylesheet" type="text/css" href="css/thankyou.css">
     <title>Thank you</title>
   </head>
+
   <body>
     <div class="text-center">
         <h1 class="display-2">Thank you for your donation</h1>
     </div>
+    <div class="text-center">
+        <p class="lead">
+            <ul class="list-unstyled">
+                <li>RM20.00 is contributed to Empower Children Through Education. </li>
+                <li>An email receipt and token of appreciation will be sent to your email.</li>
+            </ul>        
+        </p>
+    </div>
+
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
