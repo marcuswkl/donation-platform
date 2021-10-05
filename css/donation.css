@@ -14,3 +14,8 @@ body{
     padding-top: 1em;
     padding-left: 2em;
 }
+
+.btn-primary{
+    background-color:#52B788 !important;
+    color: #000;
+}
