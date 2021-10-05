@@ -20,8 +20,13 @@
         <div class="mt-3">
             <h4>Derek Edmonds</h4>
             <p class="text-secondary mb-1">derekedmonds@gmail.com</p>
+        </div>    
+        <div class="d-flex flex-column bd-highlight mb-3">
+            <button class="btn btn-primary">Edit Profile</button>
+            <button class="btn btn-primary">View Donations</button>
         </div>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
