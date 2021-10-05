@@ -6,5 +6,11 @@ body{
     text-align: right;
 }
 
+.input-group-lg{
+    margin-right: 50%;
+}
 
-
+.form-check{
+    padding-top: 1em;
+    padding-left: 2em;
+}
