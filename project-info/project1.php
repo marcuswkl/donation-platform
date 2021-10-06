@@ -163,6 +163,59 @@
         </button>
       </div>
   </section>
+
+
+  <!-- Explore More Section -->
+  <section id="explore" class="p-5">
+      <h2 class="text-center text-dark mb-4">EXPLORE OTHER PROJECTS</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 cards">
+          <a href="#" class="card-links"><div class="card bg-mediumgreen">
+            <div class="card-body text-center">
+              <h3 class="card-title mb-1"><strong>Build Schools Together</strong></h3>
+              <p class="card-text">
+                by Sunway Student Ambassadors
+              </p>
+              <img
+                src="img/explore.png"
+                class="mb-1"
+                alt="Children running in the school compound"
+              />
+            </div>
+          </div></a>
+        </div>
+        <div class="col-md-6 col-lg-4 cards">
+          <a href="#" class="card-links"><div class="card bg-mediumgreen">
+            <div class="card-body text-center">
+              <h3 class="card-title mb-1"><strong>Build Schools Together</strong></h3>
+              <p class="card-text">
+                by Sunway Student Ambassadors
+              </p>
+              <img
+                src="img/explore.png"
+                class="mb-1"
+                alt="Children running in the school compound"
+              />
+            </div>
+          </div></a>
+        </div>
+        <div class="col-md-6 col-lg-4 cards">
+          <a href="#" class="card-links"><div class="card bg-mediumgreen">
+            <div class="card-body text-center">
+              <h3 class="card-title mb-1"><strong>Build Schools Together</strong></h3>
+              <p class="card-text">
+                by Sunway Student Ambassadors
+              </p>
+              <img
+                src="img/explore.png"
+                class="mb-1"
+                alt="Children running in the school compound"
+              />
+            </div>
+          </div></a>
+        </div>
+      </div>
+  </section>
   
 </body>
 </html>

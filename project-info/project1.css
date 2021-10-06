@@ -112,3 +112,29 @@ body{
 #messages p{
     font-size: 1.5vw;
 }
+
+#explore h2{
+    font-size: 3vw;
+}
+
+#explore h3{
+    font-size: 2vw;
+}
+
+#explore p{
+    font-size: 1vw;
+}
+
+.cards{
+    padding: 2%;
+}
+
+.card-links{
+    text-decoration: none;
+    color: black;
+}
+
+.card-body img{
+    width:100%;
+    height:auto
+}
