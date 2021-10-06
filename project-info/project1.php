@@ -81,5 +81,27 @@
     </div>
   </section>
 
+  <!-- Secondary Navbar -->
+  <nav class="navbar navbar-expand-md bg-mediumgreen navbar-light py-4 collapse-navbar">
+    <div class="collapse navbar-collapse row text-center" id="navmenu">
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item col-md">
+          <a href="#story" class="nav-link">STORY</a>
+        </li>
+        <div class="d-none d-sm-block black-bar"></div>
+        <li class="nav-item col-md">
+          <a href="#organisation" class="nav-link">ORGANISATION</a>
+        </li>
+        <div class="d-none d-sm-block black-bar"></div>
+        <li class="nav-item col-md">
+          <a href="#messages" class="nav-link">MESSAGES</a>
+        </li>
+        <li class="nav-item col-md">
+          <button class="btn btn-light btn-md btn-donate" type="button">DONATE</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
 </body>
 </html>

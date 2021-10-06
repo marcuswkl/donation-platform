@@ -58,3 +58,30 @@ body{
     background:#114D4F; 
     border-radius: 5px 0 0 5px;
 }
+
+.btn-donate{
+    background-color: #52B788; 
+    border: black;
+    color: black;
+    padding: 9px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 1.5vw;
+}
+
+.donate{
+    font-size: 2.5vw;
+}
+
+.nav-link{
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.black-bar{
+    width: 0.1vw; 
+    height: 3vw; 
+    background:#515151
+}
