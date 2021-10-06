@@ -23,12 +23,11 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="project-info.css">
+    <link rel="stylesheet" href="project1.css">
     <title>Project Info</title>
   </head>
 
 <body>
-
 
   <!-- Showcase -->
   <section class="p-5">
@@ -188,7 +187,6 @@
         </button>
       </div>
   </section>
-
 
   <!-- Explore More Section -->
   <section id="explore" class="p-5">
