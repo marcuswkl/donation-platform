@@ -103,6 +103,15 @@
     </div>
   </nav>
 
+  <!-- Donate Button -->
+  <div class="navbar row text-center donate-button bg-mediumgreen navbar-light py-4" id="navmenu">
+    <ul class="navbar-nav ms-auto">
+      <li>
+        <button class="btn btn-light btn-md btn-donate donate" type="button">DONATE TO EDUCATION</button>
+      </li>
+    </ul>
+  </div>
+
   <!-- Story Section -->
   <section id="story" class="p-5">
       <div class="row align-items-center justify-content-between g-4">
@@ -134,6 +143,22 @@
         </div>
         <div class="col-md">
           <img src="img/organisation.png" class="img-fluid" alt="Bunway Committees" />
+        </div>
+      </div>
+  </section>
+
+  <!-- Organisation Section Reversed -->
+  <section id="organisation" class="p-5 bg-lightgreen resized-organisation">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md">
+          <img src="img/organisation.png" class="img-fluid" alt="Bunway Committees" />
+        </div>
+        <div class="col-md p-3">
+          <h2><u>ABOUT BUNWAY</u></h2>
+          <p class="lead justify">
+            A 10 years organisation who always supported children homes, old folks home, etc. The team consists of 50 volunteers who are very kind.
+          </p>
+          <p>Website: <a href="#">bunway.com</a></p>
         </div>
       </div>
   </section>
@@ -216,6 +241,6 @@
         </div>
       </div>
   </section>
-  
+
 </body>
 </html>
