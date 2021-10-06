@@ -121,5 +121,22 @@
       </div>
   </section>
 
+   <!-- Organisation Section -->
+   <section id="organisation" class="p-5 bg-lightgreen ori-organisation">
+      <div class="row align-items-center justify-content-between  g-4">
+        <div class="col-md p-3 small-sized">
+          <h2><u>ABOUT BUNWAY</u></h2>
+          <p class="justify">
+            <br>
+            A 10 years organisation who always supported children homes, old folks home, etc. The team consists of 50 volunteers who are very kind.
+          </p>
+          <p>Website: <a href="#">bunway.com</a></p>
+        </div>
+        <div class="col-md">
+          <img src="img/organisation.png" class="img-fluid" alt="Bunway Committees" />
+        </div>
+      </div>
+  </section>
+
 </body>
 </html>
