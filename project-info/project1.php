@@ -103,5 +103,23 @@
     </div>
   </nav>
 
+  <!-- Story Section -->
+  <section id="story" class="p-5">
+      <div class="row align-items-center justify-content-between g-4">
+        <div class="col-md">
+          <img src="img/story.png" class="img-fluid" alt="Children writing on boards" />
+        </div>
+        <div class="col-md p-3 small-sized">
+          <h2><u>THEIR STORY</u></h2>
+          <p class="justify">
+          <br>
+            The children did not have chance to attend school since they are young. They are all passionate children who have their own dream.
+          <br><br>
+            The children, who were earlier averse to basic learning, are now showing incremental improvement and are able to read their regional language and English textbooks.
+          </p>
+        </div>
+      </div>
+  </section>
+
 </body>
 </html>

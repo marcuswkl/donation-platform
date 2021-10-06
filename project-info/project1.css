@@ -85,3 +85,13 @@ body{
     height: 3vw; 
     background:#515151
 }
+
+#story h2, #organisation h2{
+    font-size: 3vw;
+    font-weight: bolder;
+}
+
+#story p, #organisation p{
+    font-size: 1.5vw;
+    padding-right: 10%;
+}
