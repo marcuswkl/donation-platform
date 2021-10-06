@@ -9,18 +9,19 @@
 <link href="css/donation-home.css" rel="stylesheet" type="text/css"> 
 
 </head>
-<body style="background-color:#00ffaa;"">
+
+<body>
   <div class="container">
     <div class="inner_section">
  <div class="row">
       <div class="col-md-6">        
         <h2 style="padding-top: 250px;">Anonym-us Angel</h2>
-        <h3>A fundraising platform which allows you to donate to an anonymous project under a selected category so that every project is supported.</h3> 							 
+        <h3>A fundraising platform which allows you to donate to an anonymous project under a selected category so that every project is supported.</h3>               
       </div>
             <div class="col-md-6"> <img class="img-responsive" src="img/angel.png" align=""> </div>
 
     </div>
-	     </div>
+       </div>
   </div> 
   </div>
 <!--Aboutus--> 
@@ -199,7 +200,7 @@
     <div class="service_wrapper">
       <div class="row">
         <div class="col-md-3">
-		<div class="delay-03s animated wow  zoomIn"><img src="img/1.png" alt=" 1" style="padding-left: 60px;padding-bottom: 10px;"> </div>
+    <div class="delay-03s animated wow  zoomIn"><img src="img/1.png" alt=" 1" style="padding-left: 60px;padding-bottom: 10px;"> </div>
           <div class="service_block">
             <br>
             <h3 class="animated fadeInUp wow">Choose a category </h3>
@@ -207,22 +208,22 @@
           </div>
         </div>
         <div class="col-md-3"> 
-		<div class="delay-03s animated wow zoomIn"><img src="img/2.png" alt="2" style="padding-left: 60px; padding-bottom: 10px;"> </div> 
-		<div class="service_block">
+    <div class="delay-03s animated wow zoomIn"><img src="img/2.png" alt="2" style="padding-left: 60px; padding-bottom: 10px;"> </div> 
+    <div class="service_block">
             <h3 class="animated fadeInUp wow">Donate</h3>
             <p class="animated fadeInDown wow">and make payment  </p>
           </div>
         </div>
         <div class="col-md-3">
-		<div class="delay-03s animated wow zoomIn"><img src="img/3.png" alt="3" style="padding-left: 60px;"></div>
+    <div class="delay-03s animated wow zoomIn"><img src="img/3.png" alt="3" style="padding-left: 60px;"></div>
           <div class="service_block">
             <br>
             <h3 class="animated fadeInUp wow">Get Appreciated</h3>
             <p class="animated fadeInDown wow">by receving a Thank You note truly by us and a receipt</p>
           </div>
         </div>
-		  <div class="col-md-3">
-		<div class="delay-03s animated wow zoomIn"><img src="img/4.png" alt="4" style="padding-left: 60px;"></div>
+      <div class="col-md-3">
+    <div class="delay-03s animated wow zoomIn"><img src="img/4.png" alt="4" style="padding-left: 60px;"></div>
           <div class="service_block">
             <br><br>
             <h3 class="animated fadeInUp wow">Understand</h3>
@@ -230,58 +231,100 @@
           </div>
         </div>
       </div> 
-	 
+   
     </div>
   </div>
 </section>
 <!--Service--> 
 
-
-
- 
 </section>
 
-<section id="qna">
-  <div class="accordion-body">
-  <div class="accordion">
-    <h1>Frequently Asked Questions</h1>
-    <hr>
-    <div class="ques">
-      <div class="label">Who am I donating to?</div>
-      <div class="content">You'll be donating to a random NGO/Companies dedicated to the categories that you have chosen previously. All the donations done will be anonymous as information of the donors will not be exposed to anyone.</div>
-    </div>
-    <hr>
-    <div class="ques">
-      <div class="label">Who is the team behind Anonym-Us Angels</div>
-      <div class="content">The team behind Anonym-Us Angels consists of 7 members which are Marcus (Leader), Chin Wai Siong, Darren, Wen Jun, Jia Xin, Amber and also Javier.
+<section class="accordion-section clearfix mt-3" aria-label="Question Accordions">
+  <div class="container">
+  
+    <h2>Frequently Asked Questions </h2>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default" >
+      <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
+      <h3 class="panel-title">
+        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+        Who am I donating to?
+        </a>
+      </h3>
+      </div>
+      <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+      <div class="panel-body px-3 mb-4">
+        <p>You'll be donating to a random NGO/Companies dedicated to the categories that you have chosen previously. All the donations done will be anonymous as information of the donors will not be exposed to anyone.</p>
+      </div>
       </div>
     </div>
-    <hr>
-    <div class="ques">
-      <div class="label">What is the company’s motto?</div>
-      <div class="content">The company's motto is "Support the Poor and Share Privilleges Equally" </div>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
+      <h3 class="panel-title">
+        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+        Who is the team behind Anonym-Us Angels?
+        </a>
+      </h3>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+      <div class="panel-body px-3 mb-4">
+        <p>The team behind Anonym-Us Angels consists of 7 members which are Marcus (Leader), Chin Wai Siong, Darren, Wen Jun, Jia Xin, Amber and also Javier.</p>
+      </div>
+      </div>
     </div>
-    <hr>
-    <div class="ques">
-      <div class="label">What are the categories of the donations?</div>
-      <div class="content">There are FOUR donation categories in total which are Covid-19, Natural Disaster, Education, and lastly, Food Supply. </div>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
+      <h3 class="panel-title">
+        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+        What are the categories of the donations?
+        </a>
+      </h3>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+      <div class="panel-body px-3 mb-4">
+        <p>There are FOUR donation categories in total which are Covid-19, Natural Disaster, Education, and lastly, Food Supply.</p>
+      </div>
+      </div>
     </div>
-    <hr>
-    <div class="ques">
-      <div class="label">Why is the donation being done anonymously?</div>
-      <div class="content">The donation is being done anonymously is to protect our client's identity(donors) so that the donors can donate freely and without any disturbance or external issues.</div>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
+      <h3 class="panel-title">
+        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+        Why is the donation being done anonymously?
+        </a>
+      </h3>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+      <div class="panel-body px-3 mb-4">
+        <p>The donation is being done anonymously is to protect our client's identity(donors) so that the donors can donate freely and without any disturbance or external issues.</p>
+      </div>
+      </div>
     </div>
-    <hr>
-    <div class="ques">
-      <div class="label">Who designed this wonderful homepage?</div>
-      <div class="content">Totally not Wai Siong</div>
+
+        <div class="panel panel-default">
+      <div class="panel-heading p-3 mb-3" role="tab" id="heading4">
+      <h3 class="panel-title">
+        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
+        Who designed this wonderful homepage?
+        </a>
+      </h3>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+      <div class="panel-body px-3 mb-4">
+        <p>Totally not Wai Siong</p>
+      </div>
+      </div>
     </div>
-    <hr>
-  </div>
+    </div>
+  
   </div>
 </section>
 
-<script type="text/javascript" src="js/donor-home.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>

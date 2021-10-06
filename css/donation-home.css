@@ -513,7 +513,7 @@ background-position-y: 70px;
 .about-us .points:before{
 	content: "\f058";
 	position: absolute;
-	font-family: FontAwesome;
+    font-family: FontAwesome;
 	font-size: 1.125em;
 	color: #F74D4D;
 	left: 0px;
@@ -1589,65 +1589,23 @@ display:none;
 }
 }
 
-.accordion {
-  width: 900px;
-  margin: 90px auto;
-  color: black;
-  background-color: white;
-  padding: 45px 45px;
-}
-.accordion .ques {
-  position: relative;
+body{
+    background-color:#B2E1CC;
 }
 
-/* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
-
-.accordion .label {
-  position: relative;
-  padding: 10px 20px;
-  font-size: 30px;
-  color: black;
-  cursor: pointer;
+.accordion-section .panel-default > .panel-heading {
+    border: 0;
+    background: #f4f4f4;
+    padding: 0;
 }
-.accordion .label::before {
-  content: '+';
-  color: black;
-  position: absolute;
-  top: 50%;
-  right: -5px;
-  font-size: 30px;
-  transform: translateY(-50%);
+.accordion-section .panel-default .panel-title a {
+    display: block;
+    font-size: 2.3rem;
+    padding-left: 1rem;
 }
 
-/* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+.accordion-section .panel-default .panel-body {
+    font-size: 2rem;
+        font-family: FontAwesome;
 
-.accordion .content {
-  position: relative;
-  background: white;
-  height: 0;
-  font-size: 20px;
-  text-align: justify;
-  width: 780px;
-  overflow: hidden;
-  transition: 0.5s;
-    padding: px 0;
-
-}
-
-/* Adds a horizontal line between the contents */
-
-.accordion hr {
-  width: 100;
-  margin-left: 0;
-  border: 1px solid grey;
-}
-.accordion .ques.active .content {
-  height: 150px;
-}
-
-/* Changes from plus sign to negative sign once active */
-
-.accordion .ques.active .label::before {
-  content: '-';
-  font-size: 30px;
 }
