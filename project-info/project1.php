@@ -138,5 +138,31 @@
       </div>
   </section>
 
+  <!-- Messages Section -->
+  <section id="messages" class="p-4 bg-mediumgreen">
+      <h1 class="text-center message">Messages</h1>
+      <div id="carouselText" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner carousel-height">
+          <div class="carousel-item active text-center">
+            <p class="carousel-size">We love children very much and they always inspire us in many ways. We will continue to do everything with our kind heart.<br><br>- Marcus, CEO of Bunway -</p>
+          </div>
+          <div class="carousel-item text-center">
+            <p class="carousel-size">You may volunteer to help families who lost their homes after a natural disaster. But you can also volunteer to protect children.<br><br>- WaiSiong, CFO of Bunway -</p>
+          </div>
+          <div class="carousel-item text-center">
+            <p class="carousel-size">Volunteering means spending your free time helping others. Giving your time means giving children a chance to live their best lives.<br><br>- WenJun, PhD holder in Bunway -</p>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselText" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselText" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </section>
+  
 </body>
 </html>
