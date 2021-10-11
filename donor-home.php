@@ -199,31 +199,31 @@
     <h2>How To Be An Anonym-Us Angel?</h2>
     <div class="service_wrapper">
       <div class="row">
-        <div class="col-md-3">
-    <div class="delay-03s animated wow  zoomIn"><img src="img/1.png" alt=" 1" style="padding-left: 60px;padding-bottom: 10px;"> </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="delay-03s animated wow  zoomIn"><img src="img/1.png" alt=" 1" style="padding-left: 70px;padding-bottom: 5px;"> </div>
           <div class="service_block">
             <br>
             <h3 class="animated fadeInUp wow">Choose a category </h3>
             <p class="animated fadeInDown wow">Which has the project that you would like to support</p>
           </div>
         </div>
-        <div class="col-md-3"> 
-    <div class="delay-03s animated wow zoomIn"><img src="img/2.png" alt="2" style="padding-left: 60px; padding-bottom: 10px;"> </div> 
+        <div class="col-md-3 col-sm-6 col-xs-12"> 
+    <div class="delay-03s animated wow zoomIn"><img src="img/2.png" alt="2" style="padding-left: 80px; padding-bottom: 10px;"> </div> 
     <div class="service_block">
             <h3 class="animated fadeInUp wow">Donate</h3>
             <p class="animated fadeInDown wow">and make payment  </p>
           </div>
         </div>
-        <div class="col-md-3">
-    <div class="delay-03s animated wow zoomIn"><img src="img/3.png" alt="3" style="padding-left: 60px;"></div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="delay-03s animated wow zoomIn"><img src="img/3.png" alt="3" style="padding-left: 80px;"></div>
           <div class="service_block">
             <br>
             <h3 class="animated fadeInUp wow">Get Appreciated</h3>
             <p class="animated fadeInDown wow">by receving a Thank You note truly by us and a receipt</p>
           </div>
         </div>
-      <div class="col-md-3">
-    <div class="delay-03s animated wow zoomIn"><img src="img/4.png" alt="4" style="padding-left: 60px;"></div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="delay-03s animated wow zoomIn"><img src="img/4.png" alt="4" style="padding-left: 80px;"></div>
           <div class="service_block">
             <br><br>
             <h3 class="animated fadeInUp wow">Understand</h3>
