@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link href="../../css/food-supply.css" rel="stylesheet">
-    <title>Food Supply</title>
+    <link href="../css/covid-19.css" rel="stylesheet">
+    <title>Covid-19</title>
 </head>
 
 <body>
     <div class="d-flex top-banner align-items-center">
         <div class="banner-text">
-            <h1>FOOD SUPPLY</h1>
-            <p>Send a warm meal and aid food security in poverty-stricken areas.</p>
+            <h1>COVID-19</h1>
+            <p>Help those who are most vulnerable in the pandemic.</p>
         </div>
         <div class="float-right align-self-end">
-            <img class="banner-img" src="../../resources/img/food-supply-banner.png" alt="Food Supply illustration">
+            <img class="banner-img" src="../resources/img/covid-19-banner.png" alt="Cvoid-19 illustration">
         </div>
     </div>
 
@@ -67,7 +67,7 @@
                         <img src="https://via.placeholder.com/1920x1080" class="project-list-image">
                     </div>
                     <div class="d-inline-flex align-items-center">
-                        <img src="../../resources/img/location_icon.png" class="project-list-icon">
+                        <img src="../resources/img/location_icon.png" class="project-list-icon">
                         <div class="project-list-location">Kajang, Selangor</div>
                     </div>
                     <div class="project-list-title h3">Empower Children Through Education</div>
@@ -89,7 +89,7 @@
                         <img src="https://via.placeholder.com/1920x1080" class="project-list-image">
                     </div>
                     <div class="d-inline-flex align-items-center">
-                        <img src="../../resources/img/location_icon.png" class="project-list-icon">
+                        <img src="../resources/img/location_icon.png" class="project-list-icon">
                         <div class="project-list-location">Kajang, Selangor</div>
                     </div>
                     <div class="project-list-title h3">Empower Children Through Education</div>
@@ -112,7 +112,7 @@
                         <img src="https://via.placeholder.com/1920x1080" class="project-list-image">
                     </div>
                     <div class="d-inline-flex align-items-center">
-                        <img src="../../resources/img/location_icon.png" class="project-list-icon">
+                        <img src="../resources/img/location_icon.png" class="project-list-icon">
                         <div class="project-list-location">Kajang, Selangor</div>
                     </div>
                     <div class="project-list-title h3">Empower Children Through Education</div>
@@ -134,7 +134,7 @@
                         <img src="https://via.placeholder.com/1920x1080" class="project-list-image">
                     </div>
                     <div class="d-inline-flex align-items-center">
-                        <img src="../../resources/img/location_icon.png" class="project-list-icon">
+                        <img src="../resources/img/location_icon.png" class="project-list-icon">
                         <div class="project-list-location">Kajang, Selangor</div>
                     </div>
                     <div class="project-list-title h3">Empower Children Through Education</div>
@@ -187,7 +187,7 @@
         <div class="row">
             <div class="col-md justify-content-center">
                 <div class="d-inline-flex align-items-center">
-                    <img src="../../resources/img/motto_icon.png" alt="Motto icon" class="bottom-banner-motto-icon">
+                    <img src="../resources/img/motto_icon.png" alt="Motto icon" class="bottom-banner-motto-icon">
                     <div class="bottom-banner-title">OUR MOTTO</div>
                 </div>
                 <div class="bottom-banner-motto">Every organization should be noticed as everyone is playing their part in helping the society.</div>
