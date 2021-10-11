@@ -11,6 +11,7 @@
 </head>
 
 <body>
+<?php include "head.php"?>
   <div class="container">
     <div class="inner_section">
  <div class="row">
@@ -322,6 +323,8 @@
   
   </div>
 </section>
+ 
+<?php include "foot.php"?>
 
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
