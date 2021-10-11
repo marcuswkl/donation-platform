@@ -21,7 +21,7 @@
             width:160px;
             height:160px;
             position:relative;
-            padding-right:300px;
+            
            
             
 
@@ -129,68 +129,81 @@
     </style>
 </head>
 <body class="body">
-    <div style="display:flex;align-items:center;justify-content:center;">
-        <div class="skill">
-            <div class="outer">
-                <div class="inner">
-                    <div id="number">
+    <table style="display: flex;text-align: center; align-items:center;justify-content:center;">
+        <tr>
+            <td style="padding-right:100px;">
+                <div class="skill">
+                    <div class="outer">
+                        <div class="inner">
+                            <div id="number">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                        <stop offset="0%" stop-color="#2D6A4F" />
                         
-                    </div>
+                        </linearGradient>
+                    </defs>
+                    <circle class="circle" cx="80" cy="80" r="70" stroke-linecap="round" />
+                    </svg>
+                    
                 </div>
-            </div>
-            <svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-            <defs>
-                <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#2D6A4F" />
-                
-                </linearGradient>
-            </defs>
-            <circle class="circle" cx="80" cy="80" r="70" stroke-linecap="round" />
-            </svg>
-            <label class="label">Total Funds Raised(%)</label>
-        </div>
-        
-        <div class="skill">
-            <div class="outer">
-                <div class="inner">
-                    <div id="number2">
+            </td>
+            <td style="padding-right:100px;">
+                <div class="skill">
+                    <div class="outer">
+                        <div class="inner">
+                            <div id="number2">
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                        <stop offset="0%" stop-color="#2D6A4F" />
+                    
+                        </linearGradient>
+                    </defs>
+                    <circle class="circle2" cx="80" cy="80" r="70" stroke-linecap="round" />
+                    </svg>
+                    
+                </div>
+            </td>
+            <td style="padding-right:100px;">
+                <div class="skill">
+                    <div class="outer">
+                        <div class="inner">
+                            <div id="number3">
+                                2/5
+                            </div>
+                        </div>
+                    </div>
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                    <defs>
+                        <linearGradient id="GradientColor">
+                        <stop offset="0%" stop-color="#2D6A4F" />
                         
-                    </div>
+                        </linearGradient>
+                    </defs>
+                    <circle class="circle3" cx="80" cy="80" r="70" stroke-linecap="round" />
+                    </svg>
+                    
+                    
                 </div>
-            </div>
-            <svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-            <defs>
-                <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#2D6A4F" />
-                
-                </linearGradient>
-            </defs>
-            <circle class="circle2" cx="80" cy="80" r="70" stroke-linecap="round" />
-            </svg>
-            <label class="label">Goals Acheived</label>
-        </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-right:100px;">Total Funds Raised(%)</td>
+            <td style="padding-right:100px;">Goals Achieved</td>
+            <td style="padding-right:100px;">Projects Ending Soon</td>
+        </tr>
         
-        <div class="skill">
-            <div class="outer">
-                <div class="inner">
-                    <div id="number3">
-                        2/5
-                    </div>
-                </div>
-            </div>
-            <svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-            <defs>
-                <linearGradient id="GradientColor">
-                <stop offset="0%" stop-color="#2D6A4F" />
-                
-                </linearGradient>
-            </defs>
-            <circle class="circle3" cx="80" cy="80" r="70" stroke-linecap="round" />
-            </svg>
-            <label class="label">Projects Ending Soon</label>
-            
-        </div>
-    </div>
+        
+    </table>
     <div>
         <br>
         <br>    

@@ -20,12 +20,6 @@
         .buttoncenter{
         color:#000000;
         background-color:#52B788;
-        margin:0;
-        position:absolute;
-        top:50%;
-        left:50%;
-        -ms-transform: translate(-50%,-50%);
-        transform: translate(-50%,-50%)
     }
     </style>
     
@@ -34,6 +28,7 @@
     <h3>Click on the Project Name to edit!</h3>
     <table class="table table-bordered border-white">
         <tr class="tableheader">
+            <th>ID</th>
             <th>Project Name</th>
             <th>Description</th>
             <th>Donation Status</th>
@@ -41,35 +36,40 @@
             <th>Fund Raised (%)</th>
         </tr>
         <tr class="tabledata">
-            <td><a href="ProjectName1.php">PN1</a></td>
+            <td>1</td>
+            <td><a href="ProjectName1.php">Bachelor of Computer Science</a></td>
             <td>...</td>
             <td>Active</td>
             <td>Education</td>
             <td>2%</td>
         </tr>
         <tr class="tabledata">
-            <td><a href="ProjectName2.php">PN2</a></td>
+            <td>2</td>
+            <td><a href="ProjectName2.php">Medical Supply</a></td>
             <td>...</td>
             <td>Active</td>
             <td>Covid-19</td>
             <td>50%</td>
         </tr>
         <tr class="tabledata">
-            <td><a href="ProjectName3.php">PN3</a></td>
+            <td>3</td>
+            <td><a href="ProjectName3.php">Rebuild after earthquake</a></td>
             <td>...</td>
             <td>On hold</td>
             <td>Natural Disaster</td>
             <td>60%</td>
         </tr>
         <tr class="tabledata">
-            <td><a href="ProjectName4.php">PN4</a></td>
+            <td>4</td>
+            <td><a href="ProjectName4.php">Master of Computer Science</a></td>
             <td>...</td>
             <td>Active</td>
             <td>Education</td>
             <td>100%</td>
         </tr>
         <tr class="tabledata">
-            <td><a href="ProjectName5.php">PN5</a></td>
+            <td>5</td>
+            <td><a href="ProjectName5.php">Food Bank</a></td>
             <td>...</td>
             <td>Active</td>
             <td>Food Security</td>
@@ -77,8 +77,8 @@
         </tr>
         
     </table>
+    <div style="display:flex;align-items:center;justify-content:center;">
     <a href="project-dashboard.php" class="btn btn-primary buttoncenter" role="button">Dashboard</a>
+    </div>
 </body>
 </html>
-<stop offset="0%" stop-color="#e91e63" />
-               <stop offset="100%" stop-color="#673ab7" />
