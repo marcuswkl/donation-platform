@@ -6,6 +6,10 @@
     text-align: justify;
 }
 
-.fr-profile-contact-icons > i {
+.fr-profile-contact-icons > a {
     font-size: 3rem;
+    background-color: #52B788;
+    color: white;
+    padding: 0rem 0.75rem 0.1rem 0.75rem;
+    border-radius: 1em;
 }
