@@ -185,8 +185,8 @@
 
     <div class="container-fluid bottom-banner">
         <div class="row">
-            <div class="col-md justify-content-center">
-                <div class="d-inline-flex align-items-center">
+            <div class="col-md container my-auto">
+                <div class="d-inline-flex justify-content-center ">
                     <img src="../resources/img/motto_icon.png" alt="Motto icon" class="bottom-banner-motto-icon">
                     <div class="bottom-banner-title">OUR MOTTO</div>
                 </div>
@@ -194,8 +194,61 @@
 
             </div>
 
-            <div class="col-md">
-                abc
+            <div class="col-md container bottom-banner-accordion">
+                <div class="accordion-title h3">Itching to help more people? Or is it that nothing here piques your interest? Take a look at some other categories below!</div>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Covid-19
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <a href="covid-19.php" class="text-decoration-none">
+                                <div class="accordion-body">
+                                    Help those who are most vulnerable in the pandemic.
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Education
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <a href="education.php" class="text-decoration-none">
+                                <div class="accordion-body">Break the barriers to education with your donation.</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                Natural Disaster
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <a href="natural-disaster.php" class="text-decoration-none">
+                                <div class="accordion-body">Natural disasters sucks, so help those less fortunate rebuild houses and regain homes.</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                                View all...
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <a href="categories.php" class="text-decoration-none">
+                                <div class="accordion-body">Come visit our exquisitely designed categories page (Spoiler alert: It's the same as the accordion menu)</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

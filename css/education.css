@@ -105,7 +105,7 @@
         margin-right: 10px;
     }
 
-    .bottom-banner-title{
+    .bottom-banner-title, .accordion-title{
         font-size: 1.5em;
         font-weight: 600;
     }
@@ -158,10 +158,12 @@
         height: 6vh;
         width: auto;
         margin-right: 10px;
+        margin-top: 5vh;
     }
 
-    .bottom-banner-title{
+    .bottom-banner-title, .accordion-title{
         font-size: 1.3em;
         font-weight: 600;
+        margin-top: 5vh;
     }
 }
