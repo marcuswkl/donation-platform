@@ -2,10 +2,10 @@
     font-size: 10rem;
 }
 
-.text-description {
+.fr-profile-description {
     text-align: justify;
 }
 
-.contact-icons > i {
+.fr-profile-contact-icons > i {
     font-size: 3rem;
 }
