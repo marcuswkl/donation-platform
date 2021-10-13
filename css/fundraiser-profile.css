@@ -5,3 +5,7 @@
 .text-description {
     text-align: justify;
 }
+
+.contact-icons > i {
+    font-size: 3rem;
+}
