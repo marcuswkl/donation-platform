@@ -1,4 +1,24 @@
 body{
     background-color: #ECFDEF;
     font-family: 'Titillium Web';
+    overflow-x: hidden;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.tableheader{
+    background-color:#52B788;
+    text-align:center;
+}
+.tabledata{
+    background-color:#B2E1CC;
+    text-align:center;
+}
+
+@media (max-width: 425px) { 
+    body{
+        overflow-x: hidden;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
 }
