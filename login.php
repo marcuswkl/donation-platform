@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "../CSS/registration.css">
+    <link rel = "stylesheet" href = "./CSS/registration.css">
     <title>Login</title>
 </head>
 
@@ -22,7 +22,7 @@
 
     
         <div class="d-block text-center">
-            <form action="">
+            <form action="" style = "height: 55vh;">
 
                 <div class="mb-3">
                     <input type="text" id="name" name="name" placeholder = " Full Name / Email"><br>
@@ -39,13 +39,7 @@
             </form>    
         </div>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        
         
     <?php include "foot.php"?>
 
