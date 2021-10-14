@@ -1,9 +1,10 @@
 body{
     background-color: #ECFDEF;
+    font-family: 'Titillium Web';
 }
 
-.btn-lg{
+.btn-primary{
     background-color:#52B788 !important;
     color: #000;
-    align-content: right;
+    margin: 1em;
 }
