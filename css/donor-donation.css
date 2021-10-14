@@ -22,3 +22,9 @@ body{
         margin-left: 10%;
     }
 }
+
+.btn-primary{
+    background-color:#52B788 !important;
+    color: #000;
+    margin-bottom: 0.5em;
+}
