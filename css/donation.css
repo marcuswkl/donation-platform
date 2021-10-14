@@ -12,6 +12,10 @@ body{
     margin-left: 25%;
 }
 
+.body-container{
+    height: 80vh;
+}
+
 @media (max-width: 767px) { 
     .checkboxes{
         margin-left: 5%;

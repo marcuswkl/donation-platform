@@ -14,6 +14,7 @@
     <title>Payment</title>
   </head>
   <body>
+  <?php include "head.php"?>
     <!-- Title -->
     <div class="text-center m-5">
       <h1 class="display-2 ">Donation Amount: RM20.00</h1>
@@ -38,12 +39,17 @@
                                 <form role="form" onsubmit="event.preventDefault()">
                                     <div class="form-group"> <label for="username">
                                             <h6>Card Owner</h6>
-                                        </label> <input type="text" name="username" placeholder="Card Owner Name" required class="form-control "> </div>
-                                    <div class="form-group"> <label for="cardNumber">
+                                        </label> <input type="text" name="username" placeholder="Card Owner Name" required class="form-control "> 
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label for="cardNumber">
                                             <h6>Card number</h6>
                                         </label>
-                                        <div class="input-group"> <input type="text" name="cardNumber" placeholder="Valid card number" class="form-control " required>
-                                            <div class="input-group-append"> <span class="input-group-text text-muted"> <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i class="fab fa-cc-amex mx-1"></i> </span> </div>
+                                        <div class="input-group"> 
+                                            <input type="text" name="cardNumber" placeholder="Valid card number" class="form-control " required>
+                                            <div class="input-group-append"> 
+                                                <span class="input-group-text text-muted"> <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i class="fab fa-cc-amex mx-1"></i> </span> 
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -51,13 +57,16 @@
                                             <div class="form-group"> <label><span class="hidden-xs">
                                                         <h6>Expiration Date</h6>
                                                     </span></label>
-                                                <div class="input-group"> <input type="number" placeholder="MM" name="" class="form-control" required> <input type="number" placeholder="YY" name="" class="form-control" required> </div>
+                                                <div class="input-group"> 
+                                                    <input type="number" placeholder="MM" name="" class="form-control" required> <input type="number" placeholder="YY" name="" class="form-control" required> 
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="form-group mb-4"> <label data-toggle="tooltip" title="Three digit CV code on the back of your card">
                                                     <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
-                                                </label> <input type="text" required class="form-control"> </div>
+                                                </label> <input type="text" required class="form-control"> 
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="card-footer"> 
@@ -67,8 +76,9 @@
                                         <button type="button" class="subscribe btn btn-primary btn-block shadow-sm m-2">
                                             <a href="donation.php" class="text-dark btn">Cancel</a> 
                                         </button>
+                                    </div>    
                                 </form>
-                            </div>
+                            </form>
                         </div> <!-- End -->
                         
                         <!-- bank transfer info -->
@@ -87,7 +97,8 @@
                                     <option>HSBC</option>
                                     <option>Maybank</option>
                                     <option>UOB</option>
-                                </select> </div>
+                                </select> 
+                            </div>
                             <button type="button" class="subscribe btn btn-primary btn-block shadow-sm m-2"> 
                                 <a href="loading.php" class="text-dark btn">Proceed</a> 
                             </button>
@@ -97,13 +108,19 @@
                             <p class="text-muted">Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your donation. </p>
                         </div> <!-- End -->
                         <!-- End -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/payment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  </body>
+  
+    <?php include "foot.php"?>
+
+</body>
+
 </html>

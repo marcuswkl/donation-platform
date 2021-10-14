@@ -15,7 +15,7 @@
 
 <body>
 
-<?php include "../head.php"?>
+<?php include "../head-nested.php"?>
 
   <!-- Showcase -->
   <section class="p-5">
@@ -227,7 +227,7 @@
       </div>
   </section>
 
-<?php include "../foot.php"?>
+<?php include "../foot-nested.php"?>
 
 </body>
 </html>
