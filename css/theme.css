@@ -1,0 +1,15 @@
+body {
+    background-color: #ECFDEF;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+
+.banner-title-font {
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+*:not(i){
+    font-family: 'Titillium Web', sans-serif;
+  }
