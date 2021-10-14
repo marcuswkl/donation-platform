@@ -28,15 +28,20 @@
     }
     .body{
         background-color:#ECFDEF;
-        max-width:600px;
-        margin:auto;
+        
+        
+    }
+    .body-container{
+            height:80vh;
+
     }
     </style>
     
 </head>
 <body class="body">
-    <?php include "admin-login/php/head.php"?>
-    <table>
+    <?php include "head.php"?>
+    <div class="container body-container">
+    <table class="mt-5" style="display: flex;text-align: center; align-items:center;justify-content:center;">
         <tr style="text-align:center;"><td colspan="2"><h2><u>Fundraiser Information</u></h2></td></tr>
     
         <tr>
@@ -86,10 +91,12 @@
         </tr>
     </table>
 
-
+<br>
 <div style="display:flex;align-items:center;justify-content:center;">
-<input class="buttoncenter btn btn-primary" type="submit" value="Submit">    
+<input class="buttoncenter btn btn-primary rounded-pill border-dark" type="submit" value="Submit">    
 </div>
-<?php include "admin-login/php/foot.php"?>
+</div>
+<?php include "foot.php"?>
+
 </body>
 </html>
