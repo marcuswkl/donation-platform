@@ -1,3 +1,12 @@
+.fr-project1-edit-progress-bar {
+    background-color: #52B788;
+    font-size: 1.25rem;
+}
+
+.fr-project1-edit-progress-labels > span {
+    font-size: 1.2rem;
+}
+
 .fr-project1-edit-cancel, .fr-project1-edit-submit {
     background-color: #52B788;
     border-radius: 1.5rem;
