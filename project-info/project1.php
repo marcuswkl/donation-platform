@@ -30,6 +30,8 @@
 
 <body>
 
+<?php include "../head.php"?>
+
   <!-- Showcase -->
   <section class="p-5">
     <div class="row text-left g-4">
@@ -239,6 +241,8 @@
         </div>
       </div>
   </section>
+
+<?php include "../foot.php"?>
 
 </body>
 </html>
