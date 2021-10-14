@@ -1,9 +1,14 @@
 body{
     background-color: #ECFDEF;
+    font-family: 'Titillium Web';
 }
 
 .btn-primary{
     background-color:#52B788 !important;
     color: #000;
     margin-bottom: 0.5em;
+}
+
+.btn-primary .text-decoration-none{
+    color: #000000 !important;
 }
