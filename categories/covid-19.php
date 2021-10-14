@@ -60,7 +60,7 @@
         <button type="button" class="btn btn-primary toolbar-child">DONATE</button>
     </div>
 
-    <div class="container-md project-list">
+    <div class="container-fluid project-list">
         <div class="row justify-content-center">
             <div class="col-md px-5 py-2">
                 <a href="#">
