@@ -1,9 +1,9 @@
 body{
     background-color: #ECFDEF;
     font-family: 'Titillium Web';
-    overflow-x: hidden;
+    /* overflow-x: hidden;
     margin-right: 3%;
-    margin-left: 3%;
+    margin-left: 3%; */
 }
 
 .tableheader{
@@ -13,6 +13,10 @@ body{
 .tabledata{
     background-color:#B2E1CC;
     text-align:center;
+}
+
+.body-container{
+    height:80vh;
 }
 
 @media (max-width: 425px) { 

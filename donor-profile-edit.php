@@ -13,6 +13,7 @@
     <title>Edit Donor Profile</title>
   </head>
   <body>
+  <?php include "head.php"?>
   <div class="text-center p-5">
         <h1 class="display-2">Edit Profile</h1>
   </div>
@@ -33,10 +34,10 @@
               <input class="form-control" id="disabledInput" type="text" placeholder="limleehong@gmail.com" disabled>
               </div>
             </div>    
-            <button class="btn btn-primary m-2 rounded-pill border-dark">
+            <button class="btn btn-primary m-3 mb-5 rounded-pill border-dark">
               <a href = "donor-profile.php" class="text-dark btn">Cancel</a>
             </button>
-            <button class="btn btn-primary m-2 rounded-pill border-dark">
+            <button class="btn btn-primary m-3 mb-5 rounded-pill border-dark">
             <a href = "donor-profile.php" class="text-dark btn">Save</a>  
             </button> 
           </form>
@@ -44,5 +45,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+    <?php include "foot.php"?>
   </body>
 </html>
