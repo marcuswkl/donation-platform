@@ -25,12 +25,10 @@
         </h3>
     </div>
 
-    <div class="position-relative">
-      <div class="position-absolute end-0">
-      <button  class="btn btn-primary m-5 " >
-            <a href="project1.php" class="text-dark btn">Learn more</a> 
-        </button>
-      </div>
+    <div class="text-center"> 
+      <button class="btn btn-primary m-5 rounded-pill border-dark">
+        <a href = "project1.php" class="text-dark btn">Learn more</a>
+      </button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
