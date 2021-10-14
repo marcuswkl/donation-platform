@@ -25,6 +25,7 @@
     }
     .buttoncenter{
         background-color:#52B788;
+        color:#000000;
     }
     .body{
         background-color:#ECFDEF;
