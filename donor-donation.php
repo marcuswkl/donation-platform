@@ -50,7 +50,7 @@
     </table>
 
     <div class="text-center">
-      <button class="btn btn-primary m-3">
+      <button class="btn btn-primary m-3 rounded-pill border-dark">
         <a href = "donor-profile.php" class="text-dark btn">Back</a>
       </button>
     </div>
