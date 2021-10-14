@@ -4,8 +4,9 @@
     }
 }
 
-.bi-person-circle {
-    font-size: 10rem;
+.fr-profile-image {
+    width: 35%;
+    border-radius: 50%;
 }
 
 .fr-profile-description {
