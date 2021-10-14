@@ -21,11 +21,16 @@
         color:#000000;
         background-color:#52B788;
     }
+    .body-container{
+            height:80vh;
+
+    }
     </style>
     
 </head>
-<?php include "admin-login/php/head.php"?>
+<?php include "head.php"?>
 <body class="body">
+<div class="body-container">
     <h3>Click on the Project Name to edit!</h3>
     <table class="table table-bordered border-white">
         <tr class="tableheader">
@@ -78,9 +83,11 @@
         </tr>
         
     </table>
+    <br>
     <div style="display:flex;align-items:center;justify-content:center;">
-    <a href="project-dashboard.php" class="btn btn-primary buttoncenter" role="button">Dashboard</a>
+    <a href="project-dashboard.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Dashboard</a>
     </div>
-    <?php include "admin-login/php/foot.php"?>
+    </div>
+    <?php include "foot.php"?>
 </body>
 </html>
