@@ -6,11 +6,12 @@
 }
 
 .bi-facebook{
-    color: rgb(36, 88, 159);
+    color: white;
     border-radius: 1em 1em 0em 1em;
     font-size: 2em;
-    background-color: white;
+    background-color: #24589F;
     padding: 0rem 0.15rem;
+    
 }
 
 
