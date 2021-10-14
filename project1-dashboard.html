@@ -42,7 +42,7 @@
             </div>
 
             <div class="row mb-4">
-                <label for="textAreaProjectDescription" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Project Description:</label>
+                <label for="textAreaProjectDescription" class="col-sm-3 col-form-label col-form-label-lg w-100 form-label-fr-project1-edit">Project Description:</label>
                 <textarea class="form-control form-control-lg form-control-fr-project1-edit fr-project1-edit-textarea" id="textAreaProjectDescription" rows="3">The Derek Edmonds Scholarship Fund seeks to provide financial aid to deserving students to pursue further education in Malaysia. Scholarship applications will be opened in November 2021 for January 2022 intake students.</textarea>
             </div>
             
@@ -55,22 +55,27 @@
 
             <div class="row mb-4">
                 <label for="inputProjectPhotos" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Project Photos:</label>
-                <div class="col-sm-9">
+                <div class="col-sm-9 input-group input-group-lg fr-project1-edit-input-group">
                     <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectPhotos" value="de-scholarship-fund.jpg">
+                    <button class="btn border border-dark border-start-0" type="button" id="input-group-button-upload">
+                        <i class="bi bi-upload"></i>
+                    </button>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <label for="inputGoalAmount" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Goal Amount:</label>
-                <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputGoalAmount" value="RM3000">
+                <div class="col-sm-9 input-group input-group-lg fr-project1-edit-input-group">
+                    <span class="input-group-text border border-dark border-end-0 input-group-text-currency" style="    border-radius: 1.5rem 0rem 0rem 1.5rem;">RM</span>
+                    <input type="number" class="form-control form-control-lg border-start-0 form-control-fr-project1-edit" id="inputGoalAmount" value="3000">
                 </div>
             </div>
 
             <div class="row mb-4">
                 <label for="inputStartingAmount" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Starting Amount:</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputStartingAmount" value="RM0">
+                <div class="col-sm-9 input-group input-group-lg fr-project1-edit-input-group">
+                    <span class="input-group-text border border-dark border-end-0 input-group-text-currency" style="    border-radius: 1.5rem 0rem 0rem 1.5rem;">RM</span>
+                    <input type="number" class="form-control form-control-lg border-start-0 form-control-fr-project1-edit" id="inputStartingAmount" value="0">
                 </div>
             </div>
             
