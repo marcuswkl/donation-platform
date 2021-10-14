@@ -7,3 +7,14 @@
     background-color: #52B788;
     border-radius: 1.5em;
 }
+
+.fr-profile-edit-textarea {
+    width: 97%;
+    margin-left: 0.5rem;
+}
+
+@media only screen and (min-width: 992px) {
+    .fr-profile-edit-textarea {
+        margin-left: 0.75rem;
+    }
+}
