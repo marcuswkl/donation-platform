@@ -1,0 +1,9 @@
+.fr-profile-image {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.fr-profile-edit-upload, .fr-profile-edit-cancel, .fr-profile-edit-submit {
+    background-color: #52B788;
+    border-radius: 1.5em;
+}
