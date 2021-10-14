@@ -6,13 +6,13 @@
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     
-    <link href = "../CSS/head.css" type = "text/css" rel = "stylesheet">
+    <link href = "../css/head.css" type = "text/css" rel = "stylesheet">
     </head>
 
     <body>
     <nav class="navbar navbar-expand-md navbar-light head">
         <div class="container">
-            <a href="#"> <img src="../icons/Logo.png" alt="logo" class = "mx-2 logo"></a>
+            <a href="#"> <img src="../resources/img/Logo.png" alt="logo" class = "mx-2 logo"></a>
 
             <button class="navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navmenu">
                 <span class="navbar-toggler-icon"></span>
@@ -33,7 +33,7 @@
                     </li>
 
                     <li class="nav-item menu">
-                        <a href="#" class = "nav=link"><img src="../icons/Logout.png" alt="logout" class = "logout">Log Out</a>
+                        <a href="#" class = "nav=link"><img src="../resources/img/Logout.png" alt="logout" class = "logout">Log Out</a>
                     </li>
                 </ul>              
             </div>           
