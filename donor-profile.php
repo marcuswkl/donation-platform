@@ -23,10 +23,10 @@
             <p class="text-secondary mb-1">limleehong@gmail.com</p>
         </div>    
         <div class="d-flex flex-column bd-highlight mb-3">
-            <button  class="btn btn-primary" >
+            <button  class="btn btn-primary rounded-pill border-dark" >
               <a href = "donor-profile-edit.php" class="text-dark btn">Edit Profile</a>
             </button>
-            <button  class="btn btn-primary">
+            <button  class="btn btn-primary rounded-pill border-dark">
               <a href = "donor-donation.php" class="text-dark btn">View Donations</a>
             </button>
         </div>
