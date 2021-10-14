@@ -14,6 +14,17 @@
     box-shadow: 0.2rem 0.2rem gray;
 }
 
+.fr-project1-edit-textarea {
+    width: 97%;
+    margin-left: 0.5rem;
+}
+
+@media only screen and (min-width: 992px) {
+    .fr-project1-edit-textarea {
+        margin-left: 0.75rem;
+    }
+}
+
 #input-group-button-upload {
     background-color: #D8F3DC;
     box-shadow: 0.2rem 0.2rem gray;
@@ -33,15 +44,8 @@
     border-radius: 0rem 1.5rem 1.5rem 0rem;
 }
 
-.fr-project1-edit-textarea {
-    width: 97%;
-    margin-left: 0.5rem;
-}
-
-@media only screen and (min-width: 992px) {
-    .fr-project1-edit-textarea {
-        margin-left: 0.75rem;
-    }
+.bi-arrow-right {
+    font-size: 2rem;
 }
 
 .fr-project1-edit-cancel, .fr-project1-edit-submit {
