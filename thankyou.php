@@ -16,13 +16,13 @@
     <div class="text-center p-5">
         <h1 class="display-2">Thank you for your donation</h1>
     </div>
-    <div class="text-center">
-        <p class="lead">
+    <div class="text-center p-4 ">
+        <h3>
             <ul class="list-unstyled">
                 <li>RM20.00 is contributed to <p><strong>Empower Children Through Education.</strong></p> </li>
                 <li>An email receipt and token of appreciation will be sent to your email.</li>
             </ul>        
-        </p>
+        </h3>
     </div>
 
     <div class="position-relative">
