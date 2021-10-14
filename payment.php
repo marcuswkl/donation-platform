@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     
-    <link rel="stylesheet" type="text/css" href="css/payment1.1.css">
+    <link rel="stylesheet" type="text/css" href="css/payment.css">
     <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
     <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel='stylesheet'>
     <title>Payment</title>
