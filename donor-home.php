@@ -6,12 +6,10 @@
   <meta name="viewport" content="width=device-width, maximum-scale=1">
   <title>Donor Homepage</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
   <link href="css/donation-home.css" rel="stylesheet" type="text/css">
-
 </head>
 
-<body>
+<body style= "background-color:#ECFDEF;">
   <?php include "head.php" ?>
 <section id = "top">
   <div class="container">
@@ -206,7 +204,7 @@
       </div>
     </div>
   </section>
-
+<br><br>
   <?php include "foot.php" ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
