@@ -3,3 +3,9 @@ body{
     font-family: 'Titillium Web';
     overflow-x: hidden;
 }
+
+.btn-primary{
+    background-color:#52B788 !important;
+    color: #000;
+    margin-bottom: 0.5em;
+}
