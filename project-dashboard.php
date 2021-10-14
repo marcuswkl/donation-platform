@@ -15,14 +15,12 @@
         }
         .body{
         background-color:#ECFDEF;
-        padding-top:100px;
+        
         }
         .skill{
             width:160px;
             height:160px;
             position:relative;
-            
-           
             
 
         }
@@ -115,22 +113,26 @@
             }
         }
         
-        hr{
-            border:4px solid #2D6A4F;
-            border-radius: 5px;
-            
-        }
+        
         .buttoncenter{
         color:#000000;
         background-color:#52B788;
+        
 
-    }
+        }
+        .body-container{
+            height:80vh;
+
+        }
         
     </style>
 </head>
 <body class="body">
-<?php include "admin-login/php/head.php"?>
-    <table style="display: flex;text-align: center; align-items:center;justify-content:center;">
+<?php include "head.php"?>
+    <div class="container body-container">
+
+    
+    <table class="mt-5" style="display: flex;text-align: center; align-items:center;justify-content:center;">
         <tr>
             <td style="padding-right:100px;">
                 <div class="skill">
@@ -205,17 +207,16 @@
         
         
     </table>
-    <div>
-        <br>
-        <br>    
-        <hr>    
-    </div>
+       
+    <br>
+    <br>    
+    
     <div style="display:flex;justify-content:space-around">
-    <a href="ShowProject.php" class="btn btn-primary buttoncenter" role="button">Show Projects</a>
-    <a href="StartProject.php" class="btn btn-primary buttoncenter" role="button">Start Project</a>
+    <a href="ShowProject.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Show Projects</a>
+    <a href="StartProject.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Start Project</a>
     </div>    
     
-
+    </div>    
     <script>
         let number = document.getElementById("number");
         let counter=0;
@@ -241,9 +242,8 @@
                 }
             },20);
     </script>
-    <script>
-            
-    </script>
-    <?php include "admin-login/php/foot.php"?>
+    
+
+    <?php include "foot.php"?>
 </body>
 </html>
