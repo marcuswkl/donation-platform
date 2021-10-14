@@ -7,3 +7,27 @@ body{
     background-color:#52B788 !important;
     color: #000;
 }
+
+button{
+    margin:1em;
+}
+
+.rounded {
+    border-radius: 1rem
+}
+
+.nav-pills .nav-link {
+    color: #555
+}
+
+.nav-pills .nav-link.active {
+    color: white
+}
+
+input[type="radio"] {
+    margin-right: 5px
+}
+
+.bold {
+    font-weight: bold
+}
