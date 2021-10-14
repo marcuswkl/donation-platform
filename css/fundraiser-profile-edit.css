@@ -8,6 +8,14 @@
     border-radius: 1.5em;
 }
 
+.fr-profile-edit-cancel {
+    padding: 0.5rem 2rem;
+}
+
+.fr-profile-edit-submit {
+    padding: 0.2rem 2rem;
+}
+
 .fr-profile-edit-textarea {
     width: 97%;
     margin-left: 0.5rem;

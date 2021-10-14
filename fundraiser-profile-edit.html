@@ -16,12 +16,13 @@
 
 <body>
     <section class="container fr-profile-edit">
-        <h1 class="fr-profile-edit-title fw-bold text-decoration-underline">Profile</h1>
-        <img src="/resources/img/fr-profile.png" class="fr-profile-image img-fluid my-5" alt="Fundraiser Profile">
+        <div class="fr-profile-edit-top text-center">
+            <h1 class="fr-profile-edit-title fw-bold text-decoration-underline">Edit Profile</h1>
+            <img src="/resources/img/fr-profile.png" class="fr-profile-image img-fluid m-5" alt="Fundraiser Profile">
+            <button class="btn-lg border-dark fr-profile-edit-upload">Upload Image</button>
+        </div>
 
-        <button class="btn-lg border-dark fr-profile-edit-upload">Upload Image</button>
-        
-        <form>
+        <form class="mb-5 fr-profile-edit-form">
             <div class="row mb-3">
               <label for="inputFullName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Full Name:</label>
               <div class="col-sm-9">
@@ -78,14 +79,16 @@
 
             <div class="row mb-3">
                 <label for="inputBankName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Bank Name:</label>
-                <div class="col-sm-9">
+                <div class="col-sm-9 mb-3">
                     <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputBankName" value="United Private Bank">
                 </div>
             </div>
 
-            <a class="btn-lg border border-dark link-dark text-decoration-none fr-profile-edit-cancel" href="fundraiser-profile.php">Cancel</a>
-            <button type="submit" class="btn-lg border-dark fr-profile-edit-submit">Submit</button>
-          </form>
+            <div class="fr-profile-edit-form-buttons text-center">
+                <a class="btn-lg border border-dark link-dark text-decoration-none m-5 fr-profile-edit-cancel" href="fundraiser-profile.php">Cancel</a>
+                <button type="submit" class="btn-lg border-1 border-dark fr-profile-edit-submit">Save</button>
+            </div>
+        </form>
     </section>
     
     <!-- Bootstrap JS CDN -->
