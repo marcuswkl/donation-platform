@@ -53,7 +53,7 @@
       </div>
 
       <div class="text-center"> 
-        <button type="submit" class="btn btn-primary m-3 rounded-pill ">
+        <button type="submit" class="btn btn-primary m-3 rounded-pill border-dark">
           <a href = "payment.php" class="text-dark btn">DONATE</a>
         </button>
       </div>
