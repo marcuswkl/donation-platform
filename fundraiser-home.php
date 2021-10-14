@@ -25,6 +25,7 @@
     
 </head>
 <body class="body">
+    <?php include "../head.php"?>
     <h3>Click on the Project Name to edit!</h3>
     <table class="table table-bordered border-white">
         <tr class="tableheader">
@@ -80,5 +81,6 @@
     <div style="display:flex;align-items:center;justify-content:center;">
     <a href="project-dashboard.php" class="btn btn-primary buttoncenter" role="button">Dashboard</a>
     </div>
+    <?php include "../foot.php"?>
 </body>
 </html>
