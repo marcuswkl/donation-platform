@@ -1,6 +1,6 @@
 <!-- Bootstrap Icons CDN -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
-<link href="css/foot.css" type="text/css" rel="stylesheet">
+<link href="../css/foot.css" type="text/css" rel="stylesheet">
 
 <footer class="p-3 footer" style="background-color: #B2E1CC; border-top: 2px solid black">
     <div class="d-flex justify-content-start align-items-center">

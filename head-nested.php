@@ -1,8 +1,8 @@
-<link href="css/head.css" type="text/css" rel="stylesheet">
+<link href="../css/head.css" type="text/css" rel="stylesheet">
 
 <nav class="navbar navbar-expand-md navbar-light head">
     <div class="container topnav-container">
-        <a href="#"> <img src="resources/img/Logo.png" alt="logo" class="mx-2 logo"></a>
+        <a href="#"> <img src="../resources/img/Logo.png" alt="logo" class="mx-2 logo"></a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="d-flex navbar-nav ms-auto">
                 <li class="nav-item menu ">
-                    <a href="#" class="nav=link"><img src="resources/img/Logout.png" alt="logout" class="logout">Log Out</a>
+                    <a href="#" class="nav=link"><img src="../resources/img/Logout.png" alt="logout" class="logout">Log Out</a>
                 </li>
             </ul>
         </div>
