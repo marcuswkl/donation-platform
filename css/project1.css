@@ -128,7 +128,7 @@ body{
 
 .btn-donate{
     background-color: #52B788; 
-    border: black;
+    border: 1px solid black;
     color: black;
     padding: 9px 32px;
     text-align: center;
