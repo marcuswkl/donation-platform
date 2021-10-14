@@ -23,7 +23,8 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="project1.css">
+    <link href="../css/project1.css" rel="stylesheet" type="text/css"> 
+    <link href="../css/theme.css" rel="stylesheet" type="text/css"> 
     <title>Project Info</title>
   </head>
 
@@ -41,13 +42,13 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="img/showcase1.png" class="img-fluid d-block w-100" alt="Children Picture 1">
+              <img src="../resources/img/showcase1.png" class="img-fluid d-block w-100" alt="Children Picture 1">
             </div>
             <div class="carousel-item">
-              <img src="img/showcase2.png" class="img-fluid d-block w-100" alt="Children Picture 2">
+              <img src="../resources/img/showcase2.png" class="img-fluid d-block w-100" alt="Children Picture 2">
             </div>
             <div class="carousel-item">
-              <img src="img/showcase3.png" class="img-fluid d-block w-100" alt="Children Picture 3">
+              <img src="../resources/img/showcase3.png" class="img-fluid d-block w-100" alt="Children Picture 3">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselImage" data-bs-slide="prev">
@@ -61,11 +62,11 @@
         </div>
       </div>
       <div class="col-lg-5 main-info">
-          <h1 class="d-flex location"><img src="img/location-icon.png" class="img-fluid d-block mx-3 location-icon" alt="Location Icon"><strong>Kajang, Selangor</strong></h1>
+          <h1 class="d-flex location"><img src="../resources/img/location-icon.png" class="img-fluid d-block mx-3 location-icon" alt="Location Icon"><strong>Kajang, Selangor</strong></h1>
           <h1 class="lead showcase-title">Empower Children Through Education</h1>
           <p class="fundraiser">Fundraiser >> Bunway</p>
           <div class="d-flex">
-            <img src="img/goal-icon.png" class="img-fluid d-block mx-3 goal-icon" alt="Goal Icon">
+            <img src="../resources/img/goal-icon.png" class="img-fluid d-block mx-3 goal-icon" alt="Goal Icon">
             <div class="d-flex flex-column">
               <div>
                 <p class="align-items-left funds"><strong>RM3,000 raised</strong> of RM 5,000</p>
@@ -114,7 +115,7 @@
   <section id="story" class="p-5">
       <div class="row align-items-center justify-content-between g-4">
         <div class="col-md">
-          <img src="img/story.png" class="img-fluid" alt="Children writing on boards" />
+          <img src="../resources/img/story.png" class="img-fluid" alt="Children writing on boards" />
         </div>
         <div class="col-md p-3 small-sized">
           <h2><u>THEIR STORY</u></h2>
@@ -140,7 +141,7 @@
           <p>Website: <a href="#">bunway.com</a></p>
         </div>
         <div class="col-md">
-          <img src="img/organisation.png" class="img-fluid" alt="Bunway Committees" />
+          <img src="../resources/img/organisation.png" class="img-fluid" alt="Bunway Committees" />
         </div>
       </div>
   </section>
@@ -149,7 +150,7 @@
   <section id="organisation" class="p-5 bg-lightgreen resized-organisation">
       <div class="row align-items-center justify-content-between">
         <div class="col-md">
-          <img src="img/organisation.png" class="img-fluid" alt="Bunway Committees" />
+          <img src="../resources/img/organisation.png" class="img-fluid" alt="Bunway Committees" />
         </div>
         <div class="col-md p-3">
           <h2><u>ABOUT BUNWAY</u></h2>
@@ -199,7 +200,7 @@
                 by Sunway Student Ambassadors
               </p>
               <img
-                src="img/explore.png"
+                src="../resources/img/explore.png"
                 class="mb-1"
                 alt="Children running in the school compound"
               />
@@ -214,7 +215,7 @@
                 by Sunway Student Ambassadors
               </p>
               <img
-                src="img/explore.png"
+                src="../resources/img/explore.png"
                 class="mb-1"
                 alt="Children running in the school compound"
               />
@@ -229,7 +230,7 @@
                 by Sunway Student Ambassadors
               </p>
               <img
-                src="img/explore.png"
+                src="../resources/img/explore.png"
                 class="mb-1"
                 alt="Children running in the school compound"
               />
