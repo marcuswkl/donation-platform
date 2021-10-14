@@ -22,7 +22,7 @@
 
     
         <div class="d-block text-center">
-            <form action="" style = "height: 55vh;">
+            <form action="donor-home.php" style = "height: 55vh;">
 
                 <div class="mb-3">
                     <input type="text" id="name" name="name" placeholder = " Full Name / Email"><br>

@@ -22,7 +22,7 @@
 
     
         <div class="d-block text-center">
-            <form action="" style = "height: 45vh;">
+            <form action="login.php" style = "height: 45vh;">
 
                 <div class="mb-3">
                     <input type="text" id="name" name="name" placeholder = " Name"><br>
