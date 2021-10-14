@@ -13,6 +13,7 @@
 
 <body>
   <?php include "head.php" ?>
+<section id = "top">
   <div class="container">
     <div class="inner_section">
       <div class="row">
@@ -26,180 +27,88 @@
     </div>
   </div>
   </div>
+</section>
   <!--Aboutus-->
 
-  <section id="Portfolio" class="content">
-
-    <!-- Container -->
-    <div class="container portfolio_title">
-
-      <!-- Title -->
-      <div class="section-title">
-        <h2>Categories</h2>
-      </div>
-      <!--/Title -->
-
-    </div>
-    <!-- Container -->
-
-    <div class="portfolio-top"></div>
-
-    <!-- Portfolio Filters -->
-    <div class="portfolio">
-
-      <div id="filters" class="sixteen columns">
-        <ul class="clearfix">
-          <li><a id="all" href="#" data-filter="*" class="active">
-              <h5>All</h5>
-            </a></li>
-          <li><a class="" href="#" data-filter=".food">
-              <h5>Food Supply</h5>
-            </a></li>
-          <li><a class="" href="#" data-filter=".education">
-              <h5>Education</h5>
-            </a></li>
-          <li><a class="" href="#" data-filter=".covid">
-              <h5>Covid-19</h5>
-            </a></li>
-          <li><a class="" href="#" data-filter=".disaster">
-              <h5>Natural Disaster</h5>
-            </a></li>
-        </ul>
-      </div>
-      <!--/Portfolio Filters -->
-
-      <!-- Portfolio Wrapper -->
-      <div class="isotope fadeInLeft animated wow grid" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper">
-        <!-- Portfolio Item -->
-        <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   disaster isotope-item effect-oscar">
-
-          <div class="portfolio_img">
-            <img src="resources/img/donor-home-natural.png" alt="Natural Disaster">
-          </div>
-          <figcaption>
-            <div>
-              <h2><span>Disaster</span></h2>
-              <p>Save the Earth and our People</p>
-              </a>
+  
+  <section id="gallery">
+      <div class="container">
+        <br><br><br><br><br><br>
+              <h2>Categories</h2>
+            <div class="row">
+                <div class="col-md-4 mt-3 col-lg-3">
+                  <figure>
+                    <img src="resources/img/donor-home-covid1.png" class="img-fluid" alt="image">
+                      <div class="service_block">
+                        <h3 class="animated fadeInUp wow">Covid 19 </h3>
+                        <p class="animated fadeInDown wow">Buy them Mask and Supplies</p>
+                      </div>   
+                </div>
+                <div class="col-md-4 mt-3 col-lg-3">
+                  <figure>
+                    <img src="resources/img/donor-home-covid2.png" class="img-fluid" alt="image">
+                      <div class="service_block">
+                        <h3 class="animated fadeInUp wow">Covid 19 </h3>
+                        <p class="animated fadeInDown wow">Buy them Mask and Supplies</p>
+                      </div>   
+                </div>
+                <div class="col-md-4 mt-3 col-lg-3">
+                  <figure>
+                    <img src="resources/img/donor-home-education.png" class="img-fluid" alt="image">
+                      <div class="service_block">
+                        <h3 class="animated fadeInUp wow">Education </h3>
+                        <p class="animated fadeInDown wow">Kids Deserve to go to School</p>
+                      </div>   
+                </div>
+                <div class="col-md-4 mt-3 col-lg-3">
+                  <figure>
+                    <img src="resources/img/donor-home-education2.png" class="img-fluid" alt="image">
+                      <div class="service_block">
+                        <h3 class="animated fadeInUp wow">Education </h3>
+                        <p class="animated fadeInDown wow">Kids Deserve to go to School</p>
+                      </div>   
+                </div>
+                <div class="col-md-4 mt-3 col-lg-3">
+                  <figure>
+                    <img src="resources/img/donor-home-food.png" class="img-fluid" alt="image">
+                      <div class="service_block">
+                        <h3 class="animated fadeInUp wow">Food Supply </h3>
+                        <p class="animated fadeInDown wow">Dont Let them Starve</p>
+                      </div>   
+                </div>
+                <div class="col-md-4 mt-3 col-lg-3">
+                  <figure>
+                    <img src="resources/img/donor-home-food2.png" class="img-fluid" alt="image">
+                      <div class="service_block">
+                        <h3 class="animated fadeInUp wow">Food Supply </h3>
+                        <p class="animated fadeInDown wow">Dont Let them Starve</p>
+                      </div>   
+                </div>
+                <div class="col-md-4 mt-3 col-lg-3">
+                  <figure>
+                    <img src="resources/img/donor-home-natural.png" class="img-fluid" alt="image">
+                      <div class="service_block">
+                        <h3 class="animated fadeInUp wow">Natural Disaster </h3>
+                        <p class="animated fadeInDown wow">Save the Earth and our People</p>
+                      </div>               
+                </div>
+                <div class="col-md-4 mt-3 col-lg-3">
+                  <figure>
+                    <img src="resources/img/donor-home-natural2.png" class="img-fluid" alt="image">
+                      <div class="service_block">
+                        <h3 class="animated fadeInUp wow">Natural Disaster </h3>
+                        <p class="animated fadeInDown wow">Save the Earth and our People</p>
+                      </div>                 
+                </div>
             </div>
-          </figcaption>
-        </figure>
-        <!--/Portfolio Item -->
-
-        <!-- Portfolio Item-->
-        <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  food isotope-item effect-oscar">
-          <div class="portfolio_img"> <img src="resources/img/donor-home-food.png" alt="food supply"> </div>
-          <figcaption>
-            <div>
-              <h2>Food <span>Supply</span></h2>
-              <p>Dont Let them Starve</p>
-              </a>
-            </div>
-          </figcaption>
-        </figure>
-        <!--/Portfolio Item -->
-
-        <!-- Portfolio Item -->
-        <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  education  isotope-item effect-oscar">
-          <div class="portfolio_img"> <img src="resources/img/donor-home-education2.png" alt="education"> </div>
-          <figcaption>
-            <div>
-              <h2><span>Education</span></h2>
-              <p>Kids Deserve to go to School</p>
-              </a>
-            </div>
-          </figcaption>
-        </figure>
-        <!--/Portfolio Item-->
-
-        <!-- Portfolio Item-->
-        <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  education  nature web isotope-item effect-oscar">
-          <div class="portfolio_img"> <img src="resources/img/donor-home-education.png" alt="education"> </div>
-          <figcaption>
-            <div>
-              <h2><span>Education</span></h2>
-              <p>Kids Deserve to go to School</p>
-              </a>
-            </div>
-          </figcaption>
-        </figure>
-        <!-- Portfolio Item -->
-
-        <!-- Portfolio Item -->
-        <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  covid isotope-item effect-oscar">
-          <div class="portfolio_img"> <img src="resources/img/donor-home-covid2.png" alt="covid19"> </div>
-          <figcaption>
-            <div>
-              <h2>Covid <span>19</span></h2>
-              <p>Buy them Mask and Supplies</p>
-              </a>
-            </div>
-          </figcaption>
-        </figure>
-        <!--/Portfolio Item -->
-
-        <!-- Portfolio Item -->
-        <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four covid web isotope-item effect-oscar">
-          <div class="portfolio_img"> <img src="resources/img/donor-home-covid1.png" alt="covid19"> </div>
-          <figcaption>
-            <div>
-              <h2>Covid <span>19</span></h2>
-              <p>Buy them Mask and Supplies</p>
-              </a>
-            </div>
-          </figcaption>
-        </figure>
-        <!--/Portfolio Item -->
-
-        <!-- Portfolio Item  -->
-        <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  disaster web isotope-item effect-oscar">
-          <div class="portfolio_img"> <img src="resources/img/donor-home-natural3.png" alt="Natural Disaster"> </div>
-          <figcaption>
-            <div>
-              <h2> <span>Disaster</span></h2>
-              <p>Save the Earth and our People</p>
-              </a>
-            </div>
-          </figcaption>
-        </figure>
-        <!--/Portfolio Item -->
-
-        <!-- Portfolio Item -->
-        <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   disaster isotope-item effect-oscar">
-          <div class="portfolio_img"> <img src="resources/img/donor-home-natural2.png" alt="Natural Disaster"> </div>
-          <figcaption>
-            <div>
-              <h2> <span>Disaster</span></h2>
-              <p>Save the Earth and our People</p>
-              </a>
-            </div>
-          </figcaption>
-        </figure>
-        <!--/Portfolio Item -->
-
-      </div>
-      <!--/Portfolio Wrapper -->
-
-    </div>
-    <!--/Portfolio Filters -->
-
-    <div class="portfolio_btm"></div>
-
-
-    <div id="project_container">
-      <div class="clear"></div>
-      <div id="project_data"></div>
-    </div>
-
-
+        </div>
   </section>
-  <!--/Portfolio -->
-
 
   <!--Service-->
   <section id="service">
     <div class="container">
-      <h2>How To Be An Anonym-Us Angel?</h2>
+      <br><br>
+      <h2 style="color:black">How To Be An Anonym-Us Angel?</h2>
       <div class="service_wrapper">
         <div class="row">
           <div class="col-md-3 col-sm-6 col-xs-12">
@@ -240,106 +149,68 @@
   </section>
   <!--Service-->
 
-  </section>
-
-  <section class="accordion-section clearfix mt-3" aria-label="Question Accordions">
+  <section class="accordionqna">
     <div class="container">
-
       <h2>Frequently Asked Questions </h2>
-      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-          <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
-            <h3 class="panel-title">
-              <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
-                Who am I donating to?
-              </a>
-            </h3>
-          </div>
-          <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
-            <div class="panel-body px-3 mb-4">
-              <p>You'll be donating to a random NGO/Companies dedicated to the categories that you have chosen previously. All the donations done will be anonymous as information of the donors will not be exposed to anyone.</p>
-            </div>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Who am I donating to?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">You'll be donating to a random NGO/Companies dedicated to the categories that you have chosen previously. All the donations done will be anonymous as information of the donors will not be exposed to anyone.</div>
           </div>
         </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
-            <h3 class="panel-title">
-              <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                Who is the team behind Anonym-Us Angels?
-              </a>
-            </h3>
-          </div>
-          <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
-            <div class="panel-body px-3 mb-4">
-              <p>The team behind Anonym-Us Angels consists of 7 members which are Marcus (Leader), Chin Wai Siong, Darren, Wen Jun, Jia Xin, Amber and also Javier.</p>
-            </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Who is the team behind Anonym-Us Angels?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">The team behind Anonym-Us Angels consists of 7 members which are Marcus (Leader), Chin Wai Siong, Darren, Wen Jun, Jia Xin, Amber and also Javier.</div>
           </div>
         </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
-            <h3 class="panel-title">
-              <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                What are the categories of the donations?
-              </a>
-            </h3>
-          </div>
-          <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
-            <div class="panel-body px-3 mb-4">
-              <p>There are FOUR donation categories in total which are Covid-19, Natural Disaster, Education, and lastly, Food Supply.</p>
-            </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              What are the categories of the donations?
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">There are FOUR donation categories in total which are Covid-19, Natural Disaster, Education, and lastly, Food Supply.</div>
           </div>
         </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
-            <h3 class="panel-title">
-              <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-                Why is the donation being done anonymously?
-              </a>
-            </h3>
-          </div>
-          <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
-            <div class="panel-body px-3 mb-4">
-              <p>The donation is being done anonymously is to protect our client's identity(donors) so that the donors can donate freely and without any disturbance or external issues.</p>
-            </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              Why is the donation being done anonymously?
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">The donation is being done anonymously is to protect our client's identity(donors) so that the donors can donate freely and without any disturbance or external issues.</div>
           </div>
         </div>
-
-        <div class="panel panel-default">
-          <div class="panel-heading p-3 mb-3" role="tab" id="heading4">
-            <h3 class="panel-title">
-              <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="true" aria-controls="collapse4">
-                Who designed this wonderful homepage?
-              </a>
-            </h3>
-          </div>
-          <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
-            <div class="panel-body px-3 mb-4">
-              <p>Totally not Wai Siong</p>
-            </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+               Who designed this wonderful homepage?
+            </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Totally not Wai Siong</div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
   <?php include "foot.php" ?>
 
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
-  <script type="text/javascript" src="js/jquery.nav.js"></script>
-  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-  <script type="text/javascript" src="js/jquery.isotope.js"></script>
-  <script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-  <script type="text/javascript" src="js/wow.js"></script>
-  <script type="text/javascript" src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
 
 </body>
 
