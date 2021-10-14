@@ -10,85 +10,91 @@
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/fundraiser-profile-edit.css">
+    <link rel="stylesheet" href="css/project1-dashboard.css">
     <style>@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');</style>
-    <title>Fundraiser Edit Profile</title>
+    <title>Edit Project1</title>
 </head>
 
 <body>
     <!-- <?php include 'head.php';?> -->
-    <section class="container my-5 fr-profile-edit">
-        <div class="fr-profile-edit-top text-center">
-            <h1 class="fr-profile-edit-title fw-bold text-decoration-underline">Edit Profile</h1>
-            <img src="resources/img/fr-profile.png" class="fr-profile-image img-fluid m-5" alt="Fundraiser Profile">
-            <button class="btn-lg border-dark fr-profile-edit-upload">Upload Image</button>
+    <section class="container my-5 fr-project1-edit">
+        <div class="fr-project1-edit-top text-center">
+            <h1 class="fr-project1-edit-title fw-bold text-decoration-underline">Manage Project</h1>
+            <!-- Progress Bar -->
         </div>
 
-        <form class="fr-profile-edit-form">
+        <form class="fr-project1-edit-form">
             <div class="row mb-4">
-              <label for="inputFullName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Full Name:</label>
+              <label for="inputProjectName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Project Name:</label>
               <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputFullName" value="Derek Edmonds Foundation">
+                <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectName" value="Derek Edmonds Scholarship Fund">
               </div>
             </div>
 
-            <div class="row mb-3">
-                <label for="inputSSMRegNo" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">SSM Registration Number:</label>
-                <div class="col-sm-9">
-                  <input type="number" class="form-control form-control-lg form-control-fr-profile-edit" id="inputSSMRegNo" value="201902123456" disabled>
-                </div>
-            </div>
-
             <div class="row mb-4">
-                <label for="textAreaDescription" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Description:</label>
-                <textarea class="form-control form-control-lg form-control-fr-profile-edit fr-profile-edit-textarea" id="textAreaDescription" rows="3">The Derek Edmonds Foundation seeks to provide education opportunities to underprivileged children in Malaysia. We believe that everyone should have equal opportunities to obtain education and achieve their dreams.</textarea>
+                <label for="textAreaProjectDescription" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Project Description:</label>
+                <textarea class="form-control form-control-lg form-control-fr-project1-edit fr-project1-edit-textarea" id="textAreaProjectDescription" rows="3">The Derek Edmonds Scholarship Fund seeks to provide financial aid to deserving students to pursue further education in Malaysia. Scholarship applications will be opened in November 2021 for January 2022 intake students.</textarea>
             </div>
             
             <div class="row mb-4">
-                <label for="inputEmail" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Email:</label>
+                <label for="inputProjectLocation" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Project Location:</label>
                 <div class="col-sm-9">
-                    <input type="email" class="form-control form-control-lg form-control-fr-profile-edit" id="inputEmail" value="derekefoundation@gmail.com">
+                    <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectLocation" value="Klang Valley, Malaysia">
                 </div>
             </div>
 
             <div class="row mb-4">
-                <label for="inputPhoneNo" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Phone Number:</label>
+                <label for="inputProjectPhotos" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Project Photos:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputPhoneNo" value="+6031234567">
+                    <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectPhotos" value="de-scholarship-fund.jpg">
                 </div>
             </div>
 
             <div class="row mb-4">
-                <label for="inputWebsite" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Website:</label>
+                <label for="inputGoalAmount" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Goal Amount:</label>
                 <div class="col-sm-9">
-                <input type="url" class="form-control form-control-lg form-control-fr-profile-edit" id="inputWebsite" value="https://www.derekedmondsfoundation.com">
+                <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputGoalAmount" value="RM3000">
                 </div>
             </div>
 
             <div class="row mb-4">
-                <label for="inputBankAccNo" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Bank Account Number:</label>
+                <label for="inputStartingAmount" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Starting Amount:</label>
                 <div class="col-sm-9">
-                    <input type="number" class="form-control form-control-lg form-control-fr-profile-edit" id="inputBankAccNo" value="1234567890">
+                    <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputStartingAmount" value="RM0">
                 </div>
             </div>
             
             <div class="row mb-4">
-                <label for="inputAccHolderName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Account Holder Name:</label>
+                <label for="inputGoalStatus" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Goal Status:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputAccHolderName" value="Derek Edmonds">
+                    <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputGoalStatus" value="Derek Edmonds">
                 </div>
             </div>
 
             <div class="row mb-4">
-                <label for="inputBankName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Bank Name:</label>
+                <label for="inputCategory" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Category:</label>
                 <div class="col-sm-9 mb-3">
-                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputBankName" value="United Private Bank">
+                    <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputCategory" value="United Private Bank">
                 </div>
             </div>
 
-            <div class="fr-profile-edit-form-buttons text-center">
-                <a class="btn-lg border border-dark link-dark text-decoration-none m-5 fr-profile-edit-cancel" href="fundraiser-profile.php">Cancel</a>
-                <button type="submit" class="btn-lg border-1 border-dark fr-profile-edit-submit">Save</button>
+            <div class="row mb-4">
+                <label for="inputDate1" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Date:</label>
+                <div class="col-sm-9">
+                  <input type="date" class="form-control form-control-lg form-control-fr-project1-edit" id="inputDate1" value="2021-10-01">
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <label for="inputDate2" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Date:</label>
+                <div class="col-sm-9">
+                  <input type="date" class="form-control form-control-lg form-control-fr-project1-edit" id="inputDate2" value="2021-10-31">
+                </div>
+            </div>
+
+            <div class="fr-project1-edit-form-buttons text-center">
+                <a class="btn-lg border border-dark link-dark text-decoration-none m-5 fr-project1-edit-cancel" href="fundraiser-profile.php">Cancel</a>
+                <button type="submit" class="btn-lg border-1 border-dark fr-project1-edit-submit">Save</button>
             </div>
         </form>
     </section>
