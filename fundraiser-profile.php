@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <?php include 'head.php';?>
     <section class="container text-center fr-profile">
         <h1 class="fr-profile-title fw-bold text-decoration-underline">Profile</h1>
         <img src="/resources/img/fr-profile.png" class="fr-profile-image img-fluid my-5" alt="Fundraiser Profile">
@@ -29,6 +30,7 @@
         </div>
         <a class="btn-lg border border-dark link-dark text-decoration-none fr-profile-button-edit" href="fundraiser-profile-edit.php">Edit Profile</a>
     </section>
+    <?php include 'foot.php';?>
     
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
