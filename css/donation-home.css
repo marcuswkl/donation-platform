@@ -3,7 +3,7 @@ figcaption{
 }
 
 body {
-    background-color:#B2E1CC;
+    background-color:#ECFDEF;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: normal;
@@ -15,7 +15,6 @@ body {
 
 h2 {
     font-size: 38px;
-    color: #222222;
     font-family: 'Raleway', sans-serif;
     font-weight: normal;
     margin: 0px 0 25px 0;
@@ -26,14 +25,12 @@ h2 {
 h3 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    color: #222222;
     font-size: 18px;
     margin: 0 0 5px 0;
 }
 
 h6 {
     font-size: 16px;
-    color: #888888;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     text-align: center;
@@ -46,7 +43,6 @@ p {
 }
 
 .caption h2{
-color:#FFE270;
 line-height:45px;
 font-size: 50px;
 }
@@ -62,10 +58,7 @@ font-size: 50px;
     height:100%;
 }
 
-#service h2{
-  color: #fff;
 
-}
 .service_wrapper {
     padding: 40px 0 40px;
 }
@@ -111,18 +104,16 @@ text-align: center;
 }
 
 .service_block h3 {
+    color: #000;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 25px;
-    color: #fff;
-margin: 35px 0 15px; 
+    margin: 35px 0 15px; 
 }
 #service h6{
-color:#fff;
 }
 .service_block p {
     font-size: 16px;
-    color: black;
     margin: 0 0 35px 0; 
 }
 	
@@ -192,7 +183,6 @@ background-position-y: 70px;
 	position: relative;
 	list-style-type: none;
 	padding: 5px 0 5px 30px;
-	color: #010100;
 }
 
 .about-us .points:before{
@@ -200,7 +190,6 @@ background-position-y: 70px;
 	position: absolute;
     font-family: FontAwesome;
 	font-size: 1.125em;
-	color: #F74D4D;
 	left: 0px;
 	top: 3px;
 }
@@ -209,4 +198,7 @@ background-position-y: 70px;
 	margin-left: 0;
 }
 
+.service_block h3{
+    color:black
+}
 
