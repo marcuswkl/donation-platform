@@ -17,14 +17,14 @@
 
 <body>
     <?php include 'head.php';?>
-    <section class="container fr-profile-edit">
+    <section class="container my-5 fr-profile-edit">
         <div class="fr-profile-edit-top text-center">
             <h1 class="fr-profile-edit-title fw-bold text-decoration-underline">Edit Profile</h1>
-            <img src="/resources/img/fr-profile.png" class="fr-profile-image img-fluid m-5" alt="Fundraiser Profile">
+            <img src="resources/img/fr-profile.png" class="fr-profile-image img-fluid m-5" alt="Fundraiser Profile">
             <button class="btn-lg border-dark fr-profile-edit-upload">Upload Image</button>
         </div>
 
-        <form class="mb-5 fr-profile-edit-form">
+        <form class="fr-profile-edit-form">
             <div class="row mb-4">
               <label for="inputFullName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Full Name:</label>
               <div class="col-sm-9">

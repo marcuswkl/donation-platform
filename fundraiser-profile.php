@@ -17,9 +17,9 @@
 
 <body>
     <?php include 'head.php';?>
-    <section class="container text-center fr-profile">
+    <section class="container text-center my-5 fr-profile">
         <h1 class="fr-profile-title fw-bold text-decoration-underline">Profile</h1>
-        <img src="/resources/img/fr-profile.png" class="fr-profile-image img-fluid my-5" alt="Fundraiser Profile">
+        <img src="resources/img/fr-profile.png" class="fr-profile-image img-fluid my-5" alt="Fundraiser Profile">
         <h2 class="fr-profile-name">Derek Edmonds Foundation</h2>
         <h6 class="fr-profile-ssm">SSM: 201902123456</h6>
         <p class="fr-profile-description lead">The Derek Edmonds Foundation seeks to provide education opportunities to underprivileged children in Malaysia. We believe that everyone should have equal opportunities to obtain education and achieve their dreams.</p>
