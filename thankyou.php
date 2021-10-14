@@ -27,7 +27,7 @@
 
     <div class="text-center"> 
       <button class="btn btn-primary m-5 rounded-pill border-dark">
-        <a href = "project1.php" class="text-dark btn">Learn more</a>
+        <a href = "project-info/project1.php" class="text-dark btn">Learn more</a>
       </button>
     </div>
 
