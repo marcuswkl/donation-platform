@@ -20,9 +20,9 @@
         <p class="text-center">Anonym-Us Angels</p>
 
         <div class = "text-center">
-            <a href="#"><img src="../resources/img/Facebook.png" alt="facebook"></a>
-            <a href="#"><img src="../resources/img/Instagram.png" alt="instagram"></a>
-            <a href="#"><img src="../resources/img/Twitter.png" alt="twitter"></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
         </div>
 
         
