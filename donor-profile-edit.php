@@ -19,7 +19,7 @@
 
   <div class="text-center">
         <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 m-3 bg-primary" width="110">
-          <button class="btn btn-primary">Upload Image</button>
+          <button class="btn btn-primary rounded-pill border-dark">Upload Image</button>
           <form>
             <div class="row mb-3 justify-content-sm-center">
               <label for="fullName" class="col-sm-2 col-form-label">Full Name:</label>
@@ -33,10 +33,10 @@
               <input class="form-control" id="disabledInput" type="text" placeholder="limleehong@gmail.com" disabled>
               </div>
             </div>    
-            <button class="btn btn-primary m-2">
+            <button class="btn btn-primary m-2 rounded-pill border-dark">
               <a href = "donor-profile.php" class="text-dark btn">Cancel</a>
             </button>
-            <button class="btn btn-primary m-2">
+            <button class="btn btn-primary m-2 rounded-pill border-dark">
             <a href = "donor-profile.php" class="text-dark btn">Save</a>  
             </button> 
           </form>
