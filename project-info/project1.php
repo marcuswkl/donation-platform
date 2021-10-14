@@ -70,9 +70,8 @@
               <div>
                 <p class="align-items-left funds"><strong>RM3,000 raised</strong> of RM 5,000</p>
               </div>
-              <div class="d-flex">
-                <div class="goal-progress"></div>
-                <div class="goal-bar"></div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
               </div>
             </div>
           </div>
