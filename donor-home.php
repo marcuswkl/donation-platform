@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1">
 <title>Donor Homepage</title>
-<link rel="icon" href="favicon.png" type="image/png">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/donation-home.css" rel="stylesheet" type="text/css"> 
 
 </head>
 
 <body>
+<?php include "head.php"?>
   <div class="container">
     <div class="inner_section">
  <div class="row">
@@ -18,7 +18,7 @@
         <h2 style="padding-top: 250px;">Anonym-us Angel</h2>
         <h3>A fundraising platform which allows you to donate to an anonymous project under a selected category so that every project is supported.</h3>               
       </div>
-            <div class="col-md-6"> <img class="img-responsive" src="img/angel.png" align=""> </div>
+            <div class="col-md-6"> <img class="img-responsive" src="resources/img/angel.png" align=""> </div>
 
     </div>
        </div>
@@ -72,7 +72,7 @@
       <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   disaster isotope-item effect-oscar">
      
         <div class="portfolio_img"> 
-    <img src="img/natural.png"  alt="Natural Disaster"> </div> 
+    <img src="resources/img/donor-home-natural.png"  alt="Natural Disaster"> </div> 
       <figcaption>    
         <div>
           <h2><span>Disaster</span></h2>
@@ -85,7 +85,7 @@
       
       <!-- Portfolio Item-->
       <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  food isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/food.png" alt="food supply"> </div>
+        <div class="portfolio_img"> <img src="resources/img/donor-home-food.png" alt="food supply"> </div>
           <figcaption>    
         <div>
           <h2>Food <span>Supply</span></h2>
@@ -98,7 +98,7 @@
       
       <!-- Portfolio Item -->
       <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  education  isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/education2.png" alt="education"> </div>
+        <div class="portfolio_img"> <img src="resources/img/donor-home-education2.png" alt="education"> </div>
        <figcaption>   
         <div>
           <h2><span>Education</span></h2>
@@ -111,7 +111,7 @@
       
       <!-- Portfolio Item-->
       <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  education  nature web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/education.png" alt="education"> </div>
+        <div class="portfolio_img"> <img src="resources/img/donor-home-education.png" alt="education"> </div>
          <figcaption>   
         <div>
           <h2><span>Education</span></h2>
@@ -124,7 +124,7 @@
       
       <!-- Portfolio Item -->
       <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  covid isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/covid2.png" alt="covid19"> </div>
+        <div class="portfolio_img"> <img src="resources/img/donor-home-covid2.png" alt="covid19"> </div>
        <figcaption>   
         <div>
           <h2>Covid <span>19</span></h2>
@@ -137,7 +137,7 @@
       
       <!-- Portfolio Item -->
       <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four covid web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/covid1.png" alt="covid19"> </div>
+        <div class="portfolio_img"> <img src="resources/img/donor-home-covid1.png" alt="covid19"> </div>
        <figcaption>   
         <div>
           <h2>Covid <span>19</span></h2>
@@ -150,7 +150,7 @@
       
       <!-- Portfolio Item  -->
       <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  disaster web isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/natural3.png" alt="Natural Disaster"> </div>       
+        <div class="portfolio_img"> <img src="resources/img/donor-home-natural3.png" alt="Natural Disaster"> </div>       
        <figcaption>   
         <div>
           <h2> <span>Disaster</span></h2>
@@ -163,7 +163,7 @@
       
       <!-- Portfolio Item -->
       <figure style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   disaster isotope-item effect-oscar">
-        <div class="portfolio_img"> <img src="img/natural2.png" alt="Natural Disaster"> </div>       
+        <div class="portfolio_img"> <img src="resources/img/donor-home-natural2.png" alt="Natural Disaster"> </div>       
       <figcaption>    
         <div>
           <h2> <span>Disaster</span></h2>
@@ -199,31 +199,31 @@
     <h2>How To Be An Anonym-Us Angel?</h2>
     <div class="service_wrapper">
       <div class="row">
-        <div class="col-md-3">
-    <div class="delay-03s animated wow  zoomIn"><img src="img/1.png" alt=" 1" style="padding-left: 60px;padding-bottom: 10px;"> </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="delay-03s animated wow  zoomIn"><img src="resources/img/donor-home-1.png" alt=" 1" style="padding-left: 70px;padding-bottom: 5px;"> </div>
           <div class="service_block">
             <br>
             <h3 class="animated fadeInUp wow">Choose a category </h3>
             <p class="animated fadeInDown wow">Which has the project that you would like to support</p>
           </div>
         </div>
-        <div class="col-md-3"> 
-    <div class="delay-03s animated wow zoomIn"><img src="img/2.png" alt="2" style="padding-left: 60px; padding-bottom: 10px;"> </div> 
+        <div class="col-md-3 col-sm-6 col-xs-12"> 
+    <div class="delay-03s animated wow zoomIn"><img src="resources/img/donor-home-2.png" alt="2" style="padding-left: 80px; padding-bottom: 10px;"> </div> 
     <div class="service_block">
             <h3 class="animated fadeInUp wow">Donate</h3>
             <p class="animated fadeInDown wow">and make payment  </p>
           </div>
         </div>
-        <div class="col-md-3">
-    <div class="delay-03s animated wow zoomIn"><img src="img/3.png" alt="3" style="padding-left: 60px;"></div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="delay-03s animated wow zoomIn"><img src="resources/img/donor-home-3.png" alt="3" style="padding-left: 80px;"></div>
           <div class="service_block">
             <br>
             <h3 class="animated fadeInUp wow">Get Appreciated</h3>
             <p class="animated fadeInDown wow">by receving a Thank You note truly by us and a receipt</p>
           </div>
         </div>
-      <div class="col-md-3">
-    <div class="delay-03s animated wow zoomIn"><img src="img/4.png" alt="4" style="padding-left: 60px;"></div>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="delay-03s animated wow zoomIn"><img src="resources/img/donor-home-4.png" alt="4" style="padding-left: 80px;"></div>
           <div class="service_block">
             <br><br>
             <h3 class="animated fadeInUp wow">Understand</h3>
@@ -322,6 +322,8 @@
   
   </div>
 </section>
+ 
+<?php include "foot.php"?>
 
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
