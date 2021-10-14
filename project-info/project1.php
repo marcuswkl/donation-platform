@@ -96,7 +96,7 @@
           <a href="#messages" class="nav-link">MESSAGES</a>
         </li>
         <li class="nav-item col-md">
-          <button class="btn btn-light btn-md btn-donate" type="button">DONATE</button>
+          <button class="btn btn-light btn-md btn-donate rounded-pill" type="button">DONATE</button>
         </li>
       </ul>
     </div>
