@@ -11,20 +11,18 @@
 
 <body style= "background-color:#ECFDEF;">
   <?php include "head.php" ?>
-<section id = "top">
-  <div class="container">
-    <div class="inner_section">
+<section class="mt-5" id = "top">
+    <div class="container inner_section text-center">
       <div class="row">
-        <div class="col-md-6">
-          <h2 style="padding-top: 250px;">Anonym-us Angel</h2>
+        <div class="col-md-8 my-auto">
+          <h2>Anonym-us Angel</h2>
           <h3>A fundraising platform which allows you to donate to an anonymous project under a selected category so that every project is supported.</h3>
         </div>
-        <div class="col-md-6"> <img class="img-responsive  img-fluid" src="resources/img/angel.png" align=""> </div>
 
+        <div class="col-md-4"> <img class="img-responsive  img-fluid" id="donor-home-img-angel" src="resources/img/angel.png">
+        </div>
       </div>
     </div>
-  </div>
-  </div>
 </section>
   <!--Aboutus-->
 
