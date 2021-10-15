@@ -19,7 +19,7 @@
           <h2 style="padding-top: 250px;">Anonym-us Angel</h2>
           <h3>A fundraising platform which allows you to donate to an anonymous project under a selected category so that every project is supported.</h3>
         </div>
-        <div class="col-md-6"> <img class="img-responsive" src="resources/img/angel.png" align=""> </div>
+        <div class="col-md-6"> <img class="img-responsive  img-fluid" src="resources/img/angel.png" align=""> </div>
 
       </div>
     </div>
