@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link href="../css/covid-19.css" rel="stylesheet">
+    <link href="../css/theme.css" rel="stylesheet">
     <title>Covid-19</title>
 </head>
 
@@ -57,13 +58,13 @@
             </ul>
         </div>
 
-        <button type="button" class="btn btn-primary toolbar-child">DONATE</button>
+        <button type="button" class="btn btn-success toolbar-child">DONATE</button>
     </div>
 
     <div class="container-fluid project-list">
         <div class="row justify-content-center">
             <div class="col-md px-5 py-2">
-                <a href="#">
+                <a href="../project-info/project1.php">
                     <div class="d-flex align-items-center pt-3">
                         <img src="https://via.placeholder.com/1920x1080" class="project-list-image">
                     </div>
@@ -85,7 +86,7 @@
             </div>
 
             <div class="col-md px-5 py-2">
-                <a href="#">
+                <a href="../project-info/project1.php">
                     <div class="d-flex align-items-center pt-3">
                         <img src="https://via.placeholder.com/1920x1080" class="project-list-image">
                     </div>
@@ -108,7 +109,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md px-5 py-2">
-                <a href="#">
+                <a href="../project-info/project1.php">
                     <div class="d-flex align-items-center pt-3">
                         <img src="https://via.placeholder.com/1920x1080" class="project-list-image">
                     </div>
@@ -130,7 +131,7 @@
             </div>
 
             <div class="col-md px-5 py-2">
-                <a href="#">
+                <a href="../project-info/project1.php">
                     <div class="d-flex align-items-center pt-3">
                         <img src="https://via.placeholder.com/1920x1080" class="project-list-image">
                     </div>
