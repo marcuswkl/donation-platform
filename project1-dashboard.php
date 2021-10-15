@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <!-- <?php include 'head.php';?> -->
+    <?php include 'head.php';?>
     <section class="container my-5 fr-project1-edit">
         <div class="fr-project1-edit-top text-center">
             <h1 class="fr-project1-edit-title fw-bold text-decoration-underline">Manage Project</h1>
@@ -137,12 +137,12 @@
             </div>
 
             <div class="fr-project1-edit-form-buttons text-center">
-                <a class="btn-lg border border-dark link-dark text-decoration-none m-5 fr-project1-edit-cancel" href="fundraiser-profile.php">Cancel</a>
+                <a class="btn-lg border border-dark link-dark text-decoration-none m-5 fr-project1-edit-cancel" href="fundraiser-home.php">Cancel</a>
                 <button type="submit" class="btn-lg border-1 border-dark fr-project1-edit-submit">Save</button>
             </div>
         </form>
     </section>
-    <!-- <?php include 'foot.php';?> -->
+    <?php include 'foot.php';?>
 
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
