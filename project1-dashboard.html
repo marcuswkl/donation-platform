@@ -92,16 +92,25 @@
             </div>
             
             <div class="row mb-4">
-                <label for="inputGoalStatus" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Goal Status:</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputGoalStatus" value="Derek Edmonds">
+                <label for="selectGoalStatus" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Goal Status:</label>
+                <div class="col-sm-4">
+                    <select class="form-select form-select-lg form-select-fr-project1-edit" id="selectGoalStatus">
+                        <option value="active" selected>Active</option>
+                        <option value="completed">Completed</option>
+                        <option value="on-hold">On Hold</option>
+                    </select>
                 </div>
             </div>
 
             <div class="row mb-4">
-                <label for="inputCategory" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Category:</label>
-                <div class="col-sm-9 mb-3">
-                    <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputCategory" value="United Private Bank">
+                <label for="selectCategory" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Category:</label>
+                <div class="col-sm-4 mb-3">
+                    <select class="form-select form-select-lg form-select-fr-project1-edit" id="selectCategory">
+                        <option value="covid-19">COVID-19</option>
+                        <option value="education" selected>Education</option>
+                        <option value="food-supply">Food Supply</option>
+                        <option value="natural-disaster">Natural Disaster</option>
+                    </select>
                 </div>
             </div>
 
@@ -123,7 +132,7 @@
                 </div>
 
                 <div class="col-sm-4">
-                    <input type="date" class="form-control form-control-lg form-control-fr-project1-edit"> 
+                    <input type="date" class="form-control form-control-lg form-control-fr-project1-edit" id="inputDate2" value="2021-10-31">
                 </div>
             </div>
 

@@ -7,7 +7,7 @@
     font-size: 1.2rem;
 }
 
-.form-control-fr-project1-edit {
+.form-control-fr-project1-edit, .form-select-fr-project1-edit {
     background-color: #D8F3DC;
     border: 1px solid black;
     border-radius: 1.5rem;
