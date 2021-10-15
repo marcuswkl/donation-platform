@@ -27,7 +27,7 @@
   <!--Aboutus-->
 
   
-  <section id="gallery">
+  <section class="mb-5" id="gallery">
       <div class="container">
         <br><br><br><br><br><br>
               <h2>Categories</h2>
@@ -103,35 +103,34 @@
   <!--Service-->
   <section id="service">
     <div class="container">
-      <br><br>
       <h2 style="color:black">How To Be An Anonym-Us Angel?</h2>
       <div class="service_wrapper">
         <div class="row">
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="delay-03s animated wow  zoomIn"><img src="resources/img/donor-home-1.png" alt=" 1" style="padding-left: 70px;padding-bottom: 5px;"> </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+            <div class="delay-03s animated wow  zoomIn"><img src="resources/img/donor-home-1.png" alt="1" style="padding-bottom: 5px;"> </div>
             <div class="service_block">
               <br>
               <h3 class="animated fadeInDown wow" style="color:black" >Choose a category </h3>
               <p class="animated fadeInDown wow">Which has the project that you would like to support</p>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="delay-03s animated wow zoomIn"><img src="resources/img/donor-home-2.png" alt="2" style="padding-left: 80px; padding-bottom: 10px;"> </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+            <div class="delay-03s animated wow zoomIn"><img src="resources/img/donor-home-2.png" alt="2" style="padding-bottom: 10px;"> </div>
             <div class="service_block">
               <h3 class="animated fadeInDown wow"style="color:black">Donate</h3>
               <p class="animated fadeInDown wow">and make payment </p>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="delay-03s animated wow zoomIn"><img src="resources/img/donor-home-3.png" alt="3" style="padding-left: 80px;"></div>
+          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+            <div class="delay-03s animated wow zoomIn"><img src="resources/img/donor-home-3.png" alt="3"></div>
             <div class="service_block">
               <br>
               <h3 class="animated fadeInDown wow"style="color:black">Get Appreciated</h3>
               <p class="animated fadeInDown wow">by receving a Thank You note truly by us and a receipt</p>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="delay-03s animated wow zoomIn"><img src="resources/img/donor-home-4.png" alt="4" style="padding-left: 80px;"></div>
+          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+            <div class="delay-03s animated wow zoomIn"><img src="resources/img/donor-home-4.png" alt="4"></div>
             <div class="service_block">
               <br><br>
               <h3 class="animated fadeInDown wow"style="color:black">Understand</h3>
