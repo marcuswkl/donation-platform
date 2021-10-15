@@ -1,0 +1,62 @@
+.fr-project1-edit-progress-bar {
+    background-color: #52B788;
+    font-size: 1.25rem;
+}
+
+.fr-project1-edit-progress-labels > span {
+    font-size: 1.2rem;
+}
+
+.form-control-fr-project1-edit, .form-select-fr-project1-edit {
+    background-color: #D8F3DC;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    box-shadow: 0.2rem 0.2rem gray;
+}
+
+.fr-project1-edit-textarea {
+    width: 97%;
+    margin-left: 0.5rem;
+}
+
+@media only screen and (min-width: 992px) {
+    .fr-project1-edit-textarea {
+        margin-left: 0.75rem;
+    }
+}
+
+#input-group-button-upload {
+    background-color: #D8F3DC;
+    box-shadow: 0.2rem 0.2rem gray;
+    border-radius: 0rem 1.5rem 1.5rem 0rem;
+}
+
+#inputProjectPhotos{
+    border-radius: 1.5rem 0rem 0rem 1.5rem;
+}
+
+.input-group-text-currency {
+    background-color: #D8F3DC;
+    box-shadow: 0.2rem 0.2rem gray;
+}
+
+#inputGoalAmount, #inputStartingAmount {
+    border-radius: 0rem 1.5rem 1.5rem 0rem;
+}
+
+.bi-arrow-right {
+    font-size: 2rem;
+}
+
+.fr-project1-edit-cancel, .fr-project1-edit-submit {
+    background-color: #52B788;
+    border-radius: 1.5rem;
+}
+
+.fr-project1-edit-cancel {
+    padding: 0.2rem 2rem;
+}
+
+.fr-project1-edit-submit {
+    padding: 0.2rem 2rem;
+}
