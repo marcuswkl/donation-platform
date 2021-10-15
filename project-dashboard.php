@@ -212,8 +212,8 @@
     <br>    
     
     <div style="display:flex;justify-content:space-between">
-    <a href="ShowProject.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Show Projects</a>
-    <a href="StartProject.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Start Project</a>
+    <a href="fundraiser-home.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Show Projects</a>
+    <a href="project1-dashboard.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Start Project</a>
     </div>    
     
     </div>    
