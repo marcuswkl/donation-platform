@@ -8,11 +8,7 @@
     border-radius: 1.5rem;
 }
 
-.fr-profile-edit-cancel {
-    padding: 0.5rem 2rem;
-}
-
-.fr-profile-edit-submit {
+.fr-profile-edit-cancel, .fr-profile-edit-submit {
     padding: 0.2rem 2rem;
 }
 
