@@ -8,21 +8,21 @@
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel = "stylesheet" href = "./CSS/registration.css">
-    <title>Registraion</title>
+    <title>Registration</title>
 </head>
 
 <body>
-    
+<?php include "head.php"?>
+
 <div class="content">
-    <?php include "head.php"?>
     
-        <div class="mt-3 mb-4">
+        <div class="mb-4">
+            <br><br>
             <h1>Registration</h1>
         </div>
 
     
         <div class="d-block text-center">
-            <form action="login.php" style = "height: 45vh;">
 
                 <div class="mb-3">
                     <input type="text" id="name" name="name" placeholder = " Name"><br>
@@ -47,7 +47,6 @@
                 
                     <div class="form-check">
                         <input type="radio" class = "form-check-input" name = "type" id = "donor" checked>
-
                         <label class = "form-check-label" for="donor">Donor</label>
                     </div>
 
@@ -55,24 +54,21 @@
                     
                     <div class="form-check">
                         <input type="radio" class = "form-check-input" name = "type" id = "fundraiser">
-
-                        <label class = "form-check-label" for="donor">Fundraiser</label>
+                        <label class = "form-check-label" for="fundraiser">Fundraiser</label>
                     </div>
                 </div>
-                <input type="submit" class = "submit"><br>
-            </form>    
+                <input type="submit" class = "submit" onclick="display()"><br>
         </div>
 
         
     <br><br><br>
 
-    <?php include "foot.php"?>
 
     
 </div>
 
-
-
+    <?php include "foot.php"?>
+    <script src="js/registration.js"></script>
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>

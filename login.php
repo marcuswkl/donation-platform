@@ -12,14 +12,13 @@
 </head>
 
 <body>
-    
+<?php include "head.php"?>
+
 <div class="content">
-    <?php include "head.php"?>
-    
-        <div class="mt-4 mb-4">
+        <br><br><br>
+        <div class="mb-4">
             <h1>Login</h1>
         </div>
-
     
         <div class="d-block text-center">
             <form action="donor-home.php" style = "height: 55vh;">
