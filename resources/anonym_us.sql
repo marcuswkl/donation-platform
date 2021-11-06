@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 06, 2021 at 07:19 AM
+-- Generation Time: Nov 06, 2021 at 08:21 AM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.11
 
@@ -97,8 +97,17 @@ CREATE TABLE `user` (
   `name` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `isAdmin` enum('yes','no') NOT NULL
+  `type` enum('donor','fundraiser','admin') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`userId`, `name`, `email`, `password`, `type`) VALUES
+(12, 'wais100', 'waisiong144@gmail.com', '$2y$10$EvGVktKwoeK1.0oneuUsJ.NgkkuAEDox5hyxKaY6FfSheakRh23je', 'donor'),
+(14, 'wais200', 'admin1@hotmail.com', '$2y$10$lgdbKQqkjh3W/LTOCP.cAOEARzPd8ILdwQz8m0RAMf.9pLFcTgwtu', 'fundraiser');
+
 --
 -- Indexes for dumped tables
 --
@@ -168,7 +177,7 @@ ALTER TABLE `project`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userId` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `userId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
