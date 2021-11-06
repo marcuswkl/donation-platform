@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 31, 2021 at 11:59 AM
+-- Generation Time: Nov 06, 2021 at 07:19 AM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.11
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `donation_history` (
-  `donationId` varchar(255) NOT NULL,
+  `donationId` int(255) NOT NULL,
   `date` datetime NOT NULL,
   `amount` double NOT NULL,
   `projectId` varchar(255) NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE `donation_history` (
 --
 
 CREATE TABLE `donor` (
-  `userId` varchar(255) NOT NULL,
+  `userId` int(255) NOT NULL,
   `donationHistory` datetime NOT NULL,
   `donorProfileImage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -56,7 +56,7 @@ CREATE TABLE `donor` (
 --
 
 CREATE TABLE `fundraiser` (
-  `fundraiserId` varchar(255) NOT NULL,
+  `fundraiserId` int(255) NOT NULL,
   `userId` varchar(255) NOT NULL,
   `ssmRegNo` int(11) NOT NULL,
   `phoneNumber` int(11) NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE `fundraiser` (
 --
 
 CREATE TABLE `project` (
-  `projectId` varchar(255) NOT NULL,
+  `projectId` int(255) NOT NULL,
   `projectName` varchar(255) NOT NULL,
   `projectDescription` varchar(255) NOT NULL,
   `projectLocation` varchar(255) NOT NULL,
@@ -93,13 +93,12 @@ CREATE TABLE `project` (
 --
 
 CREATE TABLE `user` (
-  `userId` varchar(255) NOT NULL,
+  `userId` int(255) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `isAdmin` tinyint(1) NOT NULL
+  `isAdmin` enum('yes','no') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
 --
 -- Indexes for dumped tables
 --
@@ -138,32 +137,38 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`userId`);
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Constraints for table `donation_history`
+-- AUTO_INCREMENT for table `donation_history`
 --
 ALTER TABLE `donation_history`
-  ADD CONSTRAINT `fk_fundraiserId` FOREIGN KEY (`fundraiserId`) REFERENCES `fundraiser` (`fundraiserId`);
+  MODIFY `donationId` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for table `donor`
+-- AUTO_INCREMENT for table `donor`
 --
 ALTER TABLE `donor`
-  ADD CONSTRAINT `fk_to_userId` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`);
+  MODIFY `userId` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for table `fundraiser`
+-- AUTO_INCREMENT for table `fundraiser`
 --
 ALTER TABLE `fundraiser`
-  ADD CONSTRAINT `fk_userId` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`);
+  MODIFY `fundraiserId` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for table `project`
+-- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  ADD CONSTRAINT `fk_fundraiserId_project` FOREIGN KEY (`fundraiserId`) REFERENCES `fundraiser` (`fundraiserId`);
+  MODIFY `projectId` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `userId` int(255) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
