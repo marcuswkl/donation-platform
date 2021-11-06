@@ -27,6 +27,10 @@ if(isset($_POST['username']) && isset($_POST['pwd'])){
       if($_SESSION['type'] == 'donor'){
         echo "<script type='text/javascript'>alert('Login Successfully');</script>";
         echo "<script type='text/javascript'>window.location.href = './donor-home.php';</script>";
+      }else if($_SESSION['type'] == 'fundraiser'){
+        echo "<script type='text/javascript'>window.location.href = './fundraiser-home.php';</script>";
+      }else{
+        
       }
 
     }
