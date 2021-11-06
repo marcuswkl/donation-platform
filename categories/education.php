@@ -9,6 +9,8 @@
     <link href="../css/education.css" rel="stylesheet">
     <link href="../css/theme.css" rel="stylesheet">
     <title>Education</title>
+
+    <?php include_once "DbController.php"; ?>
 </head>
 
 <body>
@@ -19,6 +21,7 @@
             <p>Break the barriers to education with your donation.</p>
         </div>
         <div class="float-right align-self-end">
+            <!-- Illustration by <a href="https://icons8.com/illustrations/author/60896eeb088aa7001087bb4d">Rosina Gavrilash</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->
             <img class="banner-img" src="../resources/img/education-banner.png" alt="Education illustration">
         </div>
     </div>
@@ -261,6 +264,3 @@
 </body>
 
 </html>
-
-
-<!-- Illustration by <a href="https://icons8.com/illustrations/author/60896eeb088aa7001087bb4d">Rosina Gavrilash</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->

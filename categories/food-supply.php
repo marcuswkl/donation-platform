@@ -9,6 +9,8 @@
     <link href="../css/food-supply.css" rel="stylesheet">
     <link href="../css/theme.css" rel="stylesheet">
     <title>Food Supply</title>
+
+    <?php include_once "DbController.php"; ?>
 </head>
 
 <body>
@@ -19,6 +21,7 @@
             <p>Send a warm meal and aid food security in poverty-stricken areas.</p>
         </div>
         <div class="float-right align-self-end">
+            <!-- Illustration by <a href="https://icons8.com/illustrations/author/60896eeb088aa7001087bb4d">Rosina Gavrilash</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->
             <img class="banner-img" src="../resources/img/food-supply-banner.png" alt="Food Supply illustration">
         </div>
     </div>
@@ -260,6 +263,3 @@
 </body>
 
 </html>
-
-
-<!-- Illustration by <a href="https://icons8.com/illustrations/author/60896eeb088aa7001087bb4d">Rosina Gavrilash</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->

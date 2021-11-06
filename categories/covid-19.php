@@ -9,6 +9,8 @@
     <link href="../css/covid-19.css" rel="stylesheet">
     <link href="../css/theme.css" rel="stylesheet">
     <title>Covid-19</title>
+
+    <?php include_once "DbController.php";?>
 </head>
 
 <body>
@@ -19,6 +21,7 @@
             <p>Help those who are most vulnerable in the pandemic.</p>
         </div>
         <div class="float-right align-self-end">
+            <!-- Illustration by <a href="https://icons8.com/illustrations/author/60896eeb088aa7001087bb4d">Rosina Gavrilash</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->
             <img class="banner-img" src="../resources/img/covid-19-banner.png" alt="Cvoid-19 illustration">
         </div>
     </div>
@@ -257,9 +260,11 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <?php include '../foot-nested.php'; ?>
+
+    <?php 
+        $query = "SELECT * FROM project";
+        $result = mysqli_query($this->conn, $query);
+    ?>
 </body>
 
 </html>
-
-
-<!-- Illustration by <a href="https://icons8.com/illustrations/author/60896eeb088aa7001087bb4d">Rosina Gavrilash</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->

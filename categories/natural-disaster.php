@@ -9,6 +9,8 @@
     <link href="../css/natural-disaster.css" rel="stylesheet">
     <link href="../css/theme.css" rel="stylesheet">
     <title>Natural Disaster</title>
+
+    <?php include_once "DbController.php"; ?>
 </head>
 
 <body>
@@ -19,6 +21,7 @@
             <p>Natural disasters sucks, so help those less fortunate rebuild houses and regain homes.</p>
         </div>
         <div class="float-right align-self-end">
+            <!-- Illustration by <a href="https://icons8.com/illustrations/author/60896eeb088aa7001087bb4d">Rosina Gavrilash</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->
             <img class="banner-img" src="../resources/img/natural-disaster-banner.png" alt="Natural disaster illustration">
         </div>
     </div>
@@ -260,6 +263,3 @@
 </body>
 
 </html>
-
-
-<!-- Illustration by <a href="https://icons8.com/illustrations/author/60896eeb088aa7001087bb4d">Rosina Gavrilash</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->
