@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 06, 2021 at 07:19 AM
+-- Generation Time: Nov 06, 2021 at 08:47 AM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.11
 
@@ -60,10 +60,19 @@ CREATE TABLE `fundraiser` (
   `userId` varchar(255) NOT NULL,
   `ssmRegNo` int(11) NOT NULL,
   `phoneNumber` int(11) NOT NULL,
-  `billingInformation` varchar(255) NOT NULL,
+  `bankNumber` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `acc_holder_name` varchar(255) NOT NULL,
+  `bank_name` varchar(255) NOT NULL,
   `verifiedStatus` enum('verified','pending','rejected') NOT NULL,
-  `profileImage` varchar(255) NOT NULL
+  `profileImage` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `fundraiser`
+--
+
+INSERT INTO `fundraiser` (`fundraiserId`, `userId`, `ssmRegNo`, `phoneNumber`, `bankNumber`, `acc_holder_name`, `bank_name`, `verifiedStatus`, `profileImage`) VALUES
+(1, '', 123, 123456789, '12345', 'legen', 'meibenk', 'verified', NULL);
 
 -- --------------------------------------------------------
 
@@ -97,8 +106,17 @@ CREATE TABLE `user` (
   `name` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `isAdmin` enum('yes','no') NOT NULL
+  `type` enum('donor','fundraiser','admin') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`userId`, `name`, `email`, `password`, `type`) VALUES
+(12, 'wais100', 'waisiong144@gmail.com', '$2y$10$EvGVktKwoeK1.0oneuUsJ.NgkkuAEDox5hyxKaY6FfSheakRh23je', 'donor'),
+(14, 'wais200', 'admin1@hotmail.com', '$2y$10$lgdbKQqkjh3W/LTOCP.cAOEARzPd8ILdwQz8m0RAMf.9pLFcTgwtu', 'fundraiser');
+
 --
 -- Indexes for dumped tables
 --
@@ -156,7 +174,7 @@ ALTER TABLE `donor`
 -- AUTO_INCREMENT for table `fundraiser`
 --
 ALTER TABLE `fundraiser`
-  MODIFY `fundraiserId` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `fundraiserId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `project`
@@ -168,7 +186,7 @@ ALTER TABLE `project`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userId` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `userId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

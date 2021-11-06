@@ -1,5 +1,8 @@
+<?php require_once 'form-handlers/fund_regis_backend.php';?>
 <!DOCTYPE html>
 <html lang="en">
+<?php require_once 'DbController.php';?>
+
 <head>
     <title>Fundraiser Registration</title>
     <meta charset="utf-8">
@@ -42,6 +45,7 @@
 <body class="body">
     <?php include "head.php"?>
     <div class="container body-container">
+    <form method="post">
     <table class="mt-5" style="display: flex;text-align: center; align-items:center;justify-content:center;">
         <tr style="text-align:center;"><td colspan="2"><h2><u>Fundraiser Information</u></h2></td></tr>
     
@@ -50,7 +54,7 @@
                 <label class="font sline">SSM Registration Number:</label>
             </td>
             <td>
-            <input class="sline2" type="text" aria-label="SSM Registration Number" class="form-control">
+            <input class="sline2" type="text" aria-label="SSM Registration Number" class="form-control" name="ssmRegNo">
             </td>
             
         </tr>
@@ -61,7 +65,7 @@
             
             </td>
             <td>
-                <input class="sline2" type="text" aria-label="Phone Number" class="form-control">
+                <input class="sline2" type="text" aria-label="Phone Number" class="form-control" name="phoneNumber">
             </td>
         </tr>
         <tr style="text-align:center;"><td colspan="2"><h2><u>Bank Account Information</u></h2></td></tr>
@@ -71,7 +75,7 @@
                 <label class="font sline">Bank Account Number:</label>
             </td>
             <td>
-                <input class="sline2" type="text" aria-label="Bank Account Number" class="form-control">
+                <input class="sline2" type="text" aria-label="Bank Account Number" class="form-control" name="bankNumber">
             </td>
         </tr>
         <tr>
@@ -79,7 +83,7 @@
             <label class="font sline">Account Holder Name:</label>
             </td>
             <td>
-            <input class="sline2" type="text" aria-label="Account Holder Name" class="form-control">
+            <input class="sline2" type="text" aria-label="Account Holder Name" class="form-control" name="acc_holder_name">
             </td>
         </tr>
         <tr>
@@ -87,14 +91,16 @@
             <label class="font sline">Bank Name:</label>
             </td>
             <td>
-            <input class="sline2" type="text" aria-label="Bank Name" class="form-control">
+            <input class="sline2" type="text" aria-label="Bank Name" class="form-control" name="bank_name">
             </td>
         </tr>
     </table>
 
 <br>
 <div style="display:flex;align-items:center;justify-content:center;">
-<input class="buttoncenter btn btn-primary rounded-pill border-dark" type="submit" value="Submit">    
+<input type="submit" value="Submit" class="buttoncenter btn btn-primary rounded-pill border-dark submitbtn"><br>
+</form>
+
 </div>
 </div>
 <?php include "foot.php"?>
