@@ -1,5 +1,7 @@
+<?php require_once 'form-handlers/register_backend.php';?>
 <!DOCTYPE html>
 <html lang="en">
+<?php require_once 'DbController.php';?>
 
 <head>
     <meta charset="UTF-8">
@@ -23,21 +25,22 @@
 
     
         <div class="d-block text-center">
+        <form method="post">
 
                 <div class="mb-3">
-                    <input type="text" id="name" name="name" placeholder = " Name"><br>
+                    <input type="text" id="username" name="username" placeholder = " Username"><br>
                 </div>
                 
                 <div class="mb-3">
-                    <input type="text" id="mail" name="mail" placeholder = " Email Address"><br>
+                    <input type="text" id="email" name="email" placeholder = " Email Address"><br>
                 </div>
 
                 <div class="mb-3">
-                    <input type="text" id="password" name="password" placeholder = " Password"><br>
+                    <input type="password" id="pwd" name="pwd" placeholder = " Password"><br>
                 </div>
                 
                 <div class="mb-3">
-                    <input type="text" id="confirm" name="confirm" placeholder = " Confirm Password"><br>
+                    <input type="password" placeholder = " Confirm Password"><br>
                 </div>
                 
 
@@ -46,18 +49,19 @@
                     <label class="form-check">Select User Type:</label>
                 
                     <div class="form-check">
-                        <input type="radio" class = "form-check-input" name = "type" id = "donor" checked>
+                        <input type="radio" name="ans" value="donor" />
                         <label class = "form-check-label" for="donor">Donor</label>
                     </div>
 
                     <br>
                     
                     <div class="form-check">
-                        <input type="radio" class = "form-check-input" name = "type" id = "fundraiser">
+                        <input type="radio" name="ans" value="fundraiser"  />
                         <label class = "form-check-label" for="fundraiser">Fundraiser</label>
                     </div>
                 </div>
-                <input type="submit" class = "submit" onclick="display()"><br>
+                <input type="submit" value="Submit" class="submitbtn"><br>
+        </form>
         </div>
 
         
