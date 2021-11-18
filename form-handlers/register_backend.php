@@ -50,7 +50,7 @@ require_once './DbController.php';
 	  }
 	  else {
       echo "<script type='text/javascript'>alert('invalid data for $data_type');</script>";
-	  echo("<script>window.location = './registration.php';</script>");
-	  }
+	  return "location:./register.php";
+	}
   }
 ?>
