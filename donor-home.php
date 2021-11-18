@@ -33,72 +33,56 @@
               <h2>Categories</h2>
             <div class="row">
                 <div class="col-md-4 mt-3 col-lg-3">
+                <a style = "text-decoration:none; color:black" href="categories/covid-19.php">
                   <figure>
                     <img src="resources/img/donor-home-covid1.png" class="img-fluid" alt="image">
                       <div class="service_block">
                         <h3 class="animated fadeInUp wow" style="color:black">Covid 19 </h3>
                         <p class="animated fadeInDown wow">Buy them Mask and Supplies</p>
-                      </div>   
+                      </div>  
+                  </figure>
+                </a> 
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                  <figure>
-                    <img src="resources/img/donor-home-covid2.png" class="img-fluid" alt="image">
-                      <div class="service_block">
-                        <h3 class="animated fadeInUp wow"style="color:black">Covid 19 </h3>
-                        <p class="animated fadeInDown wow">Buy them Mask and Supplies</p>
-                      </div>   
-                </div>
-                <div class="col-md-4 mt-3 col-lg-3">
+                <a style = "text-decoration:none; color:black" href="categories/education.php">
                   <figure>
                     <img src="resources/img/donor-home-education.png" class="img-fluid" alt="image">
                       <div class="service_block">
                         <h3 class="animated fadeInUp wow"style="color:black">Education </h3>
                         <p class="animated fadeInDown wow">Kids Deserve to go to School</p>
-                      </div>   
+                      </div>  
+                  </figure>
+                </a> 
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                  <figure>
-                    <img src="resources/img/donor-home-education2.png" class="img-fluid" alt="image">
-                      <div class="service_block">
-                        <h3 class="animated fadeInUp wow"style="color:black">Education </h3>
-                        <p class="animated fadeInDown wow">Kids Deserve to go to School</p>
-                      </div>   
-                </div>
-                <div class="col-md-4 mt-3 col-lg-3">
+                <a style = "text-decoration:none; color:black" href="categories/food-supply.php">
                   <figure>
                     <img src="resources/img/donor-home-food.png" class="img-fluid" alt="image">
                       <div class="service_block">
                         <h3 class="animated fadeInUp wow"style="color:black">Food Supply </h3>
                         <p class="animated fadeInDown wow">Dont Let them Starve</p>
-                      </div>   
+                      </div> 
+                  </figure>
+                </a>  
                 </div>
                 <div class="col-md-4 mt-3 col-lg-3">
-                  <figure>
-                    <img src="resources/img/donor-home-food2.png" class="img-fluid" alt="image">
-                      <div class="service_block">
-                        <h3 class="animated fadeInDown wow" style="color:black">Food Supply </h3>
-                        <p class="animated fadeInDown wow">Dont Let them Starve</p>
-                      </div>   
-                </div>
-                <div class="col-md-4 mt-3 col-lg-3">
-                  <figure>
-                    <img src="resources/img/donor-home-natural.png" class="img-fluid" alt="image">
-                      <div class="service_block">
-                        <h3 class="animated fadeInDown wow" style="color:black">Natural Disaster </h3>
-                        <p class="animated fadeInDown wow">Save the Earth and our People</p>
-                      </div>               
-                </div>
-                <div class="col-md-4 mt-3 col-lg-3">
+                <a style = "text-decoration:none; color:black" href="categories/natural-disaster.php">
                   <figure>
                     <img src="resources/img/donor-home-natural2.png" class="img-fluid" alt="image">
                       <div class="service_block">
                         <h3 class="animated fadeInDown wow" style="color:black">Natural Disaster </h3>
                         <p class="animated fadeInDown wow">Save the Earth and our People</p>
-                      </div>                 
+                      </div>   
+                  </figure>
+                </a>              
                 </div>
+            </div>
+            <div class="center">
+              <button type="button" class="btn btn-success toolbar-child">Browse Categories</button>
             </div>
         </div>
   </section>
+  <br>
 
   <!--Service-->
   <section id="service">
