@@ -26,7 +26,7 @@
             <form action="" method="post" style = "height: 55vh;">
 
                 <div class="mb-3">
-                    <input type="text" id="username" name="username" placeholder = " Username"><br>
+                    <input type="text" id="email" name="email" placeholder = " Email"><br>
                 </div>
                 
                 <div class="mb-3">

@@ -28,7 +28,7 @@
         <form method="post">
 
                 <div class="mb-3">
-                    <input type="text" id="username" name="username" placeholder = " Username"><br>
+                    <input type="text" id="fullName" name="fullName" placeholder = "Full Name"><br>
                 </div>
                 
                 <div class="mb-3">

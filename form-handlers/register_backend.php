@@ -2,15 +2,15 @@
 
 require_once './DbController.php';
 
-  if(isset($_POST['username']) && isset($_POST['pwd'])){
+  if(isset($_POST['fullName']) && isset($_POST['pwd'])){
 	
-	$myusername = sanitise($pdo,$_POST['username']);
+	$myusername = sanitise($pdo,$_POST['fullName']);
 	$mypassword = sanitise($pdo,$_POST['pwd']);
 	$mypassword = password_hash($mypassword, PASSWORD_DEFAULT);
 	$email      = sanitise($pdo,$_POST['email']);
 	$tbl_name = 'user';
-	$validation = data_validation($_POST['username'], "/^[a-z\d_]{5,20}$/" , "username");
-  	$validation .= data_validation($_POST['pwd'], '/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{6,12}$/', "password- at least one letter, at least one number, and there have to be 6-12 characters");
+
+	$validation .= data_validation($_POST['pwd'], '/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{6,12}$/', "password- at least one letter, at least one number, and there have to be 6-12 characters");
  	$validation .= data_validation($_POST['email'],  "/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/" , "email");
 	
   
@@ -50,7 +50,7 @@ require_once './DbController.php';
 	  }
 	  else {
       echo "<script type='text/javascript'>alert('invalid data for $data_type');</script>";
-	  echo("<script>window.location = './registration.php';</script>");
-	  }
+	  return "location:./register.php";
+	}
   }
 ?>
