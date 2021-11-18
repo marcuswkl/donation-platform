@@ -29,8 +29,8 @@ if(isset($_POST['email']) && isset($_POST['pwd'])){
         echo "<script type='text/javascript'>window.location.href = './donor-home.php';</script>";
       }else if($_SESSION['type'] == 'fundraiser'){
         echo "<script type='text/javascript'>window.location.href = './fundraiser-home.php';</script>";
-      }else{
-        
+      }else if($_SESSION['type'] == 'admin'){
+        echo "<script type='text/javascript'>window.location.href = './admin-interface.php';</script>";
       }
 
     }
