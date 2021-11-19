@@ -103,6 +103,4 @@ dist
 # TernJS port file
 .tern-port
 .metals/metals.h2.db
-.metals/metals.h2.db
 .metals/metals.lock.db
-.metals/metals.h2.db
