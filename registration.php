@@ -28,20 +28,17 @@
         <form method="post">
 
                 <div class="mb-3">
-                    <input type="text" id="fullName" name="fullName" placeholder = "Full Name"><br>
+                    <input type="text" id="fullName" name="fullName" placeholder = "Full Name" required aria-required="true"><br>
                 </div>
                 
                 <div class="mb-3">
-                    <input type="text" id="email" name="email" placeholder = " Email Address"><br>
+                    <input type="text" id="email" name="email" placeholder = " Email Address" required aria-required="true"><br>
                 </div>
 
                 <div class="mb-3">
-                    <input type="password" id="pwd" name="pwd" placeholder = " Password"><br>
+                    <input type="password" id="pwd" name="pwd" placeholder = " Password" required aria-required="true"><br>
                 </div>
                 
-                <div class="mb-3">
-                    <input type="password" placeholder = " Confirm Password"><br>
-                </div>
                 
 
                 <div class="d-flex flex-row justify-content-center mb-3">
