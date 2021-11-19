@@ -62,7 +62,7 @@ $fundraiserName = $fundraiser[0]["name"];
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="../<?php echo $photo;?>" class="img-fluid d-block w-100" alt="Children Picture 1">
+              <img src="../<?php echo $photo; ?>" class="img-fluid d-block w-100" alt="Children Picture 1">
             </div>
             <div class="carousel-item">
               <img src="../resources/img/showcase2.png" class="img-fluid d-block w-100" alt="Children Picture 2">
@@ -92,7 +92,7 @@ $fundraiserName = $fundraiser[0]["name"];
               <p class="align-items-left funds"><strong>RM&nbsp;<?php echo $goalNowStr; ?>&nbsp;raised</strong> of RM&nbsp;<?php echo $goalMaxStr; ?></p>
             </div>
             <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="<?php echo $progress; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $progress; ?>%"></div>
             </div>
           </div>
         </div>
@@ -212,24 +212,24 @@ $fundraiserName = $fundraiser[0]["name"];
   <section id="explore" class="p-5">
     <h2 class="text-center text-dark mb-4">EXPLORE OTHER PROJECTS</h2>
     <div class="row g-4">
-      
-      <?php 
-        $query = $pdo->prepare("SELECT * FROM project");
-        $query->execute();
-        $projects = $query->fetchAll();
-        $count = 0;
-        foreach($projects as $project){
-          if(($project['projectId'] != $_GET["id"]) && $count < 3){
-            $id             = $project['projectId'];
-            $name           = $project['projectName'];
-            $photo          = $project['projectPhoto'];
-            $fundraiserID   = $project['fundraiserId'];
-            $query = $pdo->prepare("SELECT `name` FROM user WHERE userId = ?");
-            $query->execute(array($fundraiserID));
-            $fundraiser = $query->fetchAll();
-            $fundraiserName = $fundraiser[0]["name"];
 
-            echo <<<_END
+      <?php
+      $query = $pdo->prepare("SELECT * FROM project");
+      $query->execute();
+      $projects = $query->fetchAll();
+      $count = 0;
+      foreach ($projects as $project) {
+        if (($project['projectId'] != $_GET["id"]) && $count < 3) {
+          $id             = $project['projectId'];
+          $name           = $project['projectName'];
+          $photo          = $project['projectPhoto'];
+          $fundraiserID   = $project['fundraiserId'];
+          $query = $pdo->prepare("SELECT `name` FROM user WHERE userId = ?");
+          $query->execute(array($fundraiserID));
+          $fundraiser = $query->fetchAll();
+          $fundraiserName = $fundraiser[0]["name"];
+
+          echo <<<_END
               <div class="col-md-6 col-lg-4 cards">
                   <a href="project1.php?id=$id" class="card-links">
                       <div class="card bg-mediumgreen">
@@ -244,11 +244,11 @@ $fundraiserName = $fundraiser[0]["name"];
                   </a>
               </div>
 _END;
-            $count++;
-          }
+          $count++;
         }
+      }
       ?>
-      
+
     </div>
   </section>
 
