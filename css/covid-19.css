@@ -55,6 +55,13 @@
     background-color: #D8F3DC;
 }
 
+.project-list-description{
+    max-width: 600px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /*Only full height if screen width >768px, same as md on Bootstrap 5*/
 @media (min-width: 768px){
     .toolbar .search{
@@ -108,6 +115,11 @@
     .bottom-banner-title, .accordion-title{
         font-size: 1.5em;
         font-weight: 600;
+    }
+
+    
+    .col-md{
+        max-width: 50vw;
     }
 }
 
@@ -165,5 +177,10 @@
         font-size: 1.3em;
         font-weight: 600;
         margin-top: 5vh;
+    }
+
+    
+    .col-md{
+        max-width: 90vw;
     }
 }
