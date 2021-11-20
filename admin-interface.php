@@ -1,5 +1,22 @@
 <?php
 require_once('DbController.php');
+
+if (!empty($_GET['action'])){
+    $fid = $_GET['fundraiserId'];
+
+    switch($_GET['action']){
+        case "accept": 
+            $accept = "UPDATE fundraiser SET verifiedStatus = 'verified' WHERE fundraiserId = $fundId";
+            $acc_result = $pdo->query($accept);
+        break;
+
+        case "reject":
+            $reject = "UPDATE fundraiser SET verifiedStatus = 'unverified' WHERE fundraiserId = $fundId";
+            $rej_result = $pdo->query($reject);
+        break;
+    }
+}
+
 ?>
 
 
@@ -64,9 +81,10 @@ require_once('DbController.php');
 
 <?php
     $query = "SELECT * FROM fundraiser";
+    
     $result  = $pdo->query($query);
 
-
+    
     foreach($result as $row){
         $fundId = $row['fundraiserId'];
         $userId = $row['userId'];
@@ -78,6 +96,7 @@ require_once('DbController.php');
         $verify = $row['verifiedStatus'];
         $profImg = $row['profileImage'];
 
+/* Fundraiser Description */
 echo <<<_END
 <div class="container-md mt-3 d-flex">
 
@@ -99,41 +118,25 @@ echo <<<_END
 
 
 <div class="d-flex flex-column my-auto mx-auto">
+<form method = "GET">
 <p class = "fw-bold text-decoration-underline text-center">Change Status</p>
-<button type="button" class="btn btn-outline-success mb-2"> Accept </button>
-<button type="button" class="btn btn-outline-success mb-2"> Reject </button>
+<button type="button" class="btn btn-outline-success mb-2" onclick = "location.href = 'admin-interface.php?action=accept&fundraiderId=$fundId';"> Accept </button>
+<button type="button" class="btn btn-outline-success mb-2" onclick = "location.href = 'admin-interface.php?action=reject&fundraiderId=$fundId';"> Reject </button>
+</form>
 </div>
 </div>
 _END;
+/* End of Fundraiser Description */
     }
 
 ?>
 
-<!--Fundraiser Description -->
-    <!--One Fundraiser Description -->
-    <!-- <div class="container-md mt-3 d-flex">
-        
-        <img src="./resources/img/placeholder.png" alt="image" class = "fundraiser ">
-        <div class = "my-auto">
-            <ul>
-                <ol>Fundraiser Name: Derek Edmonds Foundation</ol>
-                <ol>Current Status: <span class = "fw-bold">Pending</span> </ol>
-                <ol>Fundraising Goal: RM 5000</ol>
-            </ul>
-        </div>
-        
 
-        <div class="d-flex flex-column my-auto mx-auto">
-            <p class = "fw-bold text-decoration-underline text-center">Change Status</p>
-            <button type="button" class="btn btn-outline-success mb-2"> Accept </button>
-            <button type="button" class="btn btn-outline-success mb-2"> Reject </button>
-        </div>
-    </div> -->
-    <!--End -->
+
     <div class = "foot">
     <?php include "foot.php"?>
     </div>
-<!-- End Of Fundraiser Description -->
+
 
     <!-- Bootstrap JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
