@@ -1,3 +1,8 @@
+<?php
+require_once 'DbController.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,9 +62,52 @@
     </nav>
 <!--End Of Fundraiser Status Buttons -->
 
+<?php
+    $query = "SELECT * FROM fundraiser";
+    $result  = $pdo->query($query);
+
+    $rows = $result -> fetch();
+
+    $fundId = $row['fundraiserid'];
+    $userId = $row['userId'];
+    $ssm = $row['ssmRegNo'];
+    $phoneNum = $row['phoneNumber'];
+    $bankNum = $row['bankNumber'];
+    $accName = $row['acc_holder_name'];
+    $bankName = $row['bank_name'];
+    $verify = $row['verifiedStatus'];
+    $profImg = $row['profileImage'];
+
+    foreach($rows as $row){
+        echo <<<_END
+        <div class="container-md mt-3 d-flex">
+        
+            <img src="./resources/img/placeholder.png" alt="image" class = "fundraiser ">
+            <div class = "my-auto">
+                <ul>
+                    <ol>Fundraiser Name:&nbsp;$fundID </ol>
+                    <ol>Current Status: <span class = "fw-bold">Pending</span> </ol>
+                    <ol>Fundraising Goal: RM 5000</ol>
+                </ul>
+            </div>
+            
+
+            <div class="d-flex flex-column my-auto mx-auto">
+                <p class = "fw-bold text-decoration-underline text-center">Change Status</p>
+                <button type="button" class="btn btn-outline-success mb-2"> Accept </button>
+                <button type="button" class="btn btn-outline-success mb-2"> Reject </button>
+            </div>
+        </div>
+        _END;
+
+
+    }
+
+?>
+
 <!--Fundraiser Description -->
     <!--One Fundraiser Description -->
-    <div class="container-md mt-3 d-flex">
+    <!-- <div class="container-md mt-3 d-flex">
         
         <img src="./resources/img/placeholder.png" alt="image" class = "fundraiser ">
         <div class = "my-auto">
@@ -76,44 +124,8 @@
             <button type="button" class="btn btn-outline-success mb-2"> Accept </button>
             <button type="button" class="btn btn-outline-success mb-2"> Reject </button>
         </div>
-    </div>
+    </div> -->
     <!--End -->
-
-    <div class="container-md mt-3 d-flex">
-        
-        <img src="./resources/img/placeholder.png" alt="image" class = "fundraiser ">
-        <div class = "my-auto">
-            <ul>
-                <ol>Fundraiser Name: Derek Edmonds Foundation</ol>
-                <ol>Current Status: <span class = "fw-bold">Pending</span></ol>
-                <ol>Fundraising Goal: RM 5000</ol>
-            </ul>
-        </div>
-
-        <div class="d-flex flex-column my-auto mx-auto">
-            <p class = "fw-bold text-decoration-underline text-center">Change Status</p>
-            <button type="button" class="btn btn-outline-success mb-2" > Accept </button>
-            <button type="button" class="btn btn-outline-success mb-2"> Reject </button>
-        </div>
-    </div>
-
-    <div class="container-md mt-3 d-flex">
-        
-        <img src="./resources/img/placeholder.png" alt="image" class = "fundraiser ">
-        <div class = "my-auto">
-            <ul>
-                <ol>Fundraiser Name: Derek Edmonds Foundation</ol>
-                <ol>Current Status: <span class = "fw-bold">Pending</span></ol>
-                <ol>Fundraising Goal: RM 5000</ol>
-            </ul>
-        </div>
-
-        <div class="d-flex flex-column my-auto mx-auto">
-            <p class = "fw-bold text-decoration-underline text-center">Change Status</p>
-            <button type="button" class="btn btn-outline-success mb-2"> Accept </button>
-            <button type="button" class="btn btn-outline-success mb-2"> Reject </button>
-        </div>
-    </div>
 
     <?php include "foot.php"?>
 
