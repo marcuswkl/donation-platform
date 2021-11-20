@@ -1,0 +1,36 @@
+.fr-profile-image {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.fr-profile-edit-upload, .fr-profile-edit-cancel, .fr-profile-edit-submit {
+    background-color: #52B788;
+    border-radius: 1.5rem;
+}
+
+.fr-profile-edit-cancel, .fr-profile-edit-submit {
+    padding: 0.2rem 2rem;
+}
+
+.form-control-fr-profile-edit {
+    background-color: #D8F3DC;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    box-shadow: 0.2rem 0.2rem gray;
+}
+
+#inputSSMRegNo {
+    background-color: #D8F3DC;
+    opacity: 50%;
+}
+
+.fr-profile-edit-textarea {
+    width: 97%;
+    margin-left: 0.5rem;
+}
+
+@media only screen and (min-width: 992px) {
+    .fr-profile-edit-textarea {
+        margin-left: 0.75rem;
+    }
+}

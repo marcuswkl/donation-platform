@@ -13,6 +13,7 @@
     <title>Donor Profile</title>
   </head>
   <body>
+  <?php include "head.php"?>
     <div class="text-center p-5">
         <h1 class="display-2">Profile</h1>
     </div>
@@ -20,7 +21,7 @@
         <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
         <div class="mt-3">
             <h4>Lim Lee Hong</h4>
-            <p class="text-secondary mb-1">limleehong@gmail.com</p>
+            <p class="text-secondary mb-3">limleehong@gmail.com</p>
         </div>    
         <div class="d-flex flex-column bd-highlight mb-3">
             <button  class="btn btn-primary rounded-pill border-dark" >
@@ -35,5 +36,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+    <?php include "foot.php"?>
   </body>
 </html>

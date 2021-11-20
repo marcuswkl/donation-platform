@@ -13,6 +13,7 @@
   </head>
 
   <body>
+  <?php include "head.php"?>
     <div class="text-center p-5">
         <h1 class="display-2">Thank you for your donation</h1>
     </div>
@@ -27,11 +28,12 @@
 
     <div class="text-center"> 
       <button class="btn btn-primary m-5 rounded-pill border-dark">
-        <a href = "project1.php" class="text-dark btn">Learn more</a>
+        <a href = "project-info/project1.php" class="text-dark btn">Learn more</a>
       </button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+    <?php include "foot.php"?>
   </body>
 </html>

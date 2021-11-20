@@ -1,5 +1,7 @@
-<!DOCTYPE html>
+<?php require_once 'form-handlers/login_backend.php';?>
+ <!DOCTYPE html>
 <html lang="en">
+<?php require_once "DbController.php"; ?>
 
 <head>
     <meta charset="UTF-8">
@@ -12,24 +14,23 @@
 </head>
 
 <body>
-    
+<?php include "head.php"?>
+
 <div class="content">
-    <?php include "head.php"?>
-    
-        <div class="mt-4 mb-4">
+        <br><br><br>
+        <div class="mb-4">
             <h1>Login</h1>
         </div>
-
     
         <div class="d-block text-center">
-            <form action="donor-home.php" style = "height: 55vh;">
+            <form action="" method="post" style = "height: 55vh;">
 
                 <div class="mb-3">
-                    <input type="text" id="name" name="name" placeholder = " Full Name / Email"><br>
+                    <input type="text" id="email" name="email" placeholder = " Email"><br>
                 </div>
                 
                 <div class="mb-3">
-                    <input type="text" id="password" name="password" placeholder = " Password"><br>
+                    <input type="password" id="pwd" name="pwd" placeholder = " Password"><br>
                 </div>
 
 
