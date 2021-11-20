@@ -1,5 +1,5 @@
 <?php
-require_once 'DbController.php';
+require_once('DbController.php');
 ?>
 
 
@@ -66,41 +66,45 @@ require_once 'DbController.php';
     $query = "SELECT * FROM fundraiser";
     $result  = $pdo->query($query);
 
-    $rows = $result -> fetch();
 
-    $fundId = $row['fundraiserid'];
-    $userId = $row['userId'];
-    $ssm = $row['ssmRegNo'];
-    $phoneNum = $row['phoneNumber'];
-    $bankNum = $row['bankNumber'];
-    $accName = $row['acc_holder_name'];
-    $bankName = $row['bank_name'];
-    $verify = $row['verifiedStatus'];
-    $profImg = $row['profileImage'];
+    foreach($result as $row){
+        $fundId = $row['fundraiserId'];
+        $userId = $row['userId'];
+        $ssm = $row['ssmRegNo'];
+        $phoneNum = $row['phoneNumber'];
+        $bankNum = $row['bankNumber'];
+        $accName = $row['acc_holder_name'];
+        $bankName = $row['bank_name'];
+        $verify = $row['verifiedStatus'];
+        $profImg = $row['profileImage'];
 
-    foreach($rows as $row){
-        echo <<<_END
-        <div class="container-md mt-3 d-flex">
-        
-            <img src="./resources/img/placeholder.png" alt="image" class = "fundraiser ">
-            <div class = "my-auto">
-                <ul>
-                    <ol>Fundraiser Name:&nbsp;$fundID </ol>
-                    <ol>Current Status: <span class = "fw-bold">Pending</span> </ol>
-                    <ol>Fundraising Goal: RM 5000</ol>
-                </ul>
-            </div>
-            
+echo <<<_END
+<div class="container-md mt-3 d-flex">
 
-            <div class="d-flex flex-column my-auto mx-auto">
-                <p class = "fw-bold text-decoration-underline text-center">Change Status</p>
-                <button type="button" class="btn btn-outline-success mb-2"> Accept </button>
-                <button type="button" class="btn btn-outline-success mb-2"> Reject </button>
-            </div>
-        </div>
-        _END;
+<img src="./resources/img/placeholder.png" alt="image" class = "fundraiser ">
+<div class = "my-auto">
+<ul>
+<ol>Fundraiser ID:&nbsp;$fundId </ol>
+<ol>Fundraiser User ID:&nbsp;$userID </ol>
+<ol>SSM Registration Number:&nbsp;$ssm </ol>
+<ol>Phone Number:&nbsp;$phoneNum </ol>
+<ol>Bank Number:&nbsp;$bankNum </ol>
+<ol>Account Holder's Name:&nbsp;$accName </ol>
+<ol>Bank Name:&nbsp;$bankName </ol>
+
+<ol>Current Status: <span class = "fw-bold">$verify</span> </ol>
+
+</ul>
+</div>
 
 
+<div class="d-flex flex-column my-auto mx-auto">
+<p class = "fw-bold text-decoration-underline text-center">Change Status</p>
+<button type="button" class="btn btn-outline-success mb-2"> Accept </button>
+<button type="button" class="btn btn-outline-success mb-2"> Reject </button>
+</div>
+</div>
+_END;
     }
 
 ?>
@@ -126,9 +130,9 @@ require_once 'DbController.php';
         </div>
     </div> -->
     <!--End -->
-
+    <div class = "foot">
     <?php include "foot.php"?>
-
+    </div>
 <!-- End Of Fundraiser Description -->
 
     <!-- Bootstrap JS CDN -->
