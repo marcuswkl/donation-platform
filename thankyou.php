@@ -21,7 +21,7 @@
     <div class="text-center p-4 ">
         <h3>
             <ul class="list-unstyled">
-                <li><?php echo $amount ?> is contributed to <p><strong><?php echo $input_array[$rand_keys[0]] ?></strong></p> </li>
+                <li>RM<?php echo $amount ?> is contributed to <p><strong><?php echo $input_array[$rand_keys[0]] ?></strong></p> </li>
                 <li>An email receipt and token of appreciation will be sent to your email.</li>
                 <li>Click on the button to find out which project you are supporting.</li>
             </ul>        
