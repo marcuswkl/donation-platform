@@ -22,6 +22,7 @@
             <ul class="list-unstyled">
                 <li>RM20.00 is contributed to <p><strong>Empower Children Through Education.</strong></p> </li>
                 <li>An email receipt and token of appreciation will be sent to your email.</li>
+                <li>Click on the button to find out which project you are supporting.</li>
             </ul>        
         </h3>
     </div>
