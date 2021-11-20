@@ -24,6 +24,7 @@
     </style>
     
 </head>
+<?php include "admin-login/php/head.php"?>
 <body class="body">
     <?php include "../head.php"?>
     <h3>Click on the Project Name to edit!</h3>
