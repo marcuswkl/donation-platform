@@ -1,0 +1,185 @@
+.top-banner{
+    padding-left: 5vw;
+    height: 30vh;
+    background-color: #d8f3dc;
+}
+
+.banner-text{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.float-right{
+    position: absolute;
+    right: 5vw;
+}
+
+.banner-img{
+    z-index: -1;
+    max-width: auto;
+    height: 30vh;
+}
+
+.toolbar{
+    padding: 2vh;
+    background-color: #B2E1CC;
+}
+
+.toolbar-child{
+    margin-left: 2vw;
+}
+
+.project-list{
+    background-color:#D8F3DC;
+}
+
+.project-list-progress{
+    background-color: #74c69d;
+}
+
+.info-tab{
+    padding: 2vh;
+    background-color: #B2E1CC;
+}
+
+.info-tab .info-number{
+    font-weight: 700;
+}
+
+.info-tab .info-label{
+    font-weight: 600;
+}
+
+.bottom-banner{
+    padding: 2vh;
+    background-color: #D8F3DC;
+}
+
+.project-list-description{
+    max-width: 600px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/*Only full height if screen width >768px, same as md on Bootstrap 5*/
+@media (min-width: 768px){
+    .toolbar .search{
+        margin-right: auto;
+        width: 400px;
+    }
+
+    .project-list *{
+        text-decoration: none;
+        color: black;
+    }
+
+    .project-list-image{
+        height: 20vh;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-list-icon{
+        height: 6vh;
+        width: auto;
+        margin-right: 10px;
+    }
+
+    .project-list-location{
+        font-size: 1.2em;
+    }
+
+    .project-list-fundraiser{
+        font-size: 1.5em;
+    }
+
+    .project-list-funds-raised{
+        font-weight: 650;
+    }
+
+    .load-more-btn{
+        margin: 5vh;
+        width: auto;
+        padding: 0 5vw;
+        height: 5vh;        
+    }
+
+    .bottom-banner-motto-icon{
+        height: 6vh;
+        width: auto;
+        margin-right: 10px;
+    }
+
+    .bottom-banner-title, .accordion-title{
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+
+    .col-md{
+        max-width: 50vw;
+    }
+}
+
+/*If screen width <768px*/
+@media (max-width: 768px){
+    .toolbar .search{
+        margin-right: auto;
+        width: 50vw;
+    }
+
+    .project-list *{
+        text-decoration: none;
+        color: black;
+    }
+
+    .project-list-image{
+        height: 20vh;
+        width: auto;
+        margin: auto;
+    }
+
+    .project-list-icon{
+        height: 32px;
+        width: 32px;
+        margin-right: 5px;
+    }
+
+    .project-list-location{
+        font-size: 1.2em;
+    }
+
+    .project-list-fundraiser{
+        font-size: 1.5em;
+    }
+
+    .project-list-funds-raised{
+        font-weight: 650;
+    }
+
+    .load-more-btn{
+        margin: 5vh;
+        width: auto;
+        padding: 0 5vw;
+        height: 7.5vh;        
+    } 
+
+    .bottom-banner-motto-icon{
+        height: 6vh;
+        width: auto;
+        margin-right: 10px;
+        margin-top: 5vh;
+    }
+
+    .bottom-banner-title, .accordion-title{
+        font-size: 1.3em;
+        font-weight: 600;
+        margin-top: 5vh;
+    }
+
+    .col-md{
+        max-width: 90vw;
+    }
+}

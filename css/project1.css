@@ -1,0 +1,207 @@
+body{
+    background-color:#ECFDEF;
+    font-family: 'Titillium Web';
+    overflow-x: hidden;
+}
+
+.bg-lightgreen{
+    background-color:#F5FFF7
+}
+
+.bg-mediumgreen{
+    background-color:#B2E1CC
+}
+
+.justify{
+    text-align: justify;
+}
+
+@media screen and (max-width: 991.98px) {
+    .location-icon{
+        margin-top: 0 !important;
+        width: 3.5% !important;
+    }
+
+    .collapse-navbar{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .ori-organisation{
+        display: none;
+    }
+        
+    .resized-organisation{
+            display: block;
+    }    
+
+    #story h2, #organisation h2{
+        font-size: 4vw !important;
+        font-weight: bolder !important;
+    }
+
+    #story p, #organisation p{
+        font-size: 3vw !important;
+        padding-right: 10% !important;
+    }
+
+    .message{
+        margin-bottom: 0 !important;
+        font-size: 5vw !important;
+    }
+    
+    #messages p{
+        font-size: 2.5vw !important;
+    }
+    
+    #explore h2{
+        font-size: 5vw !important;
+    }
+    
+    #explore h3{
+        font-size: 4vw !important;
+    }
+    
+    #explore p{
+        font-size: 3vw !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .donate-button{
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .resized-organisation{
+        display: none;
+    }
+
+    .ori-organisation{
+    display: block;
+    }
+}
+
+.location{
+    font-size: 3vw;
+}
+
+.showcase-title{
+    font-size: 4.5vw;
+}
+
+.fundraiser{
+    font-size: 2vw;
+}
+
+.funds{
+    margin-bottom: 2.5%;
+    font-size: 2vw;
+}
+
+.location-icon{
+    width: 5%;
+    height: 4%;
+    margin-top: 0.7%;
+}
+
+.goal-icon{
+    width: 9%; 
+    height: 3%;
+}
+
+.goal-bar{
+    width: 40%; 
+    height: 10px; 
+    background:#B7E4C7; 
+    border-radius: 0 5px 5px 0;
+}
+
+.goal-progress{
+    width: 60%; 
+    height: 10px; 
+    background:#114D4F; 
+    border-radius: 5px 0 0 5px;
+}
+
+.btn-donate{
+    background-color: #52B788; 
+    border: 1px solid black;
+    color: black;
+    padding: 9px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 1.5vw;
+}
+
+.donate{
+    font-size: 2.5vw;
+}
+
+.nav-link{
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.black-bar{
+    width: 0.1vw; 
+    height: 3vw; 
+    background:#515151
+}
+
+#story h2, #organisation h2{
+    font-size: 3vw;
+    font-weight: bolder;
+}
+
+#story p, #organisation p{
+    font-size: 1.5vw;
+    padding-right: 10%;
+}
+
+.carousel-height{
+    min-height: 6em;
+}
+
+.carousel-size{
+    padding: 3% 17% 0 17%;
+}
+
+.message{
+    margin-bottom: 0 !important;
+    font-size: 4vw;
+}
+
+#messages p{
+    font-size: 1.5vw;
+}
+
+#explore h2{
+    font-size: 3vw;
+}
+
+#explore h3{
+    font-size: 2vw;
+}
+
+#explore p{
+    font-size: 1vw;
+}
+
+.cards{
+    padding: 2%;
+}
+
+.card-links{
+    text-decoration: none;
+    color: black;
+}
+
+.card-body img{
+    width:100%;
+    height:auto
+}

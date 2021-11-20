@@ -1,0 +1,28 @@
+body{
+    background-color: #ECFDEF;
+    font-family: 'Titillium Web';
+}
+
+.btn-primary{
+    background-color:#52B788 !important;
+    color: #000;
+}
+
+.checkboxes{
+    margin-left: 25%;
+}
+
+.body-container{
+    height: 80vh;
+}
+
+@media (max-width: 767px) { 
+    .checkboxes{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .input-group{
+        width:100%;
+    }
+}

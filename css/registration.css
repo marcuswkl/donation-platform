@@ -1,0 +1,25 @@
+form{
+    font-size: 1.5em;
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    border-radius: 1em;
+}
+
+.submit{
+    background-color: #52B788;
+}
+
+.form-check{
+    margin-right: 2%;
+}
+
+.content{
+    background-color: #ECFDEF;
+    height: 71vh;
+}
+
