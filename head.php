@@ -14,9 +14,9 @@
                     <a href="donor-home.php" class="nav-link">Home</a>
                 </li>
 
-                 <li class="nav-item menu">
+                 <!-- <li class="nav-item menu">
                     <a href="donor-profile.php" class="nav-link">Profile</a>
-                </li>
+                </li> -->
 
                 <!-- <li class="nav-item menu">
                     <a href="#" class="nav-link">[Placeholder]</a>
@@ -27,7 +27,11 @@
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="d-flex navbar-nav ms-auto">
                 <li class="nav-item menu ">
-                    <a href="#" class="nav=link"><img src="resources/img/Logout.png" alt="logout" class="logout">Log Out</a>
+                    <a href="#" class="nav-link"><i class="bi bi-box-arrow-left"></i>&nbsp;Log Out</a>
+                </li>
+
+                <li class="nav-item menu">
+                    <a href="donor-profile.php" class="nav-link"><i class="bi bi-person-fill"></i>&nbsp;Profile</a>
                 </li>
             </ul>
         </div>
