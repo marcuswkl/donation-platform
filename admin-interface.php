@@ -1,9 +1,7 @@
 <?php
 require_once('DbController.php');
 
-if (!empty($_GET['action'])){
-    $fid = $_GET['fundraiserId'];
-
+/* if (!empty($_GET['action'])){
     switch($_GET['action']){
         case "accept": 
             $accept = "UPDATE fundraiser SET verifiedStatus = 'verified' WHERE fundraiserId = $fundId";
@@ -16,7 +14,7 @@ if (!empty($_GET['action'])){
         break;
     }
 }
-
+ */
 ?>
 
 
