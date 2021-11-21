@@ -28,15 +28,15 @@
         <form method="post">
 
                 <div class="mb-3">
-                    <input type="text" id="fullName" name="fullName" placeholder = "Full Name" required aria-required="true"><br>
+                    <input type="text" id="fullName" name="fullName" placeholder = "&nbsp;Full Name" required aria-required="true"><br>
                 </div>
                 
                 <div class="mb-3">
-                    <input type="text" id="email" name="email" placeholder = " Email Address" required aria-required="true"><br>
+                    <input type="text" id="email" name="email" placeholder = "&nbsp;Email Address" required aria-required="true"><br>
                 </div>
 
                 <div class="mb-3">
-                    <input type="password" id="pwd" name="pwd" placeholder = " Password" required aria-required="true"><br>
+                    <input type="password" id="pwd" name="pwd" placeholder = "&nbsp;Password" required aria-required="true"><br>
                 </div>
                 
                 
@@ -56,7 +56,9 @@
                         <input type="radio" name="ans" value="fundraiser"  />
                         <label class = "form-check-label" for="fundraiser">Fundraiser</label>
                     </div>
+                    
                 </div>
+                <h5>Already Have An Account? <a href = "login.php">Click Here To Login</a></h5>
                 <input type="submit" value="Submit" class="submitbtn"><br>
         </form>
         </div>
