@@ -35,15 +35,22 @@ $desc           = $project[0]['projectDescription'];
 $location       = $project[0]['projectLocation'];
 $photo          = $project[0]['projectPhoto'];
 $goalMax        = $project[0]['projectGoalAmt'];
-$goalNow        = $project[0]['projectStartingAmt'];
+$goalNow        = $project[0]['projectCurrentAmt'];
+$category       = $project[0]['projectCategory'];
 $goalMaxStr     = number_format($goalMax, 2);
 $goalNowStr     = number_format($goalNow, 2);
 $progress       = $goalNow / $goalMax * 100;
 $fundrasierID   = $project[0]['fundraiserId'];
 $query = $pdo->prepare("SELECT `name` FROM user WHERE userId = ?");
 $query->execute(array("$fundrasierID"));
+$user = $query->fetchAll();
+$fundraiserName = $user[0]["name"];
+$query = $pdo->prepare("SELECT `profileImage`, `fundraiserDescription`, `fundraiserWebsite` FROM fundraiser WHERE userId = ?");
+$query->execute(array("$fundrasierID"));
 $fundraiser = $query->fetchAll();
-$fundraiserName = $fundraiser[0]["name"];
+$fundraiserPhoto = $fundraiser[0]["profileImage"];
+$fundraiserDesc = $fundraiser[0]["fundraiserDescription"];
+$fundraiserSite = $fundraiser[0]["fundraiserWebsite"];
 ?>
 
 
@@ -62,13 +69,13 @@ $fundraiserName = $fundraiser[0]["name"];
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="../<?php echo $photo; ?>" class="img-fluid d-block w-100" alt="Children Picture 1">
+              <img src="../<?php echo explode(";", $photo)[0]; ?>" class="img-fluid d-block w-100" alt="Children Picture 1">
             </div>
             <div class="carousel-item">
-              <img src="../resources/img/showcase2.png" class="img-fluid d-block w-100" alt="Children Picture 2">
+              <img src="../<?php echo explode(";", $photo)[1]; ?>" class="img-fluid d-block w-100" alt="Children Picture 2">
             </div>
             <div class="carousel-item">
-              <img src="../resources/img/showcase3.png" class="img-fluid d-block w-100" alt="Children Picture 3">
+              <img src="../<?php echo explode(";", $photo)[2]; ?>" class="img-fluid d-block w-100" alt="Children Picture 3">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselImage" data-bs-slide="prev">
@@ -116,7 +123,9 @@ $fundraiserName = $fundraiser[0]["name"];
           <a href="#messages" class="nav-link">MESSAGES</a>
         </li>
         <li class="nav-item col-md">
-          <button class="btn btn-light btn-md btn-donate rounded-pill" type="button">DONATE</button>
+          <a href="../donation.php?category=<?php echo $category ?>">
+            <button class="btn btn-light btn-md btn-donate rounded-pill" type="button">DONATE</button>
+          </a>
         </li>
       </ul>
     </div>
@@ -126,7 +135,9 @@ $fundraiserName = $fundraiser[0]["name"];
   <div class="navbar row text-center donate-button bg-mediumgreen navbar-light py-4" id="navmenu">
     <ul class="navbar-nav ms-auto">
       <li>
-        <button class="btn btn-light btn-md btn-donate donate" type="button">DONATE TO EDUCATION</button>
+        <a href="../donation.php?category=<?php echo $category ?>">
+          <button class="btn btn-light btn-md btn-donate donate" type="button">DONATE TO <?php echo strtoupper($category) ?></button>
+        </a>
       </li>
     </ul>
   </div>
@@ -135,15 +146,12 @@ $fundraiserName = $fundraiser[0]["name"];
   <section id="story" class="p-5">
     <div class="row align-items-center justify-content-between g-4">
       <div class="col-md">
-        <img src="../resources/img/story.png" class="img-fluid" alt="Children writing on boards" />
+        <img src="../<?php echo explode(";", $photo)[2]; ?>" class="img-fluid" alt="Children writing on boards" />
       </div>
       <div class="col-md p-3 small-sized">
         <h2><u>THEIR STORY</u></h2>
-        <p class="justify">
-          <br>
-          The children did not have chance to attend school since they are young. They are all passionate children who have their own dream.
-          <br><br>
-          The children, who were earlier averse to basic learning, are now showing incremental improvement and are able to read their regional language and English textbooks.
+        <p class="justify" style="white-space:pre-line">
+          <?php echo $desc; ?>
         </p>
       </div>
     </div>
@@ -153,15 +161,14 @@ $fundraiserName = $fundraiser[0]["name"];
   <section id="organisation" class="p-5 bg-lightgreen ori-organisation">
     <div class="row align-items-center justify-content-between  g-4">
       <div class="col-md p-3 small-sized">
-        <h2><u>ABOUT BUNWAY</u></h2>
-        <p class="justify">
-          <br>
-          A 10 years organisation who always supported children homes, old folks home, etc. The team consists of 50 volunteers who are very kind.
+        <h2><u>ABOUT <?php echo strtoupper($fundraiserName); ?></u></h2>
+        <p class="justify" style="white-space:pre-line">
+          <?php echo $fundraiserDesc; ?>
         </p>
-        <p>Website: <a href="#">bunway.com</a></p>
+        <p>Website: <a href="<?php echo $fundraiserSite; ?>"><?php echo $fundraiserSite; ?></a></p>
       </div>
       <div class="col-md">
-        <img src="../resources/img/organisation.png" class="img-fluid" alt="Bunway Committees" />
+        <img src="../<?php echo $fundraiserPhoto; ?>" class="img-fluid" alt="Bunway Committees" />
       </div>
     </div>
   </section>
@@ -170,31 +177,31 @@ $fundraiserName = $fundraiser[0]["name"];
   <section id="organisation" class="p-5 bg-lightgreen resized-organisation">
     <div class="row align-items-center justify-content-between">
       <div class="col-md">
-        <img src="../resources/img/organisation.png" class="img-fluid" alt="Bunway Committees" />
+        <img src="../<?php echo $fundraiserPhoto; ?>" class="img-fluid" alt="Bunway Committees" />
       </div>
       <div class="col-md p-3">
-        <h2><u>ABOUT BUNWAY</u></h2>
-        <p class="lead justify">
-          A 10 years organisation who always supported children homes, old folks home, etc. The team consists of 50 volunteers who are very kind.
+        <h2><u>ABOUT <?php echo strtoupper($fundraiserName); ?></u></h2>
+        <p class="lead justify" style="white-space:pre-line">
+          <?php echo $fundraiserDesc; ?>
         </p>
-        <p>Website: <a href="#">bunway.com</a></p>
+        <p>Website: <a href="<?php echo $fundraiserSite; ?>"><?php echo $fundraiserSite; ?></a></p>
       </div>
     </div>
   </section>
 
   <!-- Messages Section -->
   <section id="messages" class="p-4 bg-mediumgreen">
-    <h1 class="text-center message">Messages</h1>
+    <h1 class="text-center message">Not convinced? Hear from the other donors!</h1>
     <div id="carouselText" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner carousel-height">
         <div class="carousel-item active text-center">
-          <p class="carousel-size">We love children very much and they always inspire us in many ways. We will continue to do everything with our kind heart.<br><br>- Marcus, CEO of Bunway -</p>
+          <p class="carousel-size">We love children very much and they always inspire us in many ways. We will continue to do everything we can to support them.<br><br>- Marcus, Accountant -</p>
         </div>
         <div class="carousel-item text-center">
-          <p class="carousel-size">You may volunteer to help families who lost their homes after a natural disaster. But you can also volunteer to protect children.<br><br>- WaiSiong, CFO of Bunway -</p>
+          <p class="carousel-size">It is our duty to help those who are vunerable and in need, and I do my part by donating.<br><br>- Wais, Engineer -</p>
         </div>
         <div class="carousel-item text-center">
-          <p class="carousel-size">Volunteering means spending your free time helping others. Giving your time means giving children a chance to live their best lives.<br><br>- WenJun, PhD holder in Bunway -</p>
+          <p class="carousel-size">I believe with my donation, I can make a dent, and collectively, we will bring a greater change for the better<br><br>- Wen Jun, Professor -</p>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselText" data-bs-slide="prev">
@@ -222,7 +229,7 @@ $fundraiserName = $fundraiser[0]["name"];
         if (($project['projectId'] != $_GET["id"]) && $count < 3) {
           $id             = $project['projectId'];
           $name           = $project['projectName'];
-          $photo          = $project['projectPhoto'];
+          $photo          = explode(";", $project['projectPhoto'])[0];
           $fundraiserID   = $project['fundraiserId'];
           $query = $pdo->prepare("SELECT `name` FROM user WHERE userId = ?");
           $query->execute(array($fundraiserID));

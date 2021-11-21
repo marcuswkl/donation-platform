@@ -80,11 +80,11 @@
                 $name           = $row['projectName'];
                 $desc           = $row['projectDescription'];
                 $location       = $row['projectLocation'];
-                $photo          = $row['projectPhoto'];
+                $photo          = explode(";", $row['projectPhoto'])[0];
                 $goalMax        = $row['projectGoalAmt'];
-                $goalNow        = $row['projectStartingAmt'];
+                $goalNow        = $row['projectCurrentAmt'];
                 $goalMaxStr     = number_format($row['projectGoalAmt'], 2);
-                $goalNowStr     = number_format($row['projectStartingAmt'], 2);
+                $goalNowStr     = number_format($row['projectCurrentAmt'], 2);
                 $progress       = $goalNow / $goalMax * 100; 
                 $fundrasierID   = $row['fundraiserId'];
                 $query = $pdo->prepare("SELECT `name` FROM user WHERE userID = ?");
