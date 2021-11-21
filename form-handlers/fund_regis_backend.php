@@ -10,7 +10,10 @@ $bankNumber = sanitise($pdo,$_POST['bankNumber']);
 $tbl_name = 'fundraiser';
 $acc_holder_name    = sanitise($pdo,$_POST['acc_holder_name']);  
 $bank_name    = sanitise($pdo,$_POST['bank_name']);  
-
+	
+if ($_POST['ssmRegNo'] == "" || $_POST['phoneNumber'] == "" || $_POST['bankNumber'] == ""|| $_POST['acc_holder_name'] == ""|| $_POST['bank_name'] == "") {
+    echo "<script type='text/javascript'>alert('Field not filled');</script>";
+  }else{ 
 if($validation==""){
     $query = "INSERT INTO $tbl_name (fundraiserId, userId, ssmRegNo, phoneNumber, bankNumber, acc_holder_name, bank_name, verifiedStatus, profileImage) 
     VALUES(NULL,'', $ssmRegNo, $phoneNumber, $bankNumber , $acc_holder_name , $bank_name ,'verified', NULL)";
@@ -25,7 +28,7 @@ echo "<script type='text/javascript'>window.location.href = './fundraiser-home.p
 }
 else{
 }
-}
+}}
 
 function sanitise($pdo, $str)
 {

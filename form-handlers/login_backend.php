@@ -1,15 +1,15 @@
 <?php
 require_once './DbController.php';
 
-if(isset($_POST['username']) && isset($_POST['pwd'])){
+if(isset($_POST['email']) && isset($_POST['pwd'])){
 	
-    $un_temp = sanitise($pdo,$_POST['username']);
+    $un_temp = sanitise($pdo,$_POST['email']);
     $pw_temp = sanitise($pdo,$_POST['pwd']);
-    $query   = "SELECT * FROM user WHERE name=$un_temp";
+    $query   = "SELECT * FROM user WHERE email=$un_temp";
     $result  = $pdo->query($query);
 
     if (!$result->rowCount()){
-      echo "<script type='text/javascript'>alert('Please enter your username and password');</script>";
+      echo "<script type='text/javascript'>alert('Please enter your email and password');</script>";
     }
 
     $row = $result->fetch();
@@ -29,8 +29,8 @@ if(isset($_POST['username']) && isset($_POST['pwd'])){
         echo "<script type='text/javascript'>window.location.href = './donor-home.php';</script>";
       }else if($_SESSION['type'] == 'fundraiser'){
         echo "<script type='text/javascript'>window.location.href = './fundraiser-home.php';</script>";
-      }else{
-        
+      }else if($_SESSION['type'] == 'admin'){
+        echo "<script type='text/javascript'>window.location.href = './admin-interface.php';</script>";
       }
 
     }
