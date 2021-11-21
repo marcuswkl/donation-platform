@@ -81,11 +81,7 @@
             vertical-align:middle;
             
         }
-        @keyframes anim{
-            100%{
-                stroke-dashoffset:146.32;
-            }
-        }
+        
         .circle2{
             fill:none;
             stroke:url(#GradientColor);
@@ -94,11 +90,7 @@
             stroke-dashoffset:472;
             animation: anim2 2s linear forwards;
         }
-        @keyframes anim2{
-            100%{
-                stroke-dashoffset:316.24;
-            }
-        }
+        
         .circle3{
             fill:none;
             stroke:url(#GradientColor);
@@ -107,13 +99,7 @@
             stroke-dashoffset:472;
             animation: anim3 2s linear forwards;
         }
-        @keyframes anim3{
-            100%{
-                stroke-dashoffset:283.2;
-            }
-        }
-        
-        
+
         .buttoncenter{
         color:#000000;
         background-color:#52B788;
@@ -130,118 +116,80 @@
 <body class="body">
 <?php include "head.php"?>
     <div class="container body-container">
-
-    
     <table class="mt-5" style="display: flex;text-align: center; align-items:center;justify-content:center;">
-        <tr>
-            <td style="padding-right:100px;">
-                <div class="skill">
-                    <div class="outer">
-                        <div class="inner">
-                            <div id="number">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                        <linearGradient id="GradientColor">
-                        <stop offset="0%" stop-color="#2D6A4F" />
-                        
-                        </linearGradient>
-                    </defs>
-                    <circle class="circle" cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
-                    
-                </div>
-            </td>
-            <td style="padding-right:100px;">
-                <div class="skill">
-                    <div class="outer">
-                        <div class="inner">
-                            <div id="number2">
-                            
-                            </div>
-                        </div>
-                    </div>
-                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                        <linearGradient id="GradientColor">
-                        <stop offset="0%" stop-color="#2D6A4F" />
-                    
-                        </linearGradient>
-                    </defs>
-                    <circle class="circle2" cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
-                    
-                </div>
-            </td>
-            <td style="padding-right:100px;">
-                <div class="skill">
-                    <div class="outer">
-                        <div class="inner">
-                            <div id="number3">
-                                2/5
-                            </div>
-                        </div>
-                    </div>
-                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                    <defs>
-                        <linearGradient id="GradientColor">
-                        <stop offset="0%" stop-color="#2D6A4F" />
-                        
-                        </linearGradient>
-                    </defs>
-                    <circle class="circle3" cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
-                    
-                    
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td style="padding-right:100px;">Total Funds Raised(%)</td>
-            <td style="padding-right:100px;">Goals Achieved</td>
-            <td style="padding-right:100px;">Projects Ending Soon</td>
-        </tr>
-        
-        
-    </table>
-       
-    <br>
-    <br>    
-    
-    <div style="display:flex;justify-content:space-between">
-    <a href="fundraiser-home.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Show Projects</a>
-    <a href="project1-dashboard.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Start Project</a>
-    </div>    
-    
-    </div>    
-    <script>
-        let number = document.getElementById("number");
-        let counter=0;
-        setInterval(()=>{
-            if(counter == 69){
-                clearInterval();
+    <?php
+    $servername = "localhost";
+    $username = "forall";
+    $password = "forall123";
+    $dbname = "anonym_us";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error){
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT projectGoalAmt, projectStartingAmt FROM project";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0){
+        $totalx = null;
+        $totaly = null;
+        $totalprojects = null;
+        while($row = $result->fetch_assoc()) {
+            $x = $row["projectStartingAmt"];
+            $totalx += $x;
+            $y = $row["projectGoalAmt"];
+            $totaly += $y;
+            $z = ($totalx/$totaly)*100;
+            $z1 = ($totalx/$totaly);
+            $zz = ($x/$y)*100;
+            if ($zz == 100){
+                $counter+=1;
             }else{
-                counter+=1;
-                number.innerHTML=counter+"%";
+                $counter=0;
             }
-            
-        },20);
-    </script>
-    <script>
-            let number2 = document.getElementById("number2");
-            let counter2=0;
-            setInterval(()=>{
-                if(counter2 == 33){
-                    clearInterval();
-                }else{
-                    counter2+=1;
-                    number2.innerHTML=counter2+"%";
-                }
-            },20);
-    </script>
+            if ($zz >= 80){
+                $projects+=1;
+            }else{
+                $projects = 0;
+            }
+            $totalprojects+=1;
+            $anim = (472-(472*number_format((float)$z1, 2, '.', '')));
+            $anim2 = (472-(472*$counter));
+            $anim3 = (472-(472*($projects/$totalprojects)));    
+        }    
+        echo "<style>@keyframes anim{
+            100%{
+                stroke-dashoffset:$anim;
+            }
+        }</style>";
+        echo "<style>@keyframes anim2{
+            100%{
+                stroke-dashoffset:$anim2;
+            }
+        }</style>";
+        echo "<style>@keyframes anim3{
+            100%{
+                stroke-dashoffset:$anim3;
+            }
+        }</style>";
+        echo '<tr>';
+        echo '<td style="padding-right:100px;"><div class="skill"><div class="outer"><div class="inner"><div id="number">'.intval($z).'%</div></div></div><svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px"><defs><linearGradient id="GradientColor"><stop offset="0%" stop-color="#2D6A4F" /></linearGradient></defs><circle class="circle" cx="80" cy="80" r="70" stroke-linecap="round" /></svg></div></td>';
+        echo '<td style="padding-right:100px;"><div class="skill"><div class="outer"><div class="inner"><div id="number2">'.$counter.'%</div></div></div><svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px"><defs><linearGradient id="GradientColor"><stop offset="0%" stop-color="#2D6A4F" /></linearGradient></defs><circle class="circle2" cx="80" cy="80" r="70" stroke-linecap="round" /></svg></div></td>';
+        echo '<td style="padding-right:100px;"><div class="skill"><div class="outer"><div class="inner"><div id="number3">'.$projects.'/'.$totalprojects.'</div></div></div><svg class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px"><defs><linearGradient id="GradientColor"><stop offset="0%" stop-color="#2D6A4F" /></linearGradient></defs><circle class="circle3" cx="80" cy="80" r="70" stroke-linecap="round" /></svg></div></td>';
+        echo '</tr>';
+        echo '<tr><td style="padding-right:100px;">Total Funds Raised(%)</td><td style="padding-right:100px;">Goals Achieved</td><td style="padding-right:100px;">Projects Ending Soon</td></tr>';             
+        
+    }else {
+        echo "0 results";
+    }
+    $conn->close();
+    ?>
+    </table>
+    <br>
+    <br>
+    <div style="display:flex;justify-content:space-between"><a href="fundraiser-home.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Show Projects</a><a href="project1-dashboard.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Start Project</a></div></div>
+    
     
 
     <?php include "foot.php"?>
