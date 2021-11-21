@@ -1,21 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="../css/project1.css" rel="stylesheet" type="text/css"> 
-    <link href="../css/theme.css" rel="stylesheet" type="text/css"> 
-    <title>Project Info</title>
-  </head>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="../css/project1.css" rel="stylesheet" type="text/css">
+  <link href="../css/theme.css" rel="stylesheet" type="text/css">
+  <title>Project Info</title>
+
+  <?php include_once "../DbController.php"; ?>
+</head>
+
+<?php
+if (!isset($_GET["id"])) {
+  $error = "No project ID found, please check the URL!\\nRedirecting you back to home page.";
+  echo "<script type='text/javascript'>
+          alert('$error');
+          window.location.href='../donor-home.php';
+          </script>";
+}
+
+$query = $pdo->prepare("SELECT * from project WHERE projectID = ?");
+$query->execute(array($_GET["id"]));
+$project = $query->fetchAll();
+//Information
+$id             = $project[0]['projectId'];
+$name           = $project[0]['projectName'];
+$desc           = $project[0]['projectDescription'];
+$location       = $project[0]['projectLocation'];
+$photo          = $project[0]['projectPhoto'];
+$goalMax        = $project[0]['projectGoalAmt'];
+$goalNow        = $project[0]['projectStartingAmt'];
+$goalMaxStr     = number_format($goalMax, 2);
+$goalNowStr     = number_format($goalNow, 2);
+$progress       = $goalNow / $goalMax * 100;
+$fundrasierID   = $project[0]['fundraiserId'];
+$query = $pdo->prepare("SELECT `name` FROM user WHERE userId = ?");
+$query->execute(array("$fundrasierID"));
+$fundraiser = $query->fetchAll();
+$fundraiserName = $fundraiser[0]["name"];
+?>
+
 
 <body>
-
-<?php include "../head-nested.php"?>
+  <?php include "../head-nested.php" ?>
 
   <!-- Showcase -->
   <section class="p-5">
@@ -29,7 +62,7 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="../resources/img/showcase1.png" class="img-fluid d-block w-100" alt="Children Picture 1">
+              <img src="../<?php echo $photo; ?>" class="img-fluid d-block w-100" alt="Children Picture 1">
             </div>
             <div class="carousel-item">
               <img src="../resources/img/showcase2.png" class="img-fluid d-block w-100" alt="Children Picture 2">
@@ -49,20 +82,20 @@
         </div>
       </div>
       <div class="col-lg-5 main-info">
-          <h1 class="d-flex location"><img src="../resources/img/location-icon.png" class="img-fluid d-block mx-3 location-icon" alt="Location Icon"><strong>Kajang, Selangor</strong></h1>
-          <h1 class="lead showcase-title">Empower Children Through Education</h1>
-          <p class="fundraiser">Fundraiser >> Bunway</p>
-          <div class="d-flex">
-            <img src="../resources/img/goal-icon.png" class="img-fluid d-block mx-3 goal-icon" alt="Goal Icon">
-            <div class="d-flex flex-column">
-              <div>
-                <p class="align-items-left funds"><strong>RM3,000 raised</strong> of RM 5,000</p>
-              </div>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
-              </div>
+        <h1 class="d-flex location"><img src="../resources/img/location-icon.png" class="img-fluid d-block mx-3 location-icon" alt="Location Icon"><strong>Kajang, Selangor</strong></h1>
+        <h1 class="lead showcase-title"><?php echo $name; ?></h1>
+        <p class="fundraiser">Fundraiser >>&nbsp;<?php echo $fundraiserName; ?></p>
+        <div class="d-flex">
+          <img src="../resources/img/goal-icon.png" class="img-fluid d-block mx-3 goal-icon" alt="Goal Icon">
+          <div class="d-flex flex-column">
+            <div>
+              <p class="align-items-left funds"><strong>RM&nbsp;<?php echo $goalNowStr; ?>&nbsp;raised</strong> of RM&nbsp;<?php echo $goalMaxStr; ?></p>
+            </div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="<?php echo $progress; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $progress; ?>%"></div>
             </div>
           </div>
+        </div>
       </div>
     </div>
   </section>
@@ -100,134 +133,128 @@
 
   <!-- Story Section -->
   <section id="story" class="p-5">
-      <div class="row align-items-center justify-content-between g-4">
-        <div class="col-md">
-          <img src="../resources/img/story.png" class="img-fluid" alt="Children writing on boards" />
-        </div>
-        <div class="col-md p-3 small-sized">
-          <h2><u>THEIR STORY</u></h2>
-          <p class="justify">
-          <br>
-            The children did not have chance to attend school since they are young. They are all passionate children who have their own dream.
-          <br><br>
-            The children, who were earlier averse to basic learning, are now showing incremental improvement and are able to read their regional language and English textbooks.
-          </p>
-        </div>
+    <div class="row align-items-center justify-content-between g-4">
+      <div class="col-md">
+        <img src="../resources/img/story.png" class="img-fluid" alt="Children writing on boards" />
       </div>
+      <div class="col-md p-3 small-sized">
+        <h2><u>THEIR STORY</u></h2>
+        <p class="justify">
+          <br>
+          The children did not have chance to attend school since they are young. They are all passionate children who have their own dream.
+          <br><br>
+          The children, who were earlier averse to basic learning, are now showing incremental improvement and are able to read their regional language and English textbooks.
+        </p>
+      </div>
+    </div>
   </section>
 
-   <!-- Organisation Section -->
-   <section id="organisation" class="p-5 bg-lightgreen ori-organisation">
-      <div class="row align-items-center justify-content-between  g-4">
-        <div class="col-md p-3 small-sized">
-          <h2><u>ABOUT BUNWAY</u></h2>
-          <p class="justify">
-            <br>
-            A 10 years organisation who always supported children homes, old folks home, etc. The team consists of 50 volunteers who are very kind.
-          </p>
-          <p>Website: <a href="#">bunway.com</a></p>
-        </div>
-        <div class="col-md">
-          <img src="../resources/img/organisation.png" class="img-fluid" alt="Bunway Committees" />
-        </div>
+  <!-- Organisation Section -->
+  <section id="organisation" class="p-5 bg-lightgreen ori-organisation">
+    <div class="row align-items-center justify-content-between  g-4">
+      <div class="col-md p-3 small-sized">
+        <h2><u>ABOUT BUNWAY</u></h2>
+        <p class="justify">
+          <br>
+          A 10 years organisation who always supported children homes, old folks home, etc. The team consists of 50 volunteers who are very kind.
+        </p>
+        <p>Website: <a href="#">bunway.com</a></p>
       </div>
+      <div class="col-md">
+        <img src="../resources/img/organisation.png" class="img-fluid" alt="Bunway Committees" />
+      </div>
+    </div>
   </section>
 
   <!-- Organisation Section Reversed -->
   <section id="organisation" class="p-5 bg-lightgreen resized-organisation">
-      <div class="row align-items-center justify-content-between">
-        <div class="col-md">
-          <img src="../resources/img/organisation.png" class="img-fluid" alt="Bunway Committees" />
-        </div>
-        <div class="col-md p-3">
-          <h2><u>ABOUT BUNWAY</u></h2>
-          <p class="lead justify">
-            A 10 years organisation who always supported children homes, old folks home, etc. The team consists of 50 volunteers who are very kind.
-          </p>
-          <p>Website: <a href="#">bunway.com</a></p>
-        </div>
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md">
+        <img src="../resources/img/organisation.png" class="img-fluid" alt="Bunway Committees" />
       </div>
+      <div class="col-md p-3">
+        <h2><u>ABOUT BUNWAY</u></h2>
+        <p class="lead justify">
+          A 10 years organisation who always supported children homes, old folks home, etc. The team consists of 50 volunteers who are very kind.
+        </p>
+        <p>Website: <a href="#">bunway.com</a></p>
+      </div>
+    </div>
   </section>
 
   <!-- Messages Section -->
   <section id="messages" class="p-4 bg-mediumgreen">
-      <h1 class="text-center message">Messages</h1>
-      <div id="carouselText" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner carousel-height">
-          <div class="carousel-item active text-center">
-            <p class="carousel-size">We love children very much and they always inspire us in many ways. We will continue to do everything with our kind heart.<br><br>- Marcus, CEO of Bunway -</p>
-          </div>
-          <div class="carousel-item text-center">
-            <p class="carousel-size">You may volunteer to help families who lost their homes after a natural disaster. But you can also volunteer to protect children.<br><br>- WaiSiong, CFO of Bunway -</p>
-          </div>
-          <div class="carousel-item text-center">
-            <p class="carousel-size">Volunteering means spending your free time helping others. Giving your time means giving children a chance to live their best lives.<br><br>- WenJun, PhD holder in Bunway -</p>
-          </div>
+    <h1 class="text-center message">Messages</h1>
+    <div id="carouselText" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner carousel-height">
+        <div class="carousel-item active text-center">
+          <p class="carousel-size">We love children very much and they always inspire us in many ways. We will continue to do everything with our kind heart.<br><br>- Marcus, CEO of Bunway -</p>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselText" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselText" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-item text-center">
+          <p class="carousel-size">You may volunteer to help families who lost their homes after a natural disaster. But you can also volunteer to protect children.<br><br>- WaiSiong, CFO of Bunway -</p>
+        </div>
+        <div class="carousel-item text-center">
+          <p class="carousel-size">Volunteering means spending your free time helping others. Giving your time means giving children a chance to live their best lives.<br><br>- WenJun, PhD holder in Bunway -</p>
+        </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselText" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselText" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </section>
 
   <!-- Explore More Section -->
   <section id="explore" class="p-5">
-      <h2 class="text-center text-dark mb-4">EXPLORE OTHER PROJECTS</h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4 cards">
-          <a href="#" class="card-links"><div class="card bg-mediumgreen">
-            <div class="card-body text-center">
-              <h3 class="card-title mb-1"><strong>Build Schools Together</strong></h3>
-              <p class="card-text">
-                by Sunway Student Ambassadors
-              </p>
-              <img
-                src="../resources/img/explore.png"
-                class="mb-1"
-                alt="Children running in the school compound"
-              />
-            </div>
-          </div></a>
-        </div>
-        <div class="col-md-6 col-lg-4 cards">
-          <a href="#" class="card-links"><div class="card bg-mediumgreen">
-            <div class="card-body text-center">
-              <h3 class="card-title mb-1"><strong>Build Schools Together</strong></h3>
-              <p class="card-text">
-                by Sunway Student Ambassadors
-              </p>
-              <img
-                src="../resources/img/explore.png"
-                class="mb-1"
-                alt="Children running in the school compound"
-              />
-            </div>
-          </div></a>
-        </div>
-        <div class="col-md-6 col-lg-4 cards">
-          <a href="#" class="card-links"><div class="card bg-mediumgreen">
-            <div class="card-body text-center">
-              <h3 class="card-title mb-1"><strong>Build Schools Together</strong></h3>
-              <p class="card-text">
-                by Sunway Student Ambassadors
-              </p>
-              <img
-                src="../resources/img/explore.png"
-                class="mb-1"
-                alt="Children running in the school compound"
-              />
-            </div>
-          </div></a>
-        </div>
-      </div>
+    <h2 class="text-center text-dark mb-4">EXPLORE OTHER PROJECTS</h2>
+    <div class="row g-4">
+
+      <?php
+      $query = $pdo->prepare("SELECT * FROM project");
+      $query->execute();
+      $projects = $query->fetchAll();
+      $count = 0;
+      foreach ($projects as $project) {
+        if (($project['projectId'] != $_GET["id"]) && $count < 3) {
+          $id             = $project['projectId'];
+          $name           = $project['projectName'];
+          $photo          = $project['projectPhoto'];
+          $fundraiserID   = $project['fundraiserId'];
+          $query = $pdo->prepare("SELECT `name` FROM user WHERE userId = ?");
+          $query->execute(array($fundraiserID));
+          $fundraiser = $query->fetchAll();
+          $fundraiserName = $fundraiser[0]["name"];
+
+          echo <<<_END
+              <div class="col-md-6 col-lg-4 cards">
+                  <a href="project1.php?id=$id" class="card-links">
+                      <div class="card bg-mediumgreen">
+                      <div class="card-body text-center">
+                          <h3 class="card-title mb-1"><strong>$name</strong></h3>
+                          <p class="card-text">
+                            by&nbsp;$fundraiserName
+                          </p>
+                          <img src="../$photo" class="mb-1"/>
+                      </div>
+                      </div>
+                  </a>
+              </div>
+_END;
+          $count++;
+        }
+      }
+      ?>
+
+    </div>
   </section>
 
-<?php include "../foot-nested.php"?>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <?php include "../foot-nested.php" ?>
 
 </body>
+
 </html>

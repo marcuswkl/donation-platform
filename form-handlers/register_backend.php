@@ -36,7 +36,7 @@ require_once './DbController.php';
 	}
 }
 	else{
-	echo $validation;}
+	}
 }
 }
 

@@ -1,8 +1,12 @@
 .fundraiser{
-    height: 20vh;
+    height: 30vh;
 }
 
 .content{
     background-color: #ECFDEF;
     height: 100%;
+}
+
+.foot{
+    margin-top: 10%;
 }
