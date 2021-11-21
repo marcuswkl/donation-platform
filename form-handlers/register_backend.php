@@ -13,7 +13,9 @@ require_once './DbController.php';
 	$validation .= data_validation($_POST['pwd'], '/^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{6,12}$/', "password- at least one letter, at least one number, and there have to be 6-12 characters");
  	$validation .= data_validation($_POST['email'],  "/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/" , "email");
 	
-  
+	 if ($_POST['fullName'] == "" || $_POST['pwd'] == "" || $_POST['email'] == "") {
+		echo "<script type='text/javascript'>alert('Field not filled');</script>";
+	  }else{ 
 	if($validation==""){
 
 	$user = $_POST['ans'];  
@@ -35,6 +37,7 @@ require_once './DbController.php';
 }
 	else{
 	echo $validation;}
+}
 }
 
    function sanitise($pdo, $str)

@@ -78,7 +78,9 @@
                 </div>
             </div>
             <div class="center">
+              <a href ="categories/categories.php">
               <button type="button" class="btn btn-success toolbar-child">Browse Categories</button>
+              </a>
             </div>
         </div>
   </section>
