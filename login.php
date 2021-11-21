@@ -23,18 +23,18 @@
         </div>
     
         <div class="d-block text-center">
-            <form action="" method="post" style = "height: 55vh;">
+            <form action="" method="post" style = "height: 51vh;">
 
                 <div class="mb-3">
-                    <input type="text" id="email" name="email" placeholder = " Email"><br>
+                    <input type="text" id="email" name="email" placeholder = "&nbsp;Email"><br>
                 </div>
                 
                 <div class="mb-3">
-                    <input type="password" id="pwd" name="pwd" placeholder = " Password"><br>
+                    <input type="password" id="pwd" name="pwd" placeholder = "&nbsp;Password"><br>
                 </div>
 
 
-                <div class="d-flex flex-row justify-content-center mb-3">
+                <h5>Don't Have An Account? <a href = "registration.php">Click Here To Register</a></h5>
                    
                 <input type="submit" class = "submit" value = "Log In"><br>
             </form>    
