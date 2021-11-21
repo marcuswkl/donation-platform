@@ -14,13 +14,13 @@
                     <a href="donor-home.php" class="nav-link">Home</a>
                 </li>
 
-                <!-- <li class="nav-item menu">
-                    <a href="#" class="nav-link">[Placeholder]</a>
+                 <li class="nav-item menu">
+                    <a href="donor-profile.php" class="nav-link">Profile</a>
                 </li>
 
-                <li class="nav-item menu">
+                <!-- <li class="nav-item menu">
                     <a href="#" class="nav-link">[Placeholder]</a>
-                </li> -->
+                </li>  -->
             </ul>
         </div>
 
