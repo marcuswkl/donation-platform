@@ -128,7 +128,7 @@
     if ($conn->connect_error){
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT projectGoalAmt, projectStartingAmt FROM project";
+    $sql = "SELECT projectGoalAmt, projectCurrentAmt FROM project";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0){
@@ -136,7 +136,7 @@
         $totaly = null;
         $totalprojects = null;
         while($row = $result->fetch_assoc()) {
-            $x = $row["projectStartingAmt"];
+            $x = $row["projectCurrentAmt"];
             $totalx += $x;
             $y = $row["projectGoalAmt"];
             $totaly += $y;

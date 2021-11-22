@@ -43,13 +43,13 @@
     if ($conn->connect_error){
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT projectId, projectName, projectDescription, projectCategory, projectGoalAmt, projectStartingAmt, projectStartDate, projectEndDate FROM project";
+    $sql = "SELECT projectId, projectName, projectDescription, projectCategory, projectGoalAmt, projectCurrentAmt, projectStartDate, projectEndDate FROM project";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0){
         echo "<table class=table table-bordered border-white><tr class=tableheader><th>ID</th><th>Project Name</th><th>Description</th><th>Donation Status</th><th>Category</th><th>Fund Raised (%)</th></tr>";
         while($row = $result->fetch_assoc()) {
-            $x = $row["projectStartingAmt"];
+            $x = $row["projectCurrentAmt"];
             $y = $row["projectGoalAmt"];
             $z = ($x/$y)*100;
             $date_now = new DateTime();
