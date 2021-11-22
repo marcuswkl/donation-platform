@@ -34,9 +34,17 @@ session_start();
                 </li>
 
                 <!-- If user is type donor display PROFILE link -->
-                <?php if (($_SESSION['type'] == "donor") || ($_SESSION['type'] == "fundraiser")){?>
+                <?php if ($_SESSION['type'] == "donor"){?>
                 <li class="nav-item menu">
                     <a href="donor-profile.php" class="nav-link"><i class="bi bi-person-fill"></i>&nbsp;Profile</a>
+                </li>
+                <?php }?>
+                <!-- End of PROFILE link -->
+
+                <!-- If user is type donor display PROFILE link -->
+                <?php if ($_SESSION['type'] == "fundraiser"){?>
+                <li class="nav-item menu">
+                    <a href="fundraiser-profile.php" class="nav-link"><i class="bi bi-person-fill"></i>&nbsp;Fundraiser Profile</a>
                 </li>
                 <?php }?>
                 <!-- End of PROFILE link -->
