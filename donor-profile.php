@@ -1,3 +1,4 @@
+<?php require_once 'form-handlers/login_backend.php';?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,8 +21,8 @@
     <div class="d-flex flex-column align-items-center text-center">
         <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
         <div class="mt-3">
-            <h4>Lim Lee Hong</h4>
-            <p class="text-secondary mb-3">limleehong@gmail.com</p>
+            <h4><?php echo $_SESSION['name'] ?></h4>
+            <p class="text-secondary mb-3"><?php echo $_SESSION['email'] ?></p>
         </div>    
         <div class="d-flex flex-column bd-highlight mb-3">
             <button  class="btn btn-primary rounded-pill border-dark" >
