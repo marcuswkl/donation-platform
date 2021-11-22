@@ -15,9 +15,20 @@
   </head>
   <body>
   <?php include "head.php"?>
+    <?php
+        require_once 'DbController.php';
+
+        $query = "SELECT * FROM donation_history";
+        $result  = $pdo->query($query);
+
+        foreach($result as $row){
+            $amount = $row['amount'];
+        }
+
+    ?>
     <!-- Title -->
     <div class="text-center m-5">
-      <h1 class="display-2 ">Donation Amount: RM20.00</h1>
+      <h1 class="display-2 ">Donation Amount: RM<?php echo $amount ?></h1>
     </div>
 
     <div class="container py-5">
