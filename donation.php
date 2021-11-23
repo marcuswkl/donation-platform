@@ -60,6 +60,9 @@
         <button type="submit" class="btn btn-primary m-3 rounded-pill border-dark">
           <a href = "payment.php" class="text-dark btn">DONATE</a>
         </button>
+        <button type="button" class="btn btn-primary m-3 rounded-pill border-dark">
+            <a href="javascript:history.go(-1)" class="text-dark btn">CANCEL</a> 
+        </button>
       </div>
     </form>
   </div>  
