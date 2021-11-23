@@ -20,7 +20,7 @@ $list = $query->fetchAll();
 ?>
 
 <body>
-    <?php include '../head.php'; ?>
+    <?php include '../head-nested.php'; ?>
     <div class="d-flex top-banner align-items-center">
         <div class="banner-text">
             <h1>FOOD SUPPLY</h1>

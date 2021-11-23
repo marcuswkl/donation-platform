@@ -55,7 +55,7 @@ $fundraiserSite = $fundraiser[0]["fundraiserWebsite"];
 
 
 <body>
-  <?php include "../head.php" ?>
+  <?php include "../head-nested.php" ?>
 
   <!-- Showcase -->
   <section class="p-5">

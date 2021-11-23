@@ -1,5 +1,9 @@
 <link href="../css/head.css" type="text/css" rel="stylesheet">
 
+<?php
+session_start();
+?>
+
 <nav class="navbar navbar-expand-md navbar-light head">
     <div class="container topnav-container">
         <a href="../donor-home.php"> <img src="../resources/img/Logo.png" alt="logo" class="mx-2 logo"></a>
@@ -8,27 +12,42 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navmenu">
-            <ul class="d-flex navbar-nav me-auto">
-                <li class="nav-item menu">
-                    <a href="../donor-home.php" class="nav-link">Home</a>
-                </li>
 
-                <!-- <li class="nav-item menu">
-                    <a href="#" class="nav-link">[Placeholder]</a>
-                </li>
+        <!-- If user is type donor display HOME link -->
+        <?php if (($_SESSION['type'] == "donor") || ($_SESSION['type'] == "fundraiser")) { ?>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="d-flex navbar-nav me-auto">
+                    <li class="nav-item menu">
+                        <a href="../donor-home.php" class="nav-link">Home</a>
+                    </li>
+                </ul>
+            </div>
 
-                <li class="nav-item menu">
-                    <a href="#" class="nav-link">[Placeholder]</a>
-                </li> -->
-            </ul>
-        </div>
+        <?php } ?>
+        <!-- End of HOME link -->
+
 
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="d-flex navbar-nav ms-auto">
                 <li class="nav-item menu ">
-                    <a href="#" class="nav=link"><img src="../resources/img/Logout.png" alt="logout" class="logout">Log Out</a>
+                    <a href="../form-handlers/session_logout.php" class="nav-link"><i class="bi bi-box-arrow-left"></i>&nbsp;Log Out</a>
                 </li>
+
+                <!-- If user is type donor display PROFILE link -->
+                <?php if ($_SESSION['type'] == "donor") { ?>
+                    <li class="nav-item menu">
+                        <a href="../donor-profile.php" class="nav-link"><i class="bi bi-person-fill"></i>&nbsp;Profile</a>
+                    </li>
+                <?php } ?>
+                <!-- End of PROFILE link -->
+
+                <!-- If user is type donor display PROFILE link -->
+                <?php if ($_SESSION['type'] == "fundraiser") { ?>
+                    <li class="nav-item menu">
+                        <a href="../fundraiser-profile.php" class="nav-link"><i class="bi bi-person-fill"></i>&nbsp;Fundraiser Profile</a>
+                    </li>
+                <?php } ?>
+                <!-- End of PROFILE link -->
             </ul>
         </div>
     </div>

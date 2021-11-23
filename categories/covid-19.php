@@ -20,7 +20,7 @@
 ?>
 
 <body>
-    <?php include '../head.php'; ?>
+    <?php include '../head-nested.php'; ?>
     <div class="d-flex top-banner align-items-center">
         <div class="banner-text">
             <h1>COVID-19</h1>
@@ -242,11 +242,6 @@ _END;
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <?php include '../foot-nested.php'; ?>
-
-    <?php
-    $query = "SELECT * FROM project";
-    $result = mysqli_query($this->conn, $query);
-    ?>
 </body>
 
 </html>
