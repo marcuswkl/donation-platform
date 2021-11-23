@@ -20,7 +20,7 @@
 ?>
 
 <body>
-    <?php include '../head-nested.php'; ?>
+    <?php include '../head.php'; ?>
     <div class="d-flex top-banner align-items-center">
         <div class="banner-text">
             <h1>COVID-19</h1>

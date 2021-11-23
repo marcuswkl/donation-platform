@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <?php include '../head-nested.php'; ?>
+    <?php include '../head.php'; ?>
     <div class="py-2">
         <!-- Categories -->
         <div class="h1 text-center">Categories</div>
