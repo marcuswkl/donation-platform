@@ -15,6 +15,23 @@
   </head>
   <body>
   <?php include "head.php"?>
+  <?php
+  $email = $_SESSION['email'];
+  $query   = "SELECT * FROM user WHERE email='$email'";
+  $result  = $pdo->query($query);
+
+  if (!$result->rowCount()){
+    echo "<script type='text/javascript'>alert('Please enter your email and password');</script>";
+  }
+
+  $row = $result->fetch();
+  $un  = $row['name'];
+  $pw  = $row['password'];
+  $ty  = $row['type'];
+  $em  = $row['email'];
+
+  $_SESSION['name'] = $un;
+  ?>
     <div class="text-center p-5">
         <h1 class="display-2">Profile</h1>
     </div>
