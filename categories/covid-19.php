@@ -14,9 +14,9 @@
 </head>
 
 <?php
-    $query = $pdo->prepare("SELECT * FROM project WHERE projectCategory = ?");
-    $query->execute(array("Covid-19"));
-    $list = $query->fetchAll();
+$query = $pdo->prepare("SELECT * FROM project WHERE projectCategory = ?");
+$query->execute(array("Covid-19"));
+$list = $query->fetchAll();
 ?>
 
 <body>
@@ -66,16 +66,17 @@
                 <li><a class="dropdown-item" href="#">Terengganu</a></li>
             </ul>
         </div>
-
-        <button type="button" class="btn btn-success toolbar-child">DONATE</button>
+        <a href="../donation.php?category=Covid-19">
+            <button type="button" class="btn btn-success toolbar-child">DONATE</button>
+        </a>
     </div>
 
     <div class="container-fluid project-list">
         <div class="row justify-content-center">
-            
-        <?php
+
+            <?php
             $count = 0;
-            foreach($list as $row){
+            foreach ($list as $row) {
                 $id             = $row['projectId'];
                 $name           = $row['projectName'];
                 $desc           = $row['projectDescription'];
@@ -85,7 +86,7 @@
                 $goalNow        = $row['projectCurrentAmt'];
                 $goalMaxStr     = number_format($row['projectGoalAmt'], 2);
                 $goalNowStr     = number_format($row['projectCurrentAmt'], 2);
-                $progress       = $goalNow / $goalMax * 100; 
+                $progress       = $goalNow / $goalMax * 100;
                 $fundrasierID   = $row['fundraiserId'];
                 $query = $pdo->prepare("SELECT `name` FROM user WHERE userID = ?");
                 $query->execute(array("$fundrasierID"));
@@ -123,7 +124,7 @@ _END;
                 echo '<div class="col-md"></div>';
             }
 
-            if(empty($list)){
+            if (empty($list)) {
                 echo <<<_END
                     <div class="row">
                         <div class="col-md">
@@ -133,8 +134,7 @@ _END;
                         </div>
                     </div>
 _END;
-            }
-            else{
+            } else {
                 echo <<<_END
                     <div class="row">
                         <div class="col-md">
@@ -145,103 +145,103 @@ _END;
                     </div>
 _END;
             }
-        ?>
-    </div>
-
-    <div class="d-flex info-tab text-center justify-content-evenly">
-        <div class="info">
-            <p id="info-weeks" class="info-number h1">2</p>
-            <p class="info-label h4">Weeks</p>
+            ?>
         </div>
 
-        <div class="info">
-            <p id="info-funds-raised" class="info-number h1">RM696,969.69</p>
-            <p class="info-label h4">Funds Raised</p>
-        </div>
-
-        <div class="info">
-            <p id="info-countries" class="info-number h1">1</p>
-            <p class="info-label h4">Country</p>
-        </div>
-
-        <div class="info">
-            <p id="info-organizations" class="info-number h1">18</p>
-            <p class="info-label h4">Organizations</p>
-        </div>
-    </div>
-
-    <div class="container-fluid bottom-banner">
-        <div class="row">
-            <div class="col-md container my-auto">
-                <div class="d-inline-flex justify-content-center ">
-                    <img src="../resources/img/motto_icon.png" alt="Motto icon" class="bottom-banner-motto-icon">
-                    <div class="bottom-banner-title">OUR MOTTO</div>
-                </div>
-                <div class="bottom-banner-motto">Every organization should be noticed as everyone is playing their part in helping the society.</div>
-
+        <div class="d-flex info-tab text-center justify-content-evenly">
+            <div class="info">
+                <p id="info-weeks" class="info-number h1">2</p>
+                <p class="info-label h4">Weeks</p>
             </div>
 
-            <div class="col-md container bottom-banner-accordion">
-                <div class="accordion-title h3">Itching to help more people? Or is it that nothing here piques your interest? Take a look at some other categories below!</div>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                Education
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <a href="education.php" class="text-decoration-none">
-                                <div class="accordion-body">
-                                    Break the barriers to education with your donation.
-                                </div>
-                            </a>
+            <div class="info">
+                <p id="info-funds-raised" class="info-number h1">RM696,969.69</p>
+                <p class="info-label h4">Funds Raised</p>
+            </div>
 
-                        </div>
+            <div class="info">
+                <p id="info-countries" class="info-number h1">1</p>
+                <p class="info-label h4">Country</p>
+            </div>
+
+            <div class="info">
+                <p id="info-organizations" class="info-number h1">18</p>
+                <p class="info-label h4">Organizations</p>
+            </div>
+        </div>
+
+        <div class="container-fluid bottom-banner">
+            <div class="row">
+                <div class="col-md container my-auto">
+                    <div class="d-inline-flex justify-content-center ">
+                        <img src="../resources/img/motto_icon.png" alt="Motto icon" class="bottom-banner-motto-icon">
+                        <div class="bottom-banner-title">OUR MOTTO</div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                Food Supply
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <a href="food-supply.php" class="text-decoration-none">
-                                <div class="accordion-body">Send a warm meal and aid food security in poverty-stricken areas.</div>
-                            </a>
+                    <div class="bottom-banner-motto">Every organization should be noticed as everyone is playing their part in helping the society.</div>
+
+                </div>
+
+                <div class="col-md container bottom-banner-accordion">
+                    <div class="accordion-title h3">Itching to help more people? Or is it that nothing here piques your interest? Take a look at some other categories below!</div>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    Education
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <a href="education.php" class="text-decoration-none">
+                                    <div class="accordion-body">
+                                        Break the barriers to education with your donation.
+                                    </div>
+                                </a>
+
+                            </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                Natural Disaster
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <a href="natural-disaster.php" class="text-decoration-none">
-                                <div class="accordion-body">Natural disasters sucks, so help those less fortunate rebuild houses and regain homes.</div>
-                            </a>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Food Supply
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <a href="food-supply.php" class="text-decoration-none">
+                                    <div class="accordion-body">Send a warm meal and aid food security in poverty-stricken areas.</div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
-                                View all...
-                            </button>
-                        </h2>
-                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                            <a href="categories.php" class="text-decoration-none">
-                                <div class="accordion-body">Come visit our exquisitely designed categories page (Spoiler alert: It's the same as the accordion menu)</div>
-                            </a>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Natural Disaster
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <a href="natural-disaster.php" class="text-decoration-none">
+                                    <div class="accordion-body">Natural disasters sucks, so help those less fortunate rebuild houses and regain homes.</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    View all...
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                <a href="categories.php" class="text-decoration-none">
+                                    <div class="accordion-body">Come visit our exquisitely designed categories page (Spoiler alert: It's the same as the accordion menu)</div>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <?php include '../foot-nested.php'; ?>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <?php include '../foot-nested.php'; ?>
 </body>
 
 </html>
