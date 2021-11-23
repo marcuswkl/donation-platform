@@ -67,7 +67,9 @@ $list = $query->fetchAll();
             </ul>
         </div>
 
-        <button type="button" class="btn btn-success toolbar-child">DONATE</button>
+        <a href="../donation.php?category=Natural Disaster">
+            <button type="button" class="btn btn-success toolbar-child">DONATE</button>
+        </a>
     </div>
 
     <div class="container-fluid project-list">
