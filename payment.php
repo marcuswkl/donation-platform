@@ -85,7 +85,7 @@
                                             <a href="loading.php" class="text-dark btn">Proceed</a> 
                                         </button>
                                         <button type="button" class="subscribe btn btn-primary btn-block shadow-sm m-2">
-                                            <a href="donation.php" class="text-dark btn">Cancel</a> 
+                                            <a href="javascript:history.go(-1)" class="text-dark btn">Cancel</a> 
                                         </button>
                                     </div>    
                                 </form>
@@ -114,7 +114,7 @@
                                 <a href="loading.php" class="text-dark btn">Proceed</a> 
                             </button>
                             <button type="button" class="subscribe btn btn-primary btn-block shadow-sm m-2">
-                                <a href="donation.php" class="text-dark btn">Cancel</a> 
+                                <a href="javascript:history.go(-1)" class="text-dark btn">Cancel</a> 
                             </button>
                             <p class="text-muted">Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your donation. </p>
                         </div> <!-- End -->
