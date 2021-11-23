@@ -19,10 +19,10 @@
 
     <!-- Title -->
     <div class="text-center m-5">
-      <h1 class="display-2">You Are Supporting EDUCATION</h1>
+      <h1 class="display-2">You Are Supporting <?php echo $_GET['category']; ?></h1>
     </div>
     <!-- Donation Amount Form -->
-    <form>  
+    <form action="post">  
       <div class="row m-2 justify-content-md-center">
         <label for="colFormLabelLg" class="col-sm-auto col-form-label col-form-label-lg">Enter amount: </label>
           <div class="col-sm-auto">
@@ -59,6 +59,9 @@
       <div class="text-center"> 
         <button type="submit" class="btn btn-primary m-3 rounded-pill border-dark">
           <a href = "payment.php" class="text-dark btn">DONATE</a>
+        </button>
+        <button type="button" class="btn btn-primary m-3 rounded-pill border-dark">
+            <a href="javascript:history.go(-1)" class="text-dark btn">CANCEL</a> 
         </button>
       </div>
     </form>
