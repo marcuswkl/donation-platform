@@ -19,10 +19,10 @@
 
     <!-- Title -->
     <div class="text-center m-5">
-      <h1 class="display-2">You Are Supporting EDUCATION</h1>
+      <h1 class="display-2">You Are Supporting <?php echo $_GET['category']; ?></h1>
     </div>
     <!-- Donation Amount Form -->
-    <form>  
+    <form action="post">  
       <div class="row m-2 justify-content-md-center">
         <label for="colFormLabelLg" class="col-sm-auto col-form-label col-form-label-lg">Enter amount: </label>
           <div class="col-sm-auto">
