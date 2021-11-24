@@ -1,3 +1,5 @@
+<?php require_once 'form-handlers/login_backend.php';?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +19,23 @@
 
 <body>
     <?php include 'head.php';?>
+    <?php
+    $email = $_SESSION['email'];
+    $query   = "SELECT * FROM user WHERE email='$email'";
+    $result  = $pdo->query($query);
+
+    if (!$result->rowCount()){
+        echo "<script type='text/javascript'>alert('Please enter your email and password');</script>";
+    }
+
+    $row = $result->fetch();
+    $un  = $row['name'];
+    $pw  = $row['password'];
+    $ty  = $row['type'];
+    $em  = $row['email'];
+
+    $_SESSION['name'] = $un;
+    ?>
     <section class="container text-center my-5 fr-profile">
         <h1 class="fr-profile-title fw-bold text-decoration-underline">Profile</h1>
         <img src="resources/img/fr-profile.png" class="fr-profile-image img-fluid my-5" alt="Fundraiser Profile">
