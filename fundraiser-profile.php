@@ -21,20 +21,31 @@
     <?php include 'head.php';?>
     <?php
     $email = $_SESSION['email'];
-    $query   = "SELECT * FROM user WHERE email='$email'";
-    $result  = $pdo->query($query);
+    $userQuery   = "SELECT * FROM user WHERE email='$email'";
+    $userResult  = $pdo->query($userQuery);
 
-    if (!$result->rowCount()){
-        echo "<script type='text/javascript'>alert('Please enter your email and password');</script>";
+    if (!$userResult->rowCount()){
+        echo "<script type='text/javascript'>alert('Invalid Session! Please login.');</script>";
     }
 
-    $row = $result->fetch();
-    $un  = $row['name'];
-    $pw  = $row['password'];
-    $ty  = $row['type'];
-    $em  = $row['email'];
+    $userRow = $userResult->fetch();
+    $userId = $userRow['userId'];
+    $name = $userRow['name'];
+    $email = $userRow['email'];
 
-    $_SESSION['name'] = $un;
+    $frQuery   = "SELECT * FROM fundraiser WHERE fundraiserId='$userId'";
+    $frResult  = $pdo->query($frQuery);
+
+    if (!$frResult->rowCount()){
+        echo "<script type='text/javascript'>alert('Invalid Session! Please login.');</script>";
+    }
+
+    $frRow = $frResult->fetch();
+    $profileImg  = $frRow['profileImage'];
+    $ssmRegNo  = $frRow['ssmRegNo'];
+    $frDesc  = $frRow['fundraiserDescription'];
+    $phoneNo  = $frRow['phoneNumber'];
+    $frWebsite  = $frRow['fundraiserWebsite'];
     ?>
     <section class="container text-center my-5 fr-profile">
         <h1 class="fr-profile-title fw-bold text-decoration-underline">Profile</h1>
