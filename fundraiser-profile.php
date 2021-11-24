@@ -49,14 +49,14 @@
     ?>
     <section class="container text-center my-5 fr-profile">
         <h1 class="fr-profile-title fw-bold text-decoration-underline">Profile</h1>
-        <img src="resources/img/fr-profile.png" class="fr-profile-image img-fluid my-5" alt="Fundraiser Profile">
-        <h2 class="fr-profile-name">Derek Edmonds Foundation</h2>
-        <h6 class="fr-profile-ssm">SSM: 201902123456</h6>
-        <p class="fr-profile-description lead">The Derek Edmonds Foundation seeks to provide education opportunities to underprivileged children in Malaysia. We believe that everyone should have equal opportunities to obtain education and achieve their dreams.</p>
+        <img src="https://picsum.photos/200" class="fr-profile-image img-fluid my-5" alt="Fundraiser Profile">
+        <h2 class="fr-profile-name"><?php echo $name ?></h2>
+        <h6 class="fr-profile-ssm">SSM: <?php echo $ssmRegNo ?></h6>
+        <p class="fr-profile-description lead"><?php echo $frDesc ?></p>
         <div class="d-flex flex-row justify-content-around my-5 fr-profile-contact-icons">
-            <a href="mailto:derekefoundation@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
-            <a href="tel:+6031234567" target="_blank"><i class="bi bi-telephone"></i></a>
-            <a href="https://www.derekefoundation.com/" target="_blank"><i class="bi bi-globe"></i></a>
+            <a href="<?php echo 'mailto:' . $email ?>" target="_blank"><i class="bi bi-envelope"></i></a>
+            <a href="<?php echo 'tel:' . $phoneNo ?>" target="_blank"><i class="bi bi-telephone"></i></a>
+            <a href="<?php echo $frWebsite ?>" target="_blank"><i class="bi bi-globe"></i></a>
         </div>
         <a class="btn-lg border border-dark link-dark text-decoration-none fr-profile-button-edit" href="fundraiser-profile-edit.php">Edit Profile</a>
     </section>
