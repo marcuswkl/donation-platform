@@ -61,7 +61,7 @@
             }else{
                 $a = "Expired";
 }
-            echo "<tr class=tabledata><td>".$row["projectId"]."</td><td><a href=project-info/project1.php>".$row["projectName"]."</a></td><td>".$row["projectDescription"]."</td><td>".$a."</td><td>".$row["projectCategory"]."</td><td>".number_format((float)$z, 2, '.', '')."</td></tr>";
+            echo "<tr class=tabledata><td>".$row["projectId"]."</td><td><a href=project-info/project1.php?id=".$row["projectId"].">".$row["projectName"]."</a></td><td>".$row["projectDescription"]."</td><td>".$a."</td><td>".$row["projectCategory"]."</td><td>".number_format((float)$z, 2, '.', '')."</td></tr>";
         }
         echo "</table>";
     }else {

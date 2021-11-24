@@ -26,13 +26,15 @@ session_start();
         <?php }?>
 <!-- End of HOME link -->
 
-
+<?php if(isset($_SESSION['name'])){?>
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="d-flex navbar-nav ms-auto">
                 <li class="nav-item menu ">
                     <a href="form-handlers/session_logout.php" class="nav-link"><i class="bi bi-box-arrow-left"></i>&nbsp;Log Out</a>
                 </li>
-
+<?php }else{?>
+                    <a href="login.php" class="nav-link" style="color:black;"><i></i>&nbsp;Login</a>
+    <?php }?>
                 <!-- If user is type donor display PROFILE link -->
                 <?php if ($_SESSION['type'] == "donor"){?>
                 <li class="nav-item menu">

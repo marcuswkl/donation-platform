@@ -1,20 +1,20 @@
 <?php
 require_once('DbController.php');
 
-/* if (!empty($_GET['action'])){
+if (!empty($_GET['action'])){
     switch($_GET['action']){
         case "accept": 
-            $accept = "UPDATE fundraiser SET verifiedStatus = 'verified' WHERE fundraiserId = $fundId";
-            $acc_result = $pdo->query($accept);
+            $accept = $pdo->prepare("UPDATE `fundraiser` SET `verifiedStatus` = ? WHERE `fundraiserId` = ?");
+            $accept->execute(array('verified', $_GET['fundraiderId']));
         break;
 
         case "reject":
-            $reject = "UPDATE fundraiser SET verifiedStatus = 'unverified' WHERE fundraiserId = $fundId";
-            $rej_result = $pdo->query($reject);
+            $reject = $pdo->prepare("UPDATE `fundraiser` SET `verifiedStatus` = ? WHERE `fundraiserId` = ?");
+            $reject->execute(array('rejected', $_GET['fundraiderId']));
         break;
     }
 }
- */
+
 ?>
 
 
