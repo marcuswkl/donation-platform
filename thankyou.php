@@ -28,11 +28,18 @@
         </h3>
     </div>
 
-    <div class="text-center"> 
-      <button class="btn btn-primary m-5 rounded-pill border-dark">
-        <a href = "project-info/project1.php" class="text-dark btn">Learn more</a>
+    <?php 
+      $project = $input_array[$rand_keys[0]];
+      $query1 = "SELECT projectId FROM project WHERE projectName = '$project'";
+      $result1 = $pdo->query($query1);
+    ?>
+
+    <div class="text-center">
+      <button class="btn btn-primary m-5 rounded-pill border-dark" onclick = "window.location.href='project-info/project1.php?id=<?php echo $result1[0] ?>'">
+        <a class="text-dark btn">Learn more</a>
       </button>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
