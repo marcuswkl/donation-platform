@@ -30,7 +30,7 @@
           <div class="col-sm-auto">
             <div class="input-group input-group-lg " >
               <span class="input-group-text" id="inputGroup-sizing-lg">RM</span>
-              <input type="text" id="amt" name="amt" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="0.00">
+              <input type="text" id="amt" name="amt" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="0.00" required>
             </div>
           </div>
       </div>

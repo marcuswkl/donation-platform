@@ -21,7 +21,7 @@
     <div class="text-center p-4 ">
         <h3>
             <ul class="list-unstyled">
-                <li>RM<?php echo $amount ?> is contributed to <p><strong><?php echo $input_array[$rand_keys[0]] ?></strong></p> </li>
+                <li>RM<?php echo $result['amount'] ?> is contributed to <p><strong><?php echo $input_array[$rand_keys[0]] ?></strong></p> </li>
                 <li>An email receipt and token of appreciation will be sent to your email.</li>
                 <li>Click on the button to find out which project you are supporting.</li>
             </ul>        
@@ -29,13 +29,14 @@
     </div>
 
     <?php 
-      $project = $input_array[$rand_keys[0]];
-      $query1 = "SELECT projectId FROM project WHERE projectName = '$project'";
-      $result1 = $pdo->query($query1);
+      $project  = $input_array[$rand_keys[0]];
+      $query1   = "SELECT projectId FROM project WHERE projectName = '$project'";
+      $query1   = $pdo->query($query1);
+      $result1  = $query1->fetch();
     ?>
 
     <div class="text-center">
-      <button class="btn btn-primary m-5 rounded-pill border-dark" onclick = "window.location.href='project-info/project1.php?id=<?php echo $result1[0] ?>'">
+      <button class="btn btn-primary m-5 rounded-pill border-dark" onclick = "window.location.href='project-info/project1.php?id=<?php echo $result1['projectId'] ?>'">
         <a class="text-dark btn">Learn more</a>
       </button>
     </div>

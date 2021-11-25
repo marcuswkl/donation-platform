@@ -6,10 +6,7 @@ $input_array = array("Mask up against Covid", "Mask up against Covid 2.0", "Mask
 $rand_keys = array_rand($input_array , 2); 
 
 $query = "SELECT * FROM donation_history";
-$result  = $pdo->query($query);
-
-foreach($result as $row){
-    $amount = $row['amount'];
-}
+$query = $pdo->query($query);
+$result  = $query->fetch();
 
 ?>

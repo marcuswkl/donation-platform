@@ -2,8 +2,10 @@
 
 require_once './DbController.php';
 require_once 'login_backend.php';
-session_start();
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 if(isset($_POST['amt'])){
     $amount = sanitise($pdo,$_POST['amt']);
@@ -19,7 +21,6 @@ if(isset($_POST['amt'])){
     $result = $pdo->query($query);
 
     echo "<script type='text/javascript'>window.location.href = './payment.php';</script>";
-    
 }
 
 ?>
