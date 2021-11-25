@@ -21,8 +21,8 @@
     <div class="text-center m-5">
       <h1 class="display-2">You Are Supporting <?php echo $_GET['category']; ?></h1>
     </div>
-    <!-- Donation Amount Form -->
-    <form action="post">  
+    <!-- Donation Amount Form -->    
+<form action = "payment.php" method="post">  
       <div class="row m-2 justify-content-md-center">
         <label for="colFormLabelLg" class="col-sm-auto col-form-label col-form-label-lg">Enter amount: </label>
           <div class="col-sm-auto">
@@ -35,21 +35,21 @@
 
       <div class="checkboxes ">
         <div class="form-check py-3">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required name="terms">
           <label class="form-check-label" for="defaultCheck1">
           You will be donating anonymously
           </label>
         </div>
 
         <div class="form-check pb-3">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required name="terms">
           <label class="form-check-label" for="defaultCheck1">
           You are aware that the donation is contributed to a random project within the selected category.
           </label>
         </div>
 
         <div class="form-check pb-3">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required name="terms">
           <label class="form-check-label" for="defaultCheck1">
           By continuing, you agree with our Terms of Use
           </label>
