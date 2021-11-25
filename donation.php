@@ -24,13 +24,13 @@
       <h1 class="display-2">You Are Supporting <?php echo $_GET['category']; ?></h1>
     </div>
     <!-- Donation Amount Form -->
-    <form action = "payment.php" method="post">  
+    <form method="post">  
       <div class="row m-2 justify-content-md-center">
         <label for="colFormLabelLg" class="col-sm-auto col-form-label col-form-label-lg">Enter amount: </label>
           <div class="col-sm-auto">
             <div class="input-group input-group-lg " >
               <span class="input-group-text" id="inputGroup-sizing-lg">RM</span>
-              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="0.00">
+              <input type="text" id="amt" name="amt" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="0.00">
             </div>
           </div>
       </div>
