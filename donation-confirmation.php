@@ -32,7 +32,7 @@ AND donation_history.fundraiserId, donation_history.projectId IS NULL";
     
 $result1 = $conn->query($sql);    
 
-$query = "SELECT * FROM donation_history";
+$query = "SELECT * FROM donation_history ORDER BY date DESC LIMIT 1";
 $query = $pdo->query($query);
 $result  = $query->fetch();
 
