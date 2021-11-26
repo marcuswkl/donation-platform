@@ -8,6 +8,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 if(isset($_POST['amt'])){
+    date_default_timezone_set("Asia/Kuala_Lumpur");
     $amount = sanitise($pdo,$_POST['amt']);
     $date = date("Y-m-d H:i:s");
     $date2 = sanitise($pdo,$date);
