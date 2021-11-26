@@ -1,3 +1,4 @@
+<?php require_once "DbController.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +18,37 @@
 
 <body>
     <?php include 'head.php';?>
+    <?php
+    $email = $_SESSION['email'];
+    $userQuery   = "SELECT * FROM user WHERE email='$email'";
+    $userResult  = $pdo->query($userQuery);
+
+    if (!$userResult->rowCount()){
+        echo "<script type='text/javascript'>alert('Invalid Session! Please login.');</script>";
+    }
+
+    $userRow = $userResult->fetch();
+    $userId = $userRow['userId'];
+    $name = $userRow['name'];
+    $email = $userRow['email'];
+
+    $frQuery   = "SELECT * FROM fundraiser WHERE fundraiserId='$userId'";
+    $frResult  = $pdo->query($frQuery);
+
+    if (!$frResult->rowCount()){
+        echo "<script type='text/javascript'>alert('Invalid Session! Please login.');</script>";
+    }
+
+    $frRow = $frResult->fetch();
+    $profileImg  = $frRow['profileImage'];
+    $ssmRegNo  = $frRow['ssmRegNo'];
+    $frDesc  = $frRow['fundraiserDescription'];
+    $phoneNo  = $frRow['phoneNumber'];
+    $frWebsite  = $frRow['fundraiserWebsite'];
+    $bankAccNo  = $frRow['bankNumber'];
+    $accHolderName  = $frRow['acc_holder_name'];
+    $bankName  = $frRow['bank_name'];
+    ?>
     <section class="container my-5 fr-profile-edit">
         <div class="fr-profile-edit-top text-center">
             <h1 class="fr-profile-edit-title fw-bold text-decoration-underline">Edit Profile</h1>
@@ -28,61 +60,61 @@
             <div class="row mb-4">
               <label for="inputFullName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Full Name:</label>
               <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputFullName" value="Derek Edmonds Foundation">
+                <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputFullName" value="<?php echo $name ?>">
               </div>
             </div>
 
             <div class="row mb-3">
                 <label for="inputSSMRegNo" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">SSM Registration Number:</label>
                 <div class="col-sm-9">
-                  <input type="number" class="form-control form-control-lg form-control-fr-profile-edit" id="inputSSMRegNo" value="201902123456" disabled>
+                  <input type="number" class="form-control form-control-lg form-control-fr-profile-edit" id="inputSSMRegNo" value="<?php echo $ssmRegNo ?>" disabled>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <label for="textAreaDescription" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Description:</label>
-                <textarea class="form-control form-control-lg form-control-fr-profile-edit fr-profile-edit-textarea" id="textAreaDescription" rows="3">The Derek Edmonds Foundation seeks to provide education opportunities to underprivileged children in Malaysia. We believe that everyone should have equal opportunities to obtain education and achieve their dreams.</textarea>
+                <textarea class="form-control form-control-lg form-control-fr-profile-edit fr-profile-edit-textarea" id="textAreaDescription" rows="3"><?php echo $frDesc ?></textarea>
             </div>
             
             <div class="row mb-4">
                 <label for="inputEmail" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Email:</label>
                 <div class="col-sm-9">
-                    <input type="email" class="form-control form-control-lg form-control-fr-profile-edit" id="inputEmail" value="derekefoundation@gmail.com">
+                    <input type="email" class="form-control form-control-lg form-control-fr-profile-edit" id="inputEmail" value="<?php echo $email ?>">
                 </div>
             </div>
 
             <div class="row mb-4">
                 <label for="inputPhoneNo" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Phone Number:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputPhoneNo" value="+6031234567">
+                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputPhoneNo" value="<?php echo $phoneNo ?>">
                 </div>
             </div>
 
             <div class="row mb-4">
                 <label for="inputWebsite" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Website:</label>
                 <div class="col-sm-9">
-                <input type="url" class="form-control form-control-lg form-control-fr-profile-edit" id="inputWebsite" value="https://www.derekedmondsfoundation.com">
+                <input type="url" class="form-control form-control-lg form-control-fr-profile-edit" id="inputWebsite" value="<?php echo $frWebsite ?>">
                 </div>
             </div>
 
             <div class="row mb-4">
                 <label for="inputBankAccNo" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Bank Account Number:</label>
                 <div class="col-sm-9">
-                    <input type="number" class="form-control form-control-lg form-control-fr-profile-edit" id="inputBankAccNo" value="1234567890">
+                    <input type="number" class="form-control form-control-lg form-control-fr-profile-edit" id="inputBankAccNo" value="<?php echo $bankAccNo ?>">
                 </div>
             </div>
             
             <div class="row mb-4">
                 <label for="inputAccHolderName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Account Holder Name:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputAccHolderName" value="Derek Edmonds">
+                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputAccHolderName" value="<?php echo $accHolderName ?>">
                 </div>
             </div>
 
             <div class="row mb-4">
                 <label for="inputBankName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Bank Name:</label>
                 <div class="col-sm-9 mb-3">
-                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputBankName" value="United Private Bank">
+                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputBankName" value="<?php echo $bankName ?>">
                 </div>
             </div>
 
