@@ -16,18 +16,19 @@ $servername = "localhost";
 $input_array = array("Mask up against Covid", "Mask up against Covid 2.0", "Mask up against Covid 3.0"); 
 $rand_keys = array_rand($input_array , 2);
 $project = $input_array[$rand_keys[0]];
-$id = $_SESSION['id'];
+$userId = $_SESSION['id'];
 
-$sql = "WITH id AS (
-            SELECT projectId,fundraiserId FROM project WHERE projectName = '$project' )
-UPDATE donation_history
-SET donation_history.fundraiserId = project.fundraiserId
-AND donation_history.projectId = project.projectId
-WHERE donation_history.userId = '$id'
-AND donation_history.fundraiserId, donation_history.projectId IS NULL
-";    
+$idQuery    = "SELECT projectId,fundraiserId FROM project WHERE projectName = '$project'";
+$idQuery    = $pdo->query($idQuery);
+$idTable    = $idQuery->fetch();
+$projectID  = $idTable["projectId"];
+$fundraiserID  = $idTable["fundraiserId"];
 
-echo $sql;
+$sql = "UPDATE donation_history
+SET donation_history.fundraiserId = $projectID
+AND donation_history.projectId = $fundraiserID
+WHERE donation_history.userId = $userId
+AND donation_history.fundraiserId, donation_history.projectId IS NULL";    
     
 $result1 = $conn->query($sql);    
 
