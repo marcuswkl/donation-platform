@@ -17,6 +17,7 @@ if(isset($_POST['email']) && isset($_POST['pwd'])){
     $pw  = $row['password'];
     $ty  = $row['type'];
     $em  = $row['email'];
+    $id  = $row['userId'];
 
     if (password_verify( $pw_temp, $pw))
     {
@@ -25,7 +26,9 @@ if(isset($_POST['email']) && isset($_POST['pwd'])){
       $_SESSION['name'] = $un;
       $_SESSION['type'] = $ty;
       $_SESSION['email'] = $em;
-
+      $_SESSION['id'] = $id;
+    
+      if(isset($_SESSION['id'])){
         if(isset($_SESSION['name'])){
           if(isset($_SESSION['email'])){
             if($_SESSION['type'] == 'donor'){
@@ -39,6 +42,7 @@ if(isset($_POST['email']) && isset($_POST['pwd'])){
         }
       }
     }
+  }
     else echo "<script type='text/javascript'>alert('Incorrect username/ password');</script>";
   }
 

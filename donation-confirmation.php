@@ -1,15 +1,13 @@
 <?php
 
-require_once 'DbController.php';
+require_once 'DbController.php';   
 
-$input_array = array("Empower Children Through Education", "Mask up against Covid", "Mask up against Covid 2.0", "Mask up against Covid 3.0"); 
-$rand_keys = array_rand($input_array , 2); 
+$query = "SELECT * FROM donation_history ORDER BY date DESC LIMIT 1";
+$query = $pdo->query($query);
+$result  = $query->fetch();
+$projectID = $result['projectId'];
 
-$query = "SELECT * FROM donation_history";
-$result  = $pdo->query($query);
-
-foreach($result as $row){
-    $amount = $row['amount'];
-}
-
+$projectQuery = "SELECT projectName FROM project WHERE projectId = $projectID";
+$projectQuery = $pdo->query($projectQuery);
+$projectResult  = $projectQuery->fetch();
 ?>
