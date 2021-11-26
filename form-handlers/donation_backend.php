@@ -13,9 +13,16 @@ if(isset($_POST['amt'])){
     $date2 = sanitise($pdo,$date);
     $tbl_name = 'donation_history';
     $id = $_SESSION['id'];
+    $category = $_GET['category'];
+
+    $idQuery    = "SELECT projectId,fundraiserId FROM project WHERE projectCategory = '$category' ORDER BY RAND()";
+    $idQuery    = $pdo->query($idQuery);
+    $idTable    = $idQuery->fetch();
+    $projectID  = $idTable["projectId"];
+    $fundraiserID  = $idTable["fundraiserId"];
 
     $query = "INSERT INTO $tbl_name (donationId, date, amount, projectId, userId, fundraiserId) 
-    VALUES(NULL, $date2, $amount, NULL, $id, NULL)";
+    VALUES(NULL, $date2, $amount, $projectID, $id, $fundraiserID)";
 
     echo $query;
     $result = $pdo->query($query);
