@@ -49,7 +49,7 @@
     ?>
     <section class="container text-center my-5 fr-profile">
         <h1 class="fr-profile-title fw-bold text-decoration-underline">Profile</h1>
-        <img src="https://picsum.photos/200" class="fr-profile-image img-fluid my-5" alt="Fundraiser Profile">
+        <img src="resources/img/fr-profile.png" class="fr-profile-image img-fluid my-5" alt="Fundraiser Profile">
         <h2 class="fr-profile-name"><?php echo $name ?></h2>
         <h6 class="fr-profile-ssm">SSM: <?php echo $ssmRegNo ?></h6>
         <p class="fr-profile-description lead"><?php echo $frDesc ?></p>
