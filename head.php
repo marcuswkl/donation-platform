@@ -1,7 +1,9 @@
 <link href="css/head.css" type="text/css" rel="stylesheet">
 
 <?php
-session_start();
+if(session_status() === PHP_SESSION_NONE){
+    session_start();
+}
 ?>
 
 <nav class="navbar navbar-expand-md navbar-light head">
