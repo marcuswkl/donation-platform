@@ -23,6 +23,7 @@
     if ($_GET["type"] == "create") {
         $projectName = $projectDesc = $projectLocation = $projectPhoto = $projectGoalAmt = $projectCurrentAmt =
          $projectGoalStatus = $projectCategory = $projectStartDate = $projectEndDate = null;
+        $backendParameter = "?type=create";
 
     } else if ($_GET["type"] == "edit") {
         $projectQuery   = "SELECT * FROM project WHERE projectId='$_GET[id]'";
@@ -39,6 +40,8 @@
         $projectCategory = $projectRow['projectCategory'];
         $projectStartDate = $projectRow['projectStartDate'];
         $projectEndDate = $projectRow['projectEndDate'];
+
+        $backendParameter = "?type=edit&id=$_GET[id]";
 
     } else {
         echo "<script type='text/javascript'>alert('Invalid project dashboard type.');</script>";
@@ -78,7 +81,7 @@
             </div>
         </div>
 
-        <form class="fr-project1-edit-form" action="form-handlers/project1_dashboard_backend.php" method="post">
+        <form class="fr-project1-edit-form" action="form-handlers/project1_dashboard_backend.php<?php echo $backendParameter ?>" method="post">
             <div class="row mb-4">
               <label for="inputProjectName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Project Name:</label>
               <div class="col-sm-9">
@@ -200,8 +203,6 @@
                     <input type="date" class="form-control form-control-lg form-control-fr-project1-edit" id="inputDate2" name="projectEndDate" value="<?php echo $projectEndDate ?>" required>
                 </div>
             </div>
-
-            <input type="text" name="projectDashboardType" style="display: none;" value="<?php echo $_GET["type"] ?>">
 
             <div class="fr-project1-edit-form-buttons text-center">
                 <a class="btn-lg border border-dark link-dark text-decoration-none m-5 fr-project1-edit-cancel" href="fundraiser-home.php">Cancel</a>
