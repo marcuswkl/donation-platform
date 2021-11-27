@@ -68,25 +68,14 @@
             </div>
 
             <div class="row mb-4">
-                <div class="col">
+                <div class="col-sm-3">
                     <label for="inputGoalAmount" class="col-sm-3 col-form-label col-form-label-lg w-100 form-label-fr-project1-edit">Goal Amount:</label>
                 </div>
 
-                <div class="col">
-                    <div class="col-sm-9 input-group input-group-lg fr-project1-edit-input-group">
+                <div class="col-sm-4">
+                    <div class="col-sm-4 input-group input-group-lg fr-project1-edit-input-group">
                         <span class="input-group-text border border-dark border-end-0 input-group-text-currency" style="    border-radius: 1.5rem 0rem 0rem 1.5rem;">RM</span>
                         <input type="number" class="form-control form-control-lg border-start-0 form-control-fr-project1-edit" id="inputGoalAmount" value="3000">
-                    </div>
-                </div>
-
-                <div class="col">
-                    <label for="inputStartingAmount" class="col-sm-3 col-form-label col-form-label-lg w-100 form-label-fr-project1-edit">Starting Amount:</label>
-                </div>
-
-                <div class="col">
-                    <div class="col-sm-9 input-group input-group-lg fr-project1-edit-input-group">
-                        <span class="input-group-text border border-dark border-end-0 input-group-text-currency" style="    border-radius: 1.5rem 0rem 0rem 1.5rem;">RM</span>
-                        <input type="number" class="form-control form-control-lg border-start-0 form-control-fr-project1-edit" id="inputStartingAmount" value="0">
                     </div>
                 </div>
             </div>
