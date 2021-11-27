@@ -43,7 +43,7 @@
     if ($conn->connect_error){
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT projectId, projectName, projectDescription, projectCategory, projectGoalAmt, projectCurrentAmt, projectStartDate, projectEndDate FROM project";
+    $sql = "SELECT projectId, projectName, projectDescription, projectCategory, projectGoalAmt, projectCurrentAmt, projectStartDate, projectEndDate FROM project WHERE fundraiserId=$_SESSION[id]";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0){
@@ -61,7 +61,7 @@
             }else{
                 $a = "Expired";
 }
-            echo "<tr class=tabledata><td>".$row["projectId"]."</td><td><a href=project-info/project1.php?id=".$row["projectId"].">".$row["projectName"]."</a></td><td>".$row["projectDescription"]."</td><td>".$a."</td><td>".$row["projectCategory"]."</td><td>".number_format((float)$z, 2, '.', '')."</td></tr>";
+            echo "<tr class=tabledata><td>".$row["projectId"]."</td><td><a href=project1-dashboard.php?type=edit&id=".$row["projectId"].">".$row["projectName"]."</a></td><td>".$row["projectDescription"]."</td><td>".$a."</td><td>".$row["projectCategory"]."</td><td>".number_format((float)$z, 2, '.', '')."</td></tr>";
         }
         echo "</table>";
     }else {
