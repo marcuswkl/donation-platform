@@ -1,3 +1,4 @@
+<?php require_once "DbController.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +18,33 @@
 
 <body>
     <?php include 'head.php';?>
+    <?php
+    if ($_GET["type"] == "create") {
+        echo "<script type='text/javascript'>alert('Create project mode.');</script>";
+        $projectName = $projectDesc = $projectLocation = $projectPhoto = $projectGoalAmt = $projectCurrentAmt =
+         $projectGoalStatus = $projectCategory = $projectStartDate = $projectEndDate = null;
+
+    } else if ($_GET["type"] == "edit") {
+        echo "<script type='text/javascript'>alert('Edit project mode.');</script>";
+        $projectQuery   = "SELECT * FROM project WHERE projectId='$_GET[id]'";
+        $projectResult  = $pdo->query($projectQuery);
+        $projectRow = $projectResult->fetch();
+
+        $projectName = $projectRow['projectName'];
+        $projectDesc = $projectRow['projectDescription'];
+        $projectLocation = $projectRow['projectLocation'];
+        $projectPhoto = $projectRow['projectPhoto'];
+        $projectGoalAmt = $projectRow['projectGoalAmt'];
+        $projectCurrentAmt = $projectRow['projectCurrentAmt'];
+        $projectGoalStatus = $projectRow['projectGoalStatus'];
+        $projectCategory = $projectRow['projectCategory'];
+        $projectStartDate = $projectRow['projectStartDate'];
+        $projectEndDate = $projectRow['projectEndDate'];
+
+    } else {
+        echo "<script type='text/javascript'>alert('Invalid project dashboard type.');</script>";
+    }
+    ?>
     <section class="container my-5 fr-project1-edit">
         <div class="fr-project1-edit-top text-center">
             <h1 class="fr-project1-edit-title fw-bold text-decoration-underline">Manage Project</h1>
