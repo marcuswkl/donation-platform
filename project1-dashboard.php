@@ -78,23 +78,23 @@
             </div>
         </div>
 
-        <form class="fr-project1-edit-form">
+        <form class="fr-project1-edit-form" action="form-handlers/project1_dashboard_backend.php" method="post">
             <div class="row mb-4">
               <label for="inputProjectName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Project Name:</label>
               <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectName" value="<?php echo $projectName ?>" required>
+                <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectName" name="projectName" value="<?php echo $projectName ?>" required>
               </div>
             </div>
 
             <div class="row mb-4">
                 <label for="textAreaProjectDescription" class="col-sm-3 col-form-label col-form-label-lg w-100 form-label-fr-project1-edit">Project Description:</label>
-                <textarea class="form-control form-control-lg form-control-fr-project1-edit fr-project1-edit-textarea" id="textAreaProjectDescription" rows="3"><?php echo $projectDesc ?></textarea>
+                <textarea class="form-control form-control-lg form-control-fr-project1-edit fr-project1-edit-textarea" id="textAreaProjectDescription" name="projectDesc" rows="3"><?php echo $projectDesc ?></textarea>
             </div>
             
             <div class="row mb-4">
                 <label for="inputProjectLocation" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Project Location:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectLocation" value="<?php echo $projectLocation ?>" required>
+                    <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectLocation" name="projectLocation" value="<?php echo $projectLocation ?>" required>
                 </div>
             </div>
 
@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-sm-9">
                     <div class="col-sm-9 input-group input-group-lg fr-project1-edit-input-group">
-                        <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectPhotos" value="<?php echo $projectPhoto ?>">
+                        <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectPhotos" name="projectPhoto" value="<?php echo $projectPhoto ?>">
                         <button class="btn border border-dark border-start-0" type="button" id="input-group-button-upload">
                             <i class="bi bi-upload"></i>
                         </button>
@@ -120,7 +120,7 @@
                 <div class="col-sm-4">
                     <div class="col-sm-4 input-group input-group-lg fr-project1-edit-input-group">
                         <span class="input-group-text border border-dark border-end-0 input-group-text-currency" style="    border-radius: 1.5rem 0rem 0rem 1.5rem;">RM</span>
-                        <input type="number" class="form-control form-control-lg border-start-0 form-control-fr-project1-edit" id="inputGoalAmount" value="<?php echo $projectGoalAmt ?>" required>
+                        <input type="number" class="form-control form-control-lg border-start-0 form-control-fr-project1-edit" id="inputGoalAmount" name="projectGoalAmt" value="<?php echo $projectGoalAmt ?>" required>
                     </div>
                 </div>
             </div>
@@ -128,20 +128,20 @@
             <div class="row mb-4">
                 <label for="selectGoalStatus" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Goal Status:</label>
                 <div class="col-sm-4">
-                    <select class="form-select form-select-lg form-select-fr-project1-edit" id="selectGoalStatus">
+                    <select class="form-select form-select-lg form-select-fr-project1-edit" id="selectGoalStatus" name="projectGoalStatus">
                         <?php
                         if (is_null($projectGoalStatus) || $projectGoalStatus == 0) {
-                            echo '<option value="active" selected>Active</option>';
-                            echo '<option value="completed">Completed</option>';
-                            echo '<option value="on-hold">On Hold</option>';
+                            echo '<option value="0" selected>Active</option>';
+                            echo '<option value="1">Completed</option>';
+                            echo '<option value="2">On Hold</option>';
                         } else if ($projectGoalStatus == 1) {
-                            echo '<option value="active">Active</option>';
-                            echo '<option value="completed selected">Completed</option>';
-                            echo '<option value="on-hold">On Hold</option>';
+                            echo '<option value="0">Active</option>';
+                            echo '<option value="1" selected>Completed</option>';
+                            echo '<option value="2">On Hold</option>';
                         } else if ($projectGoalStatus == 2) {
-                            echo '<option value="active">Active</option>';
-                            echo '<option value="completed">Completed</option>';
-                            echo '<option value="on-hold" selected>On Hold</option>';
+                            echo '<option value="0">Active</option>';
+                            echo '<option value="1">Completed</option>';
+                            echo '<option value="2" selected>On Hold</option>';
                         }
                         ?>
                     </select>
@@ -151,28 +151,28 @@
             <div class="row mb-4">
                 <label for="selectCategory" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Category:</label>
                 <div class="col-sm-4 mb-3">
-                    <select class="form-select form-select-lg form-select-fr-project1-edit" id="selectCategory">
+                    <select class="form-select form-select-lg form-select-fr-project1-edit" id="selectCategory" name="projectCategory">
                         <?php
                         if (is_null($projectCategory) || $projectCategory == "Covid-19") {
-                            echo '<option value="covid-19" selected>COVID-19</option>';
-                            echo '<option value="education">Education</option>';
-                            echo '<option value="food-supply">Food Supply</option>';
-                            echo '<option value="natural-disaster">Natural Disaster</option>';
+                            echo '<option value="Covid-19" selected>COVID-19</option>';
+                            echo '<option value="Education">Education</option>';
+                            echo '<option value="Food Supply">Food Supply</option>';
+                            echo '<option value="Natural Disaster">Natural Disaster</option>';
                         } else if ($projectCategory == "Education") {
-                            echo '<option value="covid-19">COVID-19</option>';
-                            echo '<option value="education" selected>Education</option>';
-                            echo '<option value="food-supply">Food Supply</option>';
-                            echo '<option value="natural-disaster">Natural Disaster</option>';
+                            echo '<option value="Covid-19">COVID-19</option>';
+                            echo '<option value="Education" selected>Education</option>';
+                            echo '<option value="Food Supply">Food Supply</option>';
+                            echo '<option value="Natural Disaster">Natural Disaster</option>';
                         } else if ($projectCategory == "Food Supply") {
-                            echo '<option value="covid-19">COVID-19</option>';
-                            echo '<option value="education">Education</option>';
-                            echo '<option value="food-supply" selected>Food Supply</option>';
-                            echo '<option value="natural-disaster">Natural Disaster</option>';
+                            echo '<option value="Covid-19">COVID-19</option>';
+                            echo '<option value="Education">Education</option>';
+                            echo '<option value="Food Supply" selected>Food Supply</option>';
+                            echo '<option value="Natural Disaster">Natural Disaster</option>';
                         } else if ($projectCategory == "Natural Disaster") {
-                            echo '<option value="covid-19">COVID-19</option>';
-                            echo '<option value="education">Education</option>';
-                            echo '<option value="food-supply">Food Supply</option>';
-                            echo '<option value="natural-disaster" selected>Natural Disaster</option>';
+                            echo '<option value="Covid-19">COVID-19</option>';
+                            echo '<option value="Education">Education</option>';
+                            echo '<option value="Food Supply">Food Supply</option>';
+                            echo '<option value="Natural Disaster" selected>Natural Disaster</option>';
                         }
                         ?>
                     </select>
@@ -185,7 +185,7 @@
                 </div>
 
                 <div class="col-sm-4">
-                    <input type="date" class="form-control form-control-lg form-control-fr-project1-edit" id="inputDate1" value="<?php echo $projectStartDate ?>" required>
+                    <input type="date" class="form-control form-control-lg form-control-fr-project1-edit" id="inputDate1" name="projectStartDate" value="<?php echo $projectStartDate ?>" required>
                 </div>
 
                 <div class="col d-none">
@@ -197,9 +197,11 @@
                 </div>
 
                 <div class="col-sm-4">
-                    <input type="date" class="form-control form-control-lg form-control-fr-project1-edit" id="inputDate2" value="<?php echo $projectEndDate ?>" required>
+                    <input type="date" class="form-control form-control-lg form-control-fr-project1-edit" id="inputDate2" name="projectEndDate" value="<?php echo $projectEndDate ?>" required>
                 </div>
             </div>
+
+            <input type="text" name="projectDashboardType" style="display: none;" value="<?php echo $_GET["type"] ?>">
 
             <div class="fr-project1-edit-form-buttons text-center">
                 <a class="btn-lg border border-dark link-dark text-decoration-none m-5 fr-project1-edit-cancel" href="fundraiser-home.php">Cancel</a>

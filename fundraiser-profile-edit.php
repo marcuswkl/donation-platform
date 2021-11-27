@@ -56,7 +56,7 @@
             <button class="btn-lg border-dark fr-profile-edit-upload">Upload Image</button>
         </div>
 
-        <form class="fr-profile-edit-form" action="form-handlers/fundraiser_profile_backend.php" method="POST">
+        <form class="fr-profile-edit-form" action="form-handlers/fundraiser_profile_backend.php" method="post">
             <div class="row mb-4">
               <label for="inputFullName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Full Name:</label>
               <div class="col-sm-9">
