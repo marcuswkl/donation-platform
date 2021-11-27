@@ -82,7 +82,7 @@
             <div class="row mb-4">
               <label for="inputProjectName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Project Name:</label>
               <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectName" value="<?php echo $projectName ?>">
+                <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectName" value="<?php echo $projectName ?>" required>
               </div>
             </div>
 
@@ -94,7 +94,7 @@
             <div class="row mb-4">
                 <label for="inputProjectLocation" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-project1-edit">Project Location:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectLocation" value="<?php echo $projectLocation ?>">
+                    <input type="text" class="form-control form-control-lg form-control-fr-project1-edit" id="inputProjectLocation" value="<?php echo $projectLocation ?>" required>
                 </div>
             </div>
 
@@ -120,7 +120,7 @@
                 <div class="col-sm-4">
                     <div class="col-sm-4 input-group input-group-lg fr-project1-edit-input-group">
                         <span class="input-group-text border border-dark border-end-0 input-group-text-currency" style="    border-radius: 1.5rem 0rem 0rem 1.5rem;">RM</span>
-                        <input type="number" class="form-control form-control-lg border-start-0 form-control-fr-project1-edit" id="inputGoalAmount" value="<?php echo $projectGoalAmt ?>">
+                        <input type="number" class="form-control form-control-lg border-start-0 form-control-fr-project1-edit" id="inputGoalAmount" value="<?php echo $projectGoalAmt ?>" required>
                     </div>
                 </div>
             </div>
@@ -185,7 +185,7 @@
                 </div>
 
                 <div class="col-sm-4">
-                    <input type="date" class="form-control form-control-lg form-control-fr-project1-edit" id="inputDate1" value="<?php echo $projectStartDate ?>">
+                    <input type="date" class="form-control form-control-lg form-control-fr-project1-edit" id="inputDate1" value="<?php echo $projectStartDate ?>" required>
                 </div>
 
                 <div class="col d-none">
@@ -197,7 +197,7 @@
                 </div>
 
                 <div class="col-sm-4">
-                    <input type="date" class="form-control form-control-lg form-control-fr-project1-edit" id="inputDate2" value="<?php echo $projectEndDate ?>">
+                    <input type="date" class="form-control form-control-lg form-control-fr-project1-edit" id="inputDate2" value="<?php echo $projectEndDate ?>" required>
                 </div>
             </div>
 

@@ -60,7 +60,7 @@
             <div class="row mb-4">
               <label for="inputFullName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Full Name:</label>
               <div class="col-sm-9">
-                <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputFullName" name="fullName" value="<?php echo $name ?>">
+                <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputFullName" name="fullName" value="<?php echo $name ?>" required>
               </div>
             </div>
 
@@ -79,14 +79,14 @@
             <div class="row mb-4">
                 <label for="inputEmail" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Email:</label>
                 <div class="col-sm-9">
-                    <input type="email" class="form-control form-control-lg form-control-fr-profile-edit" id="inputEmail" name="email" value="<?php echo $email ?>">
+                    <input type="email" class="form-control form-control-lg form-control-fr-profile-edit" id="inputEmail" name="email" value="<?php echo $email ?>" required>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <label for="inputPhoneNo" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Phone Number:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputPhoneNo" name="phoneNo" value="<?php echo $phoneNo ?>">
+                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputPhoneNo" name="phoneNo" value="<?php echo $phoneNo ?>" required>
                 </div>
             </div>
 
@@ -100,21 +100,21 @@
             <div class="row mb-4">
                 <label for="inputBankAccNo" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Bank Account Number:</label>
                 <div class="col-sm-9">
-                    <input type="number" class="form-control form-control-lg form-control-fr-profile-edit" id="inputBankAccNo" name="bankAccNo" value="<?php echo $bankAccNo ?>">
+                    <input type="number" class="form-control form-control-lg form-control-fr-profile-edit" id="inputBankAccNo" name="bankAccNo" value="<?php echo $bankAccNo ?>" required>
                 </div>
             </div>
             
             <div class="row mb-4">
                 <label for="inputAccHolderName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Account Holder Name:</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputAccHolderName" name="accHolderName" value="<?php echo $accHolderName ?>">
+                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputAccHolderName" name="accHolderName" value="<?php echo $accHolderName ?>" required>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <label for="inputBankName" class="col-sm-3 col-form-label col-form-label-lg form-label-fr-profile-edit">Bank Name:</label>
                 <div class="col-sm-9 mb-3">
-                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputBankName" name="bankName" value="<?php echo $bankName ?>">
+                    <input type="text" class="form-control form-control-lg form-control-fr-profile-edit" id="inputBankName" name="bankName" value="<?php echo $bankName ?>" required>
                 </div>
             </div>
 
