@@ -188,7 +188,7 @@
     </table>
     <br>
     <br>
-    <div style="display:flex;justify-content:space-between"><a href="fundraiser-home.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Show Projects</a><a href="project1-dashboard.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Start Project</a></div></div>
+    <div style="display:flex;justify-content:space-between"><a href="fundraiser-home.php" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Show Projects</a><a href="project1-dashboard.php?type=create" class="btn btn-primary buttoncenter rounded-pill border-dark" role="button">Start Project</a></div></div>
     
     
 
